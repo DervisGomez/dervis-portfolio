@@ -116,13 +116,27 @@ Para añadir un proyecto:
 
 ## Despliegue
 
-Compatible con [Vercel](https://vercel.com) out of the box:
+Compatible con [Vercel](https://vercel.com). El proyecto incluye `vercel.json` con **framework: nextjs** para evitar detección incorrecta como Remix.
 
 ```bash
 npm run build
 ```
 
-No requiere variables de entorno para funcionamiento básico. Configura dominio y redirecciones según tu preferencia de locale.
+### Vercel — configuración recomendada
+
+| Setting | Valor |
+|---------|--------|
+| Framework Preset | **Next.js** |
+| Root Directory | `.` (raíz del repo) |
+| Build Command | `npm run build` |
+| Output Directory | *(dejar vacío — Next.js lo gestiona)* |
+| Install Command | `npm install` |
+
+Si aparece el error `Failed to resolve "@remix-run/dev"`, el preset está en **Remix** por error. Cámbialo a **Next.js** en *Project Settings → General → Framework Preset* y redeploy.
+
+No instales `@remix-run/dev`: este proyecto no usa Remix.
+
+No requiere variables de entorno para funcionamiento básico.
 
 ## Autor
 
