@@ -8,10 +8,11 @@ export const siteConfig = {
   whatsapp: "https://wa.me/56900000000",
 };
 
-export const metricsData = [
-  { value: 9, suffix: "+", labelKey: "yearsExperience" as const },
-  { value: 20, suffix: "+", labelKey: "projectsDelivered" as const },
-  { value: 6, suffix: "+", labelKey: "mobileApps" as const },
+export const trustMetricsData = [
+  { type: "counter" as const, value: 9, suffix: "+", labelKey: "yearsExperience" as const },
+  { type: "counter" as const, value: 20, suffix: "+", labelKey: "projectsDelivered" as const },
+  { type: "counter" as const, value: 6, suffix: "+", labelKey: "mobileApps" as const },
+  { type: "text" as const, valueKey: "companiesValue" as const, labelKey: "companiesAcrossLatam" as const },
 ];
 
 export const heroTechnologies = [
@@ -142,16 +143,35 @@ export const productMeta: Record<
   },
 };
 
-export const industrySectorKeys = [
-  "manufacturing",
-  "logistics",
-  "retail",
-  "transportation",
-  "technology",
-  "services",
+export const contributedOrganizationIds = [
+  "enaex",
+  "veyco",
+  "formidavel",
+  "appi",
+  "area33",
+  "devocion",
+  "ubicatupuesto",
+  "wonderchatt",
+  "uniserv",
 ] as const;
 
-export type IndustrySectorKey = (typeof industrySectorKeys)[number];
+export type ContributedOrganizationId = (typeof contributedOrganizationIds)[number];
+
+/** Logo paths are optional — add SVG/PNG to public/logos/ when available */
+export const contributedOrganizations: Record<
+  ContributedOrganizationId,
+  { name: string; logo?: string }
+> = {
+  enaex: { name: "ENAEX", logo: "/logos/enaex.svg" },
+  veyco: { name: "VE&CO", logo: "/logos/veyco.svg" },
+  formidavel: { name: "Formidável", logo: "/logos/formidavel.svg" },
+  appi: { name: "APPI.CL", logo: "/logos/appi.svg" },
+  area33: { name: "Area33", logo: "/logos/area33.svg" },
+  devocion: { name: "Devoción Diaria", logo: "/logos/devocion.svg" },
+  ubicatupuesto: { name: "UbicaTuPuesto", logo: "/logos/ubicatupuesto.svg" },
+  wonderchatt: { name: "WonderChatt", logo: "/logos/wonderchatt.svg" },
+  uniserv: { name: "UNISERV", logo: "/logos/uniserv.svg" },
+};
 
 export const experienceIds = ["appi", "wonderchatt", "uniserv"] as const;
 

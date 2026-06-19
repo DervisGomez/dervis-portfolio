@@ -5,7 +5,6 @@
   },
   "nav": {
     "projects": "Projects",
-    "clients": "Industries",
     "experience": "Experience",
     "stack": "Stack",
     "contact": "Contact",
@@ -42,7 +41,11 @@
     "yearsExperience": "Years of Experience",
     "projectsDelivered": "Projects Delivered",
     "mobileApps": "Published Mobile Apps",
-    "countriesServed": "Countries Served"
+    "companiesValue": "Multiple",
+    "companiesAcrossLatam": "Companies Across Latin America"
+  },
+  "trustMetrics": {
+    "ariaLabel": "Trust metrics"
   },
   "projects": {
     "label": "Work",
@@ -237,18 +240,11 @@
       }
     }
   },
-  "clients": {
-    "label": "Industries",
-    "title": "Experience across <highlight>Latin America</highlight>",
-    "description": "I've built digital products for companies in manufacturing, logistics, retail, technology, transportation and services — from corporate platforms to mobile apps in production.",
-    "industries": {
-      "manufacturing": "Manufacturing",
-      "logistics": "Logistics",
-      "retail": "Retail",
-      "transportation": "Transportation",
-      "technology": "Technology",
-      "services": "Services"
-    }
+  "organizations": {
+    "label": "Experience",
+    "title": "Organizations I've <highlight>Contributed To</highlight>",
+    "description": "Throughout my career, I have participated in the development of digital products, mobile applications and enterprise platforms used by organizations across different industries in Latin America.",
+    "footer": "Additional projects and organizations available upon request."
   },
   "experience": {
     "label": "Experience",

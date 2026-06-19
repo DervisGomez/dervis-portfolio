@@ -5,7 +5,6 @@
   },
   "nav": {
     "projects": "Proyectos",
-    "clients": "Industrias",
     "experience": "Experiencia",
     "stack": "Stack",
     "contact": "Contacto",
@@ -36,13 +35,17 @@
     "experienceBadge": "9+ años de experiencia",
     "profileAlt": "Dervis Gómez — Full Stack Developer",
     "scroll": "Desplazar",
-    "scrollAria": "Ir a métricas"
+    "scrollAria": "Ir a métricas de confianza"
   },
   "metrics": {
     "yearsExperience": "Años de Experiencia",
     "projectsDelivered": "Proyectos Entregados",
     "mobileApps": "Apps Móviles Publicadas",
-    "countriesServed": "Países Atendidos"
+    "companiesValue": "Múltiples",
+    "companiesAcrossLatam": "Empresas en Latinoamérica"
+  },
+  "trustMetrics": {
+    "ariaLabel": "Métricas de confianza"
   },
   "projects": {
     "label": "Trabajo",
@@ -237,18 +240,11 @@
       }
     }
   },
-  "clients": {
-    "label": "Industrias",
-    "title": "Experiencia en sectores de <highlight>Latinoamérica</highlight>",
-    "description": "He desarrollado productos digitales para empresas en manufactura, logística, retail, tecnología, transporte y servicios — desde plataformas corporativas hasta apps móviles en producción.",
-    "industries": {
-      "manufacturing": "Manufactura",
-      "logistics": "Logística",
-      "retail": "Retail",
-      "transportation": "Transporte",
-      "technology": "Tecnología",
-      "services": "Servicios"
-    }
+  "organizations": {
+    "label": "Experiencia",
+    "title": "Organizaciones a las que he <highlight>contribuido</highlight>",
+    "description": "A lo largo de mi carrera he participado en el desarrollo de productos digitales, aplicaciones móviles y plataformas empresariales utilizadas por organizaciones de distintas industrias en Latinoamérica.",
+    "footer": "Proyectos y organizaciones adicionales disponibles bajo solicitud."
   },
   "experience": {
     "label": "Experiencia",
