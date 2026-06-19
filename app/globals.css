@@ -1,26 +1,253 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafafa;
+  --foreground: #0a0a0a;
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+
+  --brand: #2563eb;
+  --brand-foreground: #ffffff;
+  --brand-muted: color-mix(in srgb, var(--brand) 10%, var(--card));
+  --brand-subtle: color-mix(in srgb, var(--brand) 6%, var(--card));
+
+  --primary: var(--brand);
+  --primary-foreground: var(--brand-foreground);
+  --secondary: #f4f4f5;
+  --secondary-foreground: #3f3f46;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --accent: #f4f4f5;
+  --accent-foreground: #0a0a0a;
+  --destructive: #dc2626;
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: var(--brand);
+  --radius: 0.75rem;
+
+  --section-muted: #f4f4f5;
+  --surface-elevated: #ffffff;
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.04), 0 2px 8px rgb(0 0 0 / 0.03);
+  --shadow-card-hover: 0 4px 20px rgb(0 0 0 / 0.07);
+  --shadow-image: 0 20px 60px -20px rgb(0 0 0 / 0.18);
+  --shadow-button: 0 1px 2px rgb(0 0 0 / 0.06);
+  --header-offset: 5rem;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --card: #111111;
+  --card-foreground: #fafafa;
+  --popover: #111111;
+  --popover-foreground: #fafafa;
+
+  --brand: #2563eb;
+  --brand-foreground: #ffffff;
+  --brand-muted: color-mix(in srgb, var(--brand) 18%, var(--card));
+  --brand-subtle: color-mix(in srgb, var(--brand) 12%, var(--card));
+
+  --primary: var(--brand);
+  --primary-foreground: var(--brand-foreground);
+  --secondary: #141414;
+  --secondary-foreground: #d4d4d8;
+  --muted: #141414;
+  --muted-foreground: #a1a1aa;
+  --accent: #141414;
+  --accent-foreground: #fafafa;
+  --destructive: #ef4444;
+  --border: #262626;
+  --input: #262626;
+  --ring: var(--brand);
+
+  --section-muted: #0c0c0c;
+  --surface-elevated: #161616;
+  --shadow-card: 0 0 0 1px rgb(255 255 255 / 0.04), 0 4px 24px rgb(0 0 0 / 0.35);
+  --shadow-card-hover: 0 0 0 1px rgb(255 255 255 / 0.07), 0 8px 32px rgb(0 0 0 / 0.4);
+  --shadow-image: 0 0 0 1px rgb(255 255 255 / 0.08), 0 24px 64px -16px rgb(0 0 0 / 0.65);
+  --shadow-button: 0 1px 2px rgb(0 0 0 / 0.45), inset 0 1px 0 rgb(255 255 255 / 0.07);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-subtle: var(--brand-subtle);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-section-muted: var(--section-muted);
+  --color-surface-elevated: var(--surface-elevated);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply font-sans antialiased;
+    font-feature-settings: "cv11", "ss01";
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
+  .dark body {
+    background-image: radial-gradient(
+      ellipse 80% 45% at 50% -15%,
+      rgb(255 255 255 / 0.025),
+      transparent
+    );
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--brand) 18%, transparent);
+  }
+
+  :where(#projects, #experience, #stack, #contact) {
+    scroll-margin-top: var(--header-offset);
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .page-container {
+    @apply mx-auto w-full max-w-[1080px] px-6 sm:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+
+  .section-muted {
+    background-color: var(--section-muted);
+    border-top: 1px solid var(--border);
+  }
+
+  .surface-card {
+    @apply rounded-2xl bg-card ring-1 ring-border;
+    box-shadow: var(--shadow-card);
+  }
+
+  .surface-card-interactive {
+    @apply transition-[box-shadow,ring-color] duration-200;
+  }
+
+  .surface-card-interactive:hover {
+    box-shadow: var(--shadow-card-hover);
+    @apply ring-brand/15;
+  }
+
+  .image-frame {
+    @apply overflow-hidden bg-surface-elevated;
+    box-shadow: var(--shadow-image);
+  }
+
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-primary-foreground;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-body {
+    @apply text-base leading-relaxed text-muted-foreground;
+  }
+
+  .text-body-lg {
+    @apply text-[17px] leading-[1.65] text-muted-foreground;
+  }
+
+  .text-caption {
+    @apply text-sm leading-snug text-muted-foreground;
+  }
+
+  .heading-display {
+    @apply text-balance font-semibold tracking-[-0.03em] text-foreground;
+  }
+
+  .heading-section {
+    @apply text-balance max-w-3xl text-[1.875rem] font-semibold leading-[1.12] tracking-[-0.03em] text-foreground sm:text-4xl;
+  }
+
+  .heading-card {
+    @apply text-xl font-semibold tracking-[-0.02em] text-foreground md:text-2xl;
+  }
+
+  .text-brand {
+    color: var(--brand);
+  }
+
+  .link-brand {
+    @apply text-brand transition-colors rounded-sm;
+  }
+
+  .link-brand:hover {
+    color: color-mix(in srgb, var(--brand) 80%, var(--foreground));
+  }
+
+  .section-indicator {
+    @apply text-xs font-medium uppercase tracking-[0.14em] text-brand;
+  }
+
+  .field-label {
+    @apply text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground;
+  }
+
+  .tech-badge {
+    @apply inline-flex rounded-full border px-3.5 py-1.5 text-[13px] font-medium;
+    border-color: color-mix(in srgb, var(--brand) 24%, var(--border));
+    background-color: var(--brand-subtle);
+    color: var(--brand);
+  }
+
+  .metric-value {
+    @apply font-mono font-medium tracking-tight text-brand;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .surface-card-interactive {
+      transition: none;
+    }
+  }
 }

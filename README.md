@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dervis Gómez — Portfolio
 
-## Getting Started
+Portafolio personal de **Dervis Gómez**, Full Stack Developer con más de 9 años de experiencia construyendo productos web, móviles y plataformas empresariales para compañías en Latinoamérica.
 
-First, run the development server:
+Diseñado con enfoque minimalista y orientado a producto: case studies reales, métricas de trayectoria y experiencia profesional presentada con claridad.
+
+## Características
+
+- **Case studies premium** — Proyectos destacados con screenshot, impacto de negocio, rol, responsabilidades y stack tecnológico
+- **Internacionalización** — Español (por defecto) e inglés con [next-intl](https://next-intl.dev)
+- **Tema claro / oscuro / sistema** — Soporte completo con `next-themes`
+- **Design system** — Tokens CSS, acento `#2563EB` y componentes reutilizables
+- **Responsive & accesible** — Skip link, focus visible, `prefers-reduced-motion`, navegación por anclas
+- **Optimizado para producción** — SSG con App Router, TypeScript estricto y ESLint
+
+## Stack tecnológico
+
+| Área | Tecnologías |
+|------|-------------|
+| Framework | [Next.js 16](https://nextjs.org) (App Router) |
+| Lenguaje | TypeScript |
+| Estilos | Tailwind CSS v4 |
+| UI | shadcn/ui, Radix UI, Lucide Icons |
+| Animaciones | Framer Motion |
+| i18n | next-intl |
+| Fuentes | Inter, Geist Mono |
+
+## Inicio rápido
+
+### Requisitos
+
+- Node.js 20+
+- npm 10+
+
+### Instalación
+
+```bash
+git clone <url-del-repositorio>
+cd dervis-portfolio
+npm install
+```
+
+### Desarrollo
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) — español en `/`, inglés en `/en`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Producción
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+### Lint
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estructura del proyecto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+dervis-portfolio/
+├── app/
+│   ├── [locale]/          # Rutas localizadas (es, en)
+│   ├── globals.css        # Tokens, utilidades y design system
+│   └── layout.tsx         # Fuentes globales
+├── components/
+│   ├── layout/            # Header, footer, theme & language switchers
+│   ├── sections/          # Hero, proyectos, experiencia, contacto…
+│   ├── shared/            # SectionHeader, FadeIn, AnimatedCounter…
+│   └── ui/                # Button, Badge, Card (shadcn)
+├── hooks/                 # useActiveSection
+├── i18n/                  # Routing, navegación y request config
+├── lib/
+│   ├── data.ts            # Proyectos, métricas, navegación
+│   └── design-system.tsx  # Tokens y helpers i18n (richHighlight)
+├── messages/
+│   ├── es.json            # Traducciones español
+│   └── en.json            # Traducciones inglés
+├── public/                # Assets estáticos
+└── middleware.ts          # Locale detection (next-intl)
+```
 
-## Deploy on Vercel
+## Assets en `public/`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Coloca estos archivos antes de desplegar:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Archivo | Uso |
+|---------|-----|
+| `Profile.png` | Foto de perfil (hero) |
+| `CV.pdf` | Descarga de currículum |
+| `veyco.png` | Screenshot VE&CO |
+| `enaex.png` | Screenshot Espíritu Enaex |
+
+## Internacionalización
+
+- **Español:** `/` (locale por defecto)
+- **Inglés:** `/en`
+
+Las traducciones viven en `messages/`. Para resaltar palabras en títulos, usa la etiqueta `<highlight>` en los JSON y el helper `richHighlight` de `lib/design-system.tsx`.
+
+## Proyectos destacados
+
+Los case studies principales se configuran en `lib/data.ts` (`primaryProductIds`, `productMeta`) y su contenido en `messages/{locale}.json` bajo `projects.items`.
+
+Para añadir un proyecto:
+
+1. Agrega el `id` en `featuredProductIds` y `productMeta`
+2. Completa las traducciones en `es.json` y `en.json`
+3. Opcional: añade screenshot en `public/`
+
+## Despliegue
+
+Compatible con [Vercel](https://vercel.com) out of the box:
+
+```bash
+npm run build
+```
+
+No requiere variables de entorno para funcionamiento básico. Configura dominio y redirecciones según tu preferencia de locale.
+
+## Autor
+
+**Dervis Gómez** — Full Stack Developer
+
+- [LinkedIn](https://linkedin.com/in/dervisgomez)
+- [GitHub](https://github.com/dervisgomez)
+- [Email](mailto:dervis@appi.cl)
+
+## Licencia
+
+Proyecto privado. Todos los derechos reservados.

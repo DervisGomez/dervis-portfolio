@@ -1,0 +1,313 @@
+{
+  "metadata": {
+    "title": "Dervis Gómez — Full Stack Developer",
+    "description": "Ingeniero en Informática con más de 9 años de experiencia desarrollando aplicaciones web, móviles y PWAs utilizando Angular, React, Node.js, Firebase y tecnologías modernas."
+  },
+  "nav": {
+    "projects": "Proyectos",
+    "clients": "Industrias",
+    "experience": "Experiencia",
+    "stack": "Stack",
+    "contact": "Contacto",
+    "contactMe": "Contactarme",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "skipToContent": "Ir al contenido principal",
+    "mainNav": "Navegación principal"
+  },
+  "language": {
+    "es": "Español",
+    "en": "English",
+    "switch": "Cambiar idioma"
+  },
+  "theme": {
+    "light": "Modo claro",
+    "dark": "Modo oscuro",
+    "system": "Preferencia del sistema",
+    "switch": "Cambiar tema"
+  },
+  "hero": {
+    "name": "Dervis Gómez",
+    "subtitle": "Full Stack Developer",
+    "headline": "Construyo productos digitales en los que <highlight>empresas reales</highlight> confían.",
+    "description": "Full Stack Developer con más de 9 años entregando plataformas web, apps móviles y sistemas empresariales para empresas en Latinoamérica.",
+    "viewProjects": "Ver Proyectos",
+    "downloadCv": "Descargar CV",
+    "experienceBadge": "9+ años de experiencia",
+    "profileAlt": "Dervis Gómez — Full Stack Developer",
+    "scroll": "Desplazar",
+    "scrollAria": "Ir a métricas"
+  },
+  "metrics": {
+    "yearsExperience": "Años de Experiencia",
+    "projectsDelivered": "Proyectos Entregados",
+    "mobileApps": "Apps Móviles Publicadas",
+    "countriesServed": "Países Atendidos"
+  },
+  "projects": {
+    "label": "Trabajo",
+    "title": "Productos construidos para <highlight>empresas reales</highlight>",
+    "description": "Casos de estudio de plataformas entregadas en producción — marketplaces, PWAs empresariales, sistemas corporativos y apps móviles para empresas en Latinoamérica.",
+    "moreProjects": "Más proyectos",
+    "roleLabel": "Mi Rol",
+    "responsibilitiesLabel": "Responsabilidades Clave",
+    "impactLabel": "Impacto en el Negocio",
+    "technologiesLabel": "Tecnologías",
+    "platformsLabel": "Plataformas",
+    "statusLabel": "Estado",
+    "productionStatus": "Producción",
+    "viewLive": "Ver Proyecto en Vivo",
+    "viewWebsite": "Visitar Sitio Web",
+    "viewApplication": "Abrir Aplicación",
+    "viewCaseStudy": "Ver Caso de Estudio",
+    "viewProjectDetails": "Ver Detalles del Proyecto",
+    "contactCta": "Consultar Proyecto",
+    "statisticsLabel": "Estadísticas del Proyecto",
+    "platforms": {
+      "web": "Web",
+      "android": "Android",
+      "ios": "iOS"
+    },
+    "items": {
+      "veyco": {
+        "name": "VE&CO",
+        "category": "Plataforma Marketplace",
+        "description": "Plataforma marketplace digital con aplicación web y app móvil, diseñada para conectar compradores y vendedores a través de una experiencia segura y escalable.",
+        "role": "Lead Full Stack Developer",
+        "imageAlt": "Captura de pantalla de la plataforma VE&CO",
+        "impact": {
+          "metric": "Web & Mobile",
+          "description": "Marketplace disponible en web y app móvil, conectando compradores y vendedores en un ecosistema diseñado para escalar con el negocio."
+        },
+        "responsibilities": {
+          "0": "Desarrollé la aplicación web frontend con Angular.",
+          "1": "Desarrollé la aplicación móvil con Ionic, Angular y Capacitor.",
+          "2": "Desarrollé servicios backend con Node.js, Express, MongoDB y APIs REST.",
+          "3": "Implementé autenticación y gestión de usuarios.",
+          "4": "Construí módulos de catálogo y publicación de productos.",
+          "5": "Integré la plataforma web y la app móvil con el backend compartido.",
+          "6": "Participé en despliegue, mantenimiento y evolución de funcionalidades."
+        }
+      },
+      "area33": {
+        "name": "Area33",
+        "category": "Aplicación Móvil",
+        "description": "Aplicación móvil multiplataforma publicada en Android e iOS, ofreciendo una experiencia nativa fluida para los usuarios finales.",
+        "role": "Full Stack Developer",
+        "imageAlt": "Captura de pantalla de la aplicación Area33",
+        "impact": {
+          "metric": "Android & iOS",
+          "description": "App publicada en ambas tiendas, entregando experiencia nativa y accesible a usuarios finales en dispositivos móviles."
+        },
+        "responsibilities": {
+          "0": "Desarrollé la aplicación móvil con Ionic, Angular y Capacitor.",
+          "1": "Integré Firebase para autenticación, base de datos y servicios en la nube.",
+          "2": "Implementé funcionalidades nativas para iOS y Android.",
+          "3": "Optimicé rendimiento y experiencia de usuario en dispositivos móviles.",
+          "4": "Gestioné publicación y actualizaciones en Google Play y App Store."
+        }
+      },
+      "enaex": {
+        "name": "Espíritu Enaex",
+        "category": "Plataforma de Reconocimiento Corporativo",
+        "description": "Plataforma empresarial de reconocimiento utilizada por colaboradores en múltiples países para fortalecer la cultura organizacional, premiar conductas positivas e incrementar el engagement en toda la compañía.",
+        "role": "Full Stack Developer",
+        "imageAlt": "Captura de pantalla de la plataforma Espíritu Enaex",
+        "impact": {
+          "metric": "Multi-país · Web & Mobile",
+          "description": "Plataforma corporativa utilizada por colaboradores en distintos países para reconocer logros, promover valores de la empresa y fortalecer la cultura organizacional."
+        },
+        "responsibilities": {
+          "0": "Desarrollé la aplicación web con Angular.",
+          "1": "Desarrollé la aplicación móvil con Ionic y Capacitor.",
+          "2": "Implementé flujos de autenticación y autorización.",
+          "3": "Integré inicio de sesión con Microsoft Azure Active Directory.",
+          "4": "Desarrollé servicios backend con Firebase Functions.",
+          "5": "Integré APIs REST.",
+          "6": "Participé en arquitectura, mantenimiento y evolución de funcionalidades."
+        },
+        "highlights": {
+          "0": {
+            "title": "Plataforma multi-país",
+            "description": "Utilizada por colaboradores en distintos países."
+          },
+          "1": {
+            "title": "Experiencia cross-platform",
+            "description": "Disponible en Web, Android e iOS."
+          },
+          "2": {
+            "title": "Autenticación empresarial",
+            "description": "Integrada con Microsoft Azure Active Directory."
+          },
+          "3": {
+            "title": "Arquitectura en la nube",
+            "description": "Construida con Firebase, Functions y APIs REST."
+          }
+        }
+      },
+      "formidavel": {
+        "name": "Formidável",
+        "category": "Plataforma de Digitalización de Procesos de Negocio",
+        "description": "Formidável es una plataforma empresarial enfocada en digitalizar operaciones de campo, reemplazando procesos en papel con flujos digitales, formularios, inspecciones, auditorías, reportes y automatización operacional. La plataforma ayuda a las organizaciones a recopilar información en tiempo real, gestionar equipos de campo y centralizar datos operacionales a través de una experiencia web y móvil.",
+        "role": "Lead Full Stack Developer",
+        "imageAlt": "Captura de pantalla de la plataforma Formidável",
+        "impact": {
+          "metric": "SaaS Empresarial · Transformación Digital",
+          "description": "Formidável permite a las organizaciones reemplazar formularios en papel y procesos manuales con flujos digitales, mejorando la visibilidad operacional, la productividad de campo y la calidad de los datos."
+        },
+        "platforms": {
+          "webApp": "Aplicación Web",
+          "pwa": "Progressive Web App (PWA)",
+          "mobile": "Experiencia Móvil",
+          "desktop": "Navegadores de Escritorio"
+        },
+        "responsibilities": {
+          "0": "Desarrollé y mantuve la aplicación Angular.",
+          "1": "Construí experiencias móviles con Ionic y Capacitor.",
+          "2": "Diseñé e implementé módulos centrales de la plataforma.",
+          "3": "Desarrollé formularios dinámicos y flujos de recolección de datos.",
+          "4": "Implementé capacidades offline-first.",
+          "5": "Integré servicios Firebase e infraestructura en la nube.",
+          "6": "Desarrollé módulos de reportes y analíticas.",
+          "7": "Construí funcionalidades de códigos QR y gestión documental.",
+          "8": "Implementé flujos de procesamiento de imágenes y gestión de archivos.",
+          "9": "Participé en arquitectura, optimización y evolución del producto."
+        },
+        "highlights": {
+          "0": {
+            "title": "Formularios Dinámicos",
+            "description": "Crea y gestiona formularios personalizables para inspecciones, auditorías, visitas de campo y procesos operacionales."
+          },
+          "1": {
+            "title": "Operaciones de Campo",
+            "description": "Diseñada para equipos que trabajan fuera de la oficina, habilitando recolección de datos en tiempo real y seguimiento operacional."
+          },
+          "2": {
+            "title": "Capacidades Offline",
+            "description": "Soporta trabajo en entornos con conectividad limitada mediante PWA y estrategias de almacenamiento local."
+          },
+          "3": {
+            "title": "Automatización Documental",
+            "description": "Genera reportes, PDFs, exportaciones y documentación operacional de forma automática."
+          }
+        },
+        "statistics": {
+          "0": "Plataforma SaaS",
+          "1": "Entorno de Producción",
+          "2": "Arquitectura PWA",
+          "3": "Datos en Tiempo Real",
+          "4": "Gestión de Operaciones de Campo"
+        }
+      },
+      "devocion": {
+        "name": "Devoción Diaria",
+        "category": "Plataforma Móvil",
+        "description": "Plataforma móvil de devocionales con panel de administración completo para gestión de contenido, engagement y analíticas.",
+        "role": "Full Stack Developer",
+        "imageAlt": "Captura de pantalla de la plataforma Devoción Diaria",
+        "impact": {
+          "metric": "Contenido diario",
+          "description": "Entrega devocionales diarios a usuarios móviles con un panel admin para gestionar contenido, engagement y métricas."
+        },
+        "responsibilities": {
+          "0": "Desarrollé la app móvil con Ionic y Angular.",
+          "1": "Construí el panel de administración y APIs con Node.js.",
+          "2": "Integré Firebase para contenido, usuarios y notificaciones.",
+          "3": "Implementé módulos de analíticas y gestión de contenido.",
+          "4": "Mantuve y evolucioné la plataforma según necesidades del negocio."
+        }
+      },
+      "ubicatupuesto": {
+        "name": "UbicaTuPuesto",
+        "category": "Plataforma Laboral",
+        "description": "Plataforma digital para gestión de empleos y puestos de trabajo, optimizando horarios, asignaciones y coordinación de equipos.",
+        "role": "Full Stack Developer",
+        "imageAlt": "Captura de pantalla de la plataforma UbicaTuPuesto",
+        "impact": {
+          "metric": "Gestión laboral",
+          "description": "Centralizó la coordinación de equipos, horarios y asignaciones en una plataforma única para la operación diaria."
+        },
+        "responsibilities": {
+          "0": "Desarrollé el frontend con Angular y TypeScript.",
+          "1": "Construí servicios backend con Node.js y PostgreSQL.",
+          "2": "Implementé módulos de gestión de empleos y puestos.",
+          "3": "Diseñé flujos de asignación, horarios y coordinación de equipos.",
+          "4": "Participé en arquitectura, despliegue y mantenimiento de la plataforma."
+        }
+      }
+    }
+  },
+  "clients": {
+    "label": "Industrias",
+    "title": "Experiencia en sectores de <highlight>Latinoamérica</highlight>",
+    "description": "He desarrollado productos digitales para empresas en manufactura, logística, retail, tecnología, transporte y servicios — desde plataformas corporativas hasta apps móviles en producción.",
+    "industries": {
+      "manufacturing": "Manufactura",
+      "logistics": "Logística",
+      "retail": "Retail",
+      "transportation": "Transporte",
+      "technology": "Tecnología",
+      "services": "Servicios"
+    }
+  },
+  "experience": {
+    "label": "Experiencia",
+    "title": "Trayectoria <highlight>profesional</highlight>",
+    "description": "Casi una década construyendo productos digitales para empresas de Latinoamérica — desde apps móviles hasta plataformas empresariales.",
+    "present": "Actualidad",
+    "items": {
+      "appi": {
+        "period": "2019 — {present}",
+        "role": "Full Stack Developer",
+        "company": "APPI.CL",
+        "description": "Desarrollé aplicaciones web, apps móviles y PWAs para múltiples clientes en Latinoamérica utilizando Angular, Ionic, Node.js, Firebase y tecnologías modernas."
+      },
+      "wonderchatt": {
+        "period": "2018 — 2019",
+        "role": "Backend & Mobile Developer",
+        "company": "WonderChatt",
+        "description": "Construí servicios backend e integraciones móviles para una plataforma de comunicación en tiempo real, enfocándome en diseño de APIs y entrega multiplataforma."
+      },
+      "uniserv": {
+        "period": "2014 — 2016",
+        "role": "Mobile & Web Developer",
+        "company": "UNISERV",
+        "description": "Desarrollé soluciones móviles y web para clientes del sector servicios, contribuyendo tanto en interfaces frontend como en lógica backend."
+      }
+    }
+  },
+  "stack": {
+    "label": "Tecnología",
+    "title": "Herramientas con las que <highlight>trabajo</highlight>",
+    "description": "Un stack probado en producción para construir aplicaciones web, apps móviles y soluciones empresariales.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Bases de Datos",
+      "other": "Otros"
+    }
+  },
+  "contact": {
+    "label": "Contacto",
+    "title": "<highlight>Conectemos</highlight>",
+    "description": "¿Interesado en trabajar juntos o discutir un proyecto? Escríbeme.",
+    "linkedinDescription": "Conectar profesionalmente",
+    "githubDescription": "Ver mi código y proyectos",
+    "whatsappDescription": "Enviar un mensaje directo",
+    "sendEmail": "Enviarme un email",
+    "opensInNewTab": "(se abre en una nueva pestaña)",
+    "channels": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "email": "Email",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "footer": {
+    "subtitle": "Full Stack Developer",
+    "bio": "Full Stack Developer construyendo productos web, móviles y empresariales para empresas de Latinoamérica.",
+    "navigate": "Navegar",
+    "connect": "Conectar",
+    "rights": "Todos los derechos reservados."
+  }
+}

@@ -1,0 +1,313 @@
+{
+  "metadata": {
+    "title": "Dervis Gómez — Full Stack Developer",
+    "description": "Software Engineer with 9+ years of experience developing web applications, mobile apps and PWAs using Angular, React, Node.js, Firebase, TypeScript and modern technologies."
+  },
+  "nav": {
+    "projects": "Projects",
+    "clients": "Industries",
+    "experience": "Experience",
+    "stack": "Stack",
+    "contact": "Contact",
+    "contactMe": "Contact Me",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skipToContent": "Skip to main content",
+    "mainNav": "Main navigation"
+  },
+  "language": {
+    "es": "Español",
+    "en": "English",
+    "switch": "Switch language"
+  },
+  "theme": {
+    "light": "Light mode",
+    "dark": "Dark mode",
+    "system": "System preference",
+    "switch": "Switch theme"
+  },
+  "hero": {
+    "name": "Dervis Gómez",
+    "subtitle": "Full Stack Developer",
+    "headline": "Building digital products that <highlight>real companies</highlight> run on.",
+    "description": "Full Stack Developer with 9+ years shipping web platforms, mobile apps, and enterprise systems for companies across Latin America.",
+    "viewProjects": "View Projects",
+    "downloadCv": "Download CV",
+    "experienceBadge": "9+ years of experience",
+    "profileAlt": "Dervis Gómez — Full Stack Developer",
+    "scroll": "Scroll",
+    "scrollAria": "Scroll to metrics"
+  },
+  "metrics": {
+    "yearsExperience": "Years of Experience",
+    "projectsDelivered": "Projects Delivered",
+    "mobileApps": "Published Mobile Apps",
+    "countriesServed": "Countries Served"
+  },
+  "projects": {
+    "label": "Work",
+    "title": "Products built for <highlight>real businesses</highlight>",
+    "description": "Case studies of platforms shipped to production — marketplaces, enterprise PWAs, corporate systems, and mobile apps built for companies across Latin America.",
+    "moreProjects": "More projects",
+    "roleLabel": "My Role",
+    "responsibilitiesLabel": "Key Responsibilities",
+    "impactLabel": "Business Impact",
+    "technologiesLabel": "Technologies",
+    "platformsLabel": "Platforms",
+    "statusLabel": "Status",
+    "productionStatus": "Production",
+    "viewLive": "View Live Project",
+    "viewWebsite": "Visit Website",
+    "viewApplication": "Open Application",
+    "viewCaseStudy": "View Case Study",
+    "viewProjectDetails": "View Project Details",
+    "contactCta": "Discuss Project",
+    "statisticsLabel": "Project Statistics",
+    "platforms": {
+      "web": "Web",
+      "android": "Android",
+      "ios": "iOS"
+    },
+    "items": {
+      "veyco": {
+        "name": "VE&CO",
+        "category": "Marketplace Platform",
+        "description": "Digital marketplace platform with web application and mobile app, designed to connect buyers and sellers through a secure and scalable experience.",
+        "role": "Lead Full Stack Developer",
+        "imageAlt": "VE&CO platform screenshot",
+        "impact": {
+          "metric": "Web & Mobile",
+          "description": "Marketplace available on web and mobile app, connecting buyers and sellers in an ecosystem built to scale with the business."
+        },
+        "responsibilities": {
+          "0": "Developed the web frontend application with Angular.",
+          "1": "Developed the mobile app with Ionic, Angular and Capacitor.",
+          "2": "Built backend services with Node.js, Express, MongoDB and REST APIs.",
+          "3": "Implemented authentication and user management.",
+          "4": "Built product catalog and publication modules.",
+          "5": "Integrated the web platform and mobile app with the shared backend.",
+          "6": "Participated in deployment, maintenance and feature evolution."
+        }
+      },
+      "area33": {
+        "name": "Area33",
+        "category": "Mobile Application",
+        "description": "Cross-platform mobile application published on Android and iOS, delivering a seamless native experience for end users.",
+        "role": "Full Stack Developer",
+        "imageAlt": "Area33 mobile application screenshot",
+        "impact": {
+          "metric": "Android & iOS",
+          "description": "Published app on both stores, delivering a native and accessible experience to end users on mobile devices."
+        },
+        "responsibilities": {
+          "0": "Developed the mobile app with Ionic, Angular and Capacitor.",
+          "1": "Integrated Firebase for authentication, database and cloud services.",
+          "2": "Implemented native features for iOS and Android.",
+          "3": "Optimized performance and user experience on mobile devices.",
+          "4": "Managed publishing and updates on Google Play and App Store."
+        }
+      },
+      "enaex": {
+        "name": "Espíritu Enaex",
+        "category": "Corporate Recognition Platform",
+        "description": "Enterprise recognition platform used by employees across multiple countries to strengthen company culture, reward positive behaviors and increase engagement across the organization.",
+        "role": "Full Stack Developer",
+        "imageAlt": "Espíritu Enaex platform screenshot",
+        "impact": {
+          "metric": "Multi-country · Web & Mobile",
+          "description": "A corporate platform used by employees across multiple countries to recognize achievements, promote company values and improve organizational culture."
+        },
+        "responsibilities": {
+          "0": "Developed the web application using Angular.",
+          "1": "Developed the mobile application using Ionic and Capacitor.",
+          "2": "Implemented authentication and authorization flows.",
+          "3": "Integrated Microsoft Azure Active Directory login.",
+          "4": "Developed backend services using Firebase Functions.",
+          "5": "Integrated REST APIs.",
+          "6": "Participated in architecture, maintenance and feature evolution."
+        },
+        "highlights": {
+          "0": {
+            "title": "Multi-country Platform",
+            "description": "Used by employees in different countries."
+          },
+          "1": {
+            "title": "Cross-platform Experience",
+            "description": "Available on Web, Android and iOS."
+          },
+          "2": {
+            "title": "Enterprise Authentication",
+            "description": "Integrated with Microsoft Azure Active Directory."
+          },
+          "3": {
+            "title": "Cloud Architecture",
+            "description": "Built using Firebase, Functions and REST APIs."
+          }
+        }
+      },
+      "formidavel": {
+        "name": "Formidável",
+        "category": "Business Process Digitalization Platform",
+        "description": "Formidável is a business platform focused on digitalizing field operations, replacing paper-based processes with digital workflows, forms, inspections, audits, reports and operational automation. The platform helps organizations collect information in real time, manage field teams and centralize operational data through a web and mobile experience.",
+        "role": "Lead Full Stack Developer",
+        "imageAlt": "Formidável platform screenshot",
+        "impact": {
+          "metric": "Enterprise SaaS · Digital Transformation",
+          "description": "Formidável enables organizations to replace paper forms and manual processes with digital workflows, improving operational visibility, field productivity and data quality."
+        },
+        "platforms": {
+          "webApp": "Web Application",
+          "pwa": "Progressive Web App (PWA)",
+          "mobile": "Mobile Experience",
+          "desktop": "Desktop Browsers"
+        },
+        "responsibilities": {
+          "0": "Developed and maintained the Angular application.",
+          "1": "Built mobile experiences using Ionic and Capacitor.",
+          "2": "Designed and implemented core platform modules.",
+          "3": "Developed dynamic forms and data collection workflows.",
+          "4": "Implemented offline-first capabilities.",
+          "5": "Integrated Firebase services and cloud infrastructure.",
+          "6": "Developed reporting and analytics modules.",
+          "7": "Built QR code and document management features.",
+          "8": "Implemented image processing and file management workflows.",
+          "9": "Participated in architecture, optimization and product evolution."
+        },
+        "highlights": {
+          "0": {
+            "title": "Dynamic Forms",
+            "description": "Create and manage customizable forms for inspections, audits, field visits and operational processes."
+          },
+          "1": {
+            "title": "Field Operations",
+            "description": "Designed for teams working outside the office, enabling real-time data collection and operational tracking."
+          },
+          "2": {
+            "title": "Offline Capabilities",
+            "description": "Supports work in environments with limited connectivity through PWA and local storage strategies."
+          },
+          "3": {
+            "title": "Document Automation",
+            "description": "Generate reports, PDFs, exports and operational documentation automatically."
+          }
+        },
+        "statistics": {
+          "0": "SaaS Platform",
+          "1": "Production Environment",
+          "2": "PWA Architecture",
+          "3": "Real-Time Data",
+          "4": "Field Operations Management"
+        }
+      },
+      "devocion": {
+        "name": "Devoción Diaria",
+        "category": "Mobile Platform",
+        "description": "Mobile devotional platform with a full admin dashboard for content management, user engagement and analytics.",
+        "role": "Full Stack Developer",
+        "imageAlt": "Devoción Diaria platform screenshot",
+        "impact": {
+          "metric": "Daily content delivery",
+          "description": "Delivers daily devotionals to mobile users with an admin panel to manage content, engagement and metrics."
+        },
+        "responsibilities": {
+          "0": "Developed the mobile app with Ionic and Angular.",
+          "1": "Built the admin panel and APIs with Node.js.",
+          "2": "Integrated Firebase for content, users and notifications.",
+          "3": "Implemented analytics and content management modules.",
+          "4": "Maintained and evolved the platform based on business needs."
+        }
+      },
+      "ubicatupuesto": {
+        "name": "UbicaTuPuesto",
+        "category": "Workforce Platform",
+        "description": "Digital platform for job and workplace management, streamlining scheduling, assignments and team coordination.",
+        "role": "Full Stack Developer",
+        "imageAlt": "UbicaTuPuesto platform screenshot",
+        "impact": {
+          "metric": "Workforce management",
+          "description": "Centralized team coordination, scheduling and assignments in a single platform for daily operations."
+        },
+        "responsibilities": {
+          "0": "Developed the frontend with Angular and TypeScript.",
+          "1": "Built backend services with Node.js and PostgreSQL.",
+          "2": "Implemented job and position management modules.",
+          "3": "Designed assignment, scheduling and team coordination flows.",
+          "4": "Participated in architecture, deployment and platform maintenance."
+        }
+      }
+    }
+  },
+  "clients": {
+    "label": "Industries",
+    "title": "Experience across <highlight>Latin America</highlight>",
+    "description": "I've built digital products for companies in manufacturing, logistics, retail, technology, transportation and services — from corporate platforms to mobile apps in production.",
+    "industries": {
+      "manufacturing": "Manufacturing",
+      "logistics": "Logistics",
+      "retail": "Retail",
+      "transportation": "Transportation",
+      "technology": "Technology",
+      "services": "Services"
+    }
+  },
+  "experience": {
+    "label": "Experience",
+    "title": "Professional <highlight>journey</highlight>",
+    "description": "Nearly a decade building digital products for companies across Latin America — from mobile apps to enterprise platforms.",
+    "present": "Present",
+    "items": {
+      "appi": {
+        "period": "2019 — {present}",
+        "role": "Full Stack Developer",
+        "company": "APPI.CL",
+        "description": "Developed web applications, mobile apps and PWAs for multiple clients across Latin America using Angular, Ionic, Node.js, Firebase and modern technologies."
+      },
+      "wonderchatt": {
+        "period": "2018 — 2019",
+        "role": "Backend & Mobile Developer",
+        "company": "WonderChatt",
+        "description": "Built backend services and mobile integrations for a real-time communication platform, focusing on API design and cross-platform delivery."
+      },
+      "uniserv": {
+        "period": "2014 — 2016",
+        "role": "Mobile & Web Developer",
+        "company": "UNISERV",
+        "description": "Developed mobile and web solutions for service industry clients, contributing to both frontend interfaces and backend logic."
+      }
+    }
+  },
+  "stack": {
+    "label": "Technology",
+    "title": "Tools I <highlight>work with</highlight>",
+    "description": "A production-proven stack for building web applications, mobile apps and enterprise solutions.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Databases",
+      "other": "Other"
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Let's <highlight>connect</highlight>",
+    "description": "Interested in working together or discussing a project? Reach out.",
+    "linkedinDescription": "Connect professionally",
+    "githubDescription": "View my code and projects",
+    "whatsappDescription": "Send a direct message",
+    "sendEmail": "Send me an email",
+    "opensInNewTab": "(opens in a new tab)",
+    "channels": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "email": "Email",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "footer": {
+    "subtitle": "Full Stack Developer",
+    "bio": "Full Stack Developer building web, mobile and enterprise products for businesses across Latin America.",
+    "navigate": "Navigate",
+    "connect": "Connect",
+    "rights": "All rights reserved."
+  }
+}
