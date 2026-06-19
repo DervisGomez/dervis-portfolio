@@ -21,18 +21,25 @@ function ProjectScreenshot({
   category,
   name,
   priority,
+  prominent,
 }: {
   image?: string;
   alt: string;
   category: string;
   name: string;
   priority?: boolean;
+  prominent?: boolean;
 }) {
   const [hasError, setHasError] = useState(false);
   const showImage = Boolean(image) && !hasError;
 
   return (
-    <div className="relative aspect-[16/10] w-full overflow-hidden bg-surface-elevated md:aspect-[2/1]">
+    <div
+      className={cn(
+        "relative w-full overflow-hidden bg-surface-elevated",
+        prominent ? "aspect-[16/9] md:aspect-[2.05/1]" : "aspect-[16/10] md:aspect-[2/1]"
+      )}
+    >
       <div className="absolute inset-x-0 top-0 z-10 flex h-10 items-center gap-2 border-b border-border bg-card/90 px-5 backdrop-blur-sm dark:border-white/[0.06]">
         <span className="h-2 w-2 rounded-full bg-border dark:bg-white/10" aria-hidden />
         <span className="h-2 w-2 rounded-full bg-border dark:bg-white/10" aria-hidden />
@@ -65,26 +72,47 @@ function ProjectScreenshot({
 export function ProjectCaseStudy({ id }: ProjectCaseStudyProps) {
   const t = useTranslations("projects");
   const meta = productMeta[id];
+  const isDevocion = meta.theme === "devocion";
   const caseStudyId = `${id}-case-study`;
   const highlightsId = `${id}-highlights`;
   const sidebarId = `${id}-sidebar`;
 
+  const platformSummary = isDevocion
+    ? t(`items.${id}.platformSummary`)
+    : null;
+
   return (
-    <div className="space-y-4">
-      <article id={caseStudyId} className="surface-card overflow-hidden">
+    <div
+      className={cn("space-y-4", isDevocion && "devocion-case-study")}
+    >
+      <article
+        id={caseStudyId}
+        className={cn(
+          "surface-card overflow-hidden",
+          meta.prominent &&
+            "ring-1 ring-border shadow-[var(--shadow-card-hover)] dark:ring-white/[0.08]",
+          isDevocion && "ring-[var(--project-accent-border)]"
+        )}
+      >
         <ProjectScreenshot
           image={meta.image}
           alt={t(`items.${id}.imageAlt`)}
           category={t(`items.${id}.category`)}
           name={t(`items.${id}.name`)}
-          priority={id === "veyco" || id === "enaex" || id === "formidavel"}
+          priority={id === "veyco" || id === "enaex" || id === "formidavel" || id === "devocion"}
+          prominent={meta.prominent}
         />
 
         <div className="scroll-mt-28 p-6 md:p-10 lg:p-12">
           <div className="grid gap-10 lg:grid-cols-[1.35fr_1fr] lg:gap-14 xl:gap-16">
             <div>
               <div className="flex flex-wrap items-center gap-3">
-                <h3 className="heading-card text-[1.625rem] md:text-3xl lg:text-[2rem]">
+                <h3
+                  className={cn(
+                    "heading-card md:text-3xl lg:text-[2rem]",
+                    meta.prominent && "text-[1.75rem] md:text-[2.125rem] lg:text-[2.25rem]"
+                  )}
+                >
                   {t(`items.${id}.name`)}
                 </h3>
                 {meta.status === "production" ? (
@@ -95,11 +123,34 @@ export function ProjectCaseStudy({ id }: ProjectCaseStudyProps) {
                     {t("productionStatus")}
                   </Badge>
                 ) : null}
+                {meta.status === "activeDevelopment" ? (
+                  <Badge
+                    variant="outline"
+                    className={cn(
+                      "rounded-full px-3 py-1 text-xs font-medium",
+                      isDevocion
+                        ? "border-[var(--project-accent-border)] bg-[var(--project-accent-subtle)] text-[var(--project-accent)]"
+                        : "border-border text-foreground"
+                    )}
+                  >
+                    {t("activeDevelopmentStatus")}
+                  </Badge>
+                ) : null}
               </div>
+
+              {platformSummary ? (
+                <p className="text-caption mt-3 font-medium">{platformSummary}</p>
+              ) : null}
 
               <p className="text-body-lg mt-5 max-w-2xl">
                 {t(`items.${id}.description`)}
               </p>
+
+              {isDevocion ? (
+                <p className="text-body mt-4 max-w-2xl">
+                  {t(`items.${id}.longDescription`)}
+                </p>
+              ) : null}
 
               {meta.platformKeys?.length || meta.platforms?.length ? (
                 <div className="mt-8">
@@ -144,9 +195,21 @@ export function ProjectCaseStudy({ id }: ProjectCaseStudyProps) {
                 </div>
               ) : null}
 
-              <div className="mt-8 rounded-xl border border-border bg-muted/40 p-5 dark:bg-muted/20 md:p-6">
+              <div
+                className={cn(
+                  "mt-8 rounded-xl border p-5 md:p-6",
+                  isDevocion
+                    ? "project-impact-card"
+                    : "border-border bg-muted/40 dark:bg-muted/20"
+                )}
+              >
                 <p className="field-label mb-2">{t("impactLabel")}</p>
-                <p className="text-lg font-semibold tracking-tight text-foreground md:text-xl">
+                <p
+                  className={cn(
+                    "text-lg font-semibold tracking-tight md:text-xl",
+                    isDevocion ? "project-accent-text" : "text-foreground"
+                  )}
+                >
                   {t(`items.${id}.impact.metric`)}
                 </p>
                 <p className="text-body mt-2">
@@ -157,16 +220,50 @@ export function ProjectCaseStudy({ id }: ProjectCaseStudyProps) {
               <div className="mt-8">
                 <p className="field-label mb-3">{t("technologiesLabel")}</p>
                 <div className="flex flex-wrap gap-2">
-                  {meta.stack.map((tech) => (
-                    <Badge key={tech} variant="tech">
-                      {tech}
-                    </Badge>
-                  ))}
+                  {meta.stack.map((tech) =>
+                    isDevocion ? (
+                      <div
+                        key={tech}
+                        className="project-tech-badge inline-flex rounded-full border px-3.5 py-1.5 text-[13px] font-medium"
+                      >
+                        {tech}
+                      </div>
+                    ) : (
+                      <Badge key={tech} variant="tech">
+                        {tech}
+                      </Badge>
+                    )
+                  )}
                 </div>
               </div>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                {meta.cta === "enterprise" ? (
+                {meta.cta === "product" ? (
+                  <>
+                    {meta.url ? (
+                      <Button
+                        asChild
+                        className={cn(
+                          "w-full rounded-full sm:w-auto",
+                          isDevocion &&
+                            "bg-[var(--project-accent)] text-white hover:bg-[#047857]"
+                        )}
+                      >
+                        <a href={meta.url}>
+                          {t("viewProject")}
+                          <ArrowUpRight />
+                        </a>
+                      </Button>
+                    ) : null}
+                    <Button
+                      disabled
+                      variant="outline"
+                      className="w-full rounded-full sm:w-auto"
+                    >
+                      {t("caseStudyComingSoon")}
+                    </Button>
+                  </>
+                ) : meta.cta === "enterprise" ? (
                   <>
                     {meta.url ? (
                       <Button asChild className="w-full rounded-full sm:w-auto">
@@ -248,7 +345,12 @@ export function ProjectCaseStudy({ id }: ProjectCaseStudyProps) {
                     >
                       <span
                         aria-hidden
-                        className="mt-2 h-1 w-1 shrink-0 rounded-full bg-muted-foreground/60"
+                        className={cn(
+                          "mt-2 h-1 w-1 shrink-0 rounded-full",
+                          isDevocion
+                            ? "project-bullet"
+                            : "bg-muted-foreground/60"
+                        )}
                       />
                       <span>{t(`items.${id}.responsibilities.${key}`)}</span>
                     </li>
@@ -262,16 +364,29 @@ export function ProjectCaseStudy({ id }: ProjectCaseStudyProps) {
 
       {meta.highlightKeys?.length ? (
         <div id={highlightsId} className="scroll-mt-28 space-y-4">
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {isDevocion ? (
+            <p className="field-label">{t("technicalHighlightsLabel")}</p>
+          ) : null}
+          <div
+            className={cn(
+              "grid gap-3 sm:grid-cols-2",
+              meta.highlightKeys.length > 4 ? "lg:grid-cols-4" : "lg:grid-cols-4"
+            )}
+          >
             {meta.highlightKeys.map((key) => (
               <div
                 key={key}
                 className={cn(
                   "surface-card p-5 md:p-6",
-                  "border-border dark:border-white/[0.06]"
+                  isDevocion && "ring-[var(--project-accent-border)]"
                 )}
               >
-                <h4 className="text-[15px] font-semibold tracking-tight text-foreground">
+                <h4
+                  className={cn(
+                    "text-[15px] font-semibold tracking-tight",
+                    isDevocion ? "project-accent-text" : "text-foreground"
+                  )}
+                >
                   {t(`items.${id}.highlights.${key}.title`)}
                 </h4>
                 <p className="text-body mt-2 text-sm leading-relaxed">

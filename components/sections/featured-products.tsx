@@ -49,7 +49,7 @@ export function FeaturedProducts() {
         </FadeIn>
 
         {/* Primary case studies — full detail */}
-        <StaggerContainer className="flex flex-col gap-12 md:gap-14">
+        <StaggerContainer className="flex flex-col gap-12 md:gap-14 [&>:first-child]:mb-2">
           {primaryProductIds.map((id) => (
             <StaggerItem key={id}>
               <ProjectCaseStudy id={id} />

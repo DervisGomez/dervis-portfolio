@@ -59,7 +59,11 @@
     "platformsLabel": "Platforms",
     "statusLabel": "Status",
     "productionStatus": "Production",
+    "activeDevelopmentStatus": "Active Development",
     "viewLive": "View Live Project",
+    "viewProject": "View Project",
+    "caseStudyComingSoon": "Case Study (coming soon)",
+    "technicalHighlightsLabel": "Technical Highlights",
     "viewWebsite": "Visit Website",
     "viewApplication": "Open Application",
     "viewCaseStudy": "View Case Study",
@@ -204,20 +208,59 @@
       },
       "devocion": {
         "name": "Devoción Diaria",
-        "category": "Mobile Platform",
-        "description": "Mobile devotional platform with a full admin dashboard for content management, user engagement and analytics.",
-        "role": "Full Stack Developer",
+        "category": "Faith-Based Productivity Platform",
+        "description": "Devoción Diaria is a platform designed to help believers build consistent spiritual habits through devotional journaling, prayer tracking and personal growth insights.",
+        "longDescription": "Devoción Diaria combines devotional journaling, prayer requests, spiritual habit tracking and church administration tools into a single platform. The project includes a mobile experience, a progressive web application and an administrative dashboard for churches and community leaders.",
+        "platformSummary": "Web App · PWA · Android (in progress)",
+        "role": "Founder & Full Stack Developer",
         "imageAlt": "Devoción Diaria platform screenshot",
         "impact": {
-          "metric": "Daily content delivery",
-          "description": "Delivers daily devotionals to mobile users with an admin panel to manage content, engagement and metrics."
+          "metric": "Product Ownership",
+          "description": "Designed and developed as an independent software product focused on helping users cultivate daily devotional and prayer habits through a modern digital experience."
         },
         "responsibilities": {
-          "0": "Developed the mobile app with Ionic and Angular.",
-          "1": "Built the admin panel and APIs with Node.js.",
-          "2": "Integrated Firebase for content, users and notifications.",
-          "3": "Implemented analytics and content management modules.",
-          "4": "Maintained and evolved the platform based on business needs."
+          "0": "Product architecture.",
+          "1": "UX and feature design.",
+          "2": "Frontend development.",
+          "3": "Backend development.",
+          "4": "Database design.",
+          "5": "Firebase infrastructure.",
+          "6": "Dashboard development.",
+          "7": "Deployment and maintenance."
+        },
+        "highlights": {
+          "0": {
+            "title": "Devotional journaling",
+            "description": "Daily spiritual reflection and journaling system."
+          },
+          "1": {
+            "title": "Prayer requests",
+            "description": "Management and tracking of prayer requests."
+          },
+          "2": {
+            "title": "Growth statistics",
+            "description": "Insights into personal spiritual habits and progress."
+          },
+          "3": {
+            "title": "Streak tracking",
+            "description": "Motivation through daily consistency and habits."
+          },
+          "4": {
+            "title": "Progressive Web App",
+            "description": "Installable web experience with offline capabilities."
+          },
+          "5": {
+            "title": "Church dashboard",
+            "description": "Administrative panel for leaders and communities."
+          },
+          "6": {
+            "title": "Authentication & profiles",
+            "description": "User management and personalized profiles."
+          },
+          "7": {
+            "title": "Real-time sync",
+            "description": "Data synchronized across devices with Firestore."
+          }
         }
       },
       "ubicatupuesto": {

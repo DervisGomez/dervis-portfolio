@@ -245,6 +245,31 @@
     @apply font-mono font-medium tracking-tight text-brand;
   }
 
+  .devocion-case-study {
+    --project-accent: #059669;
+    --project-accent-subtle: color-mix(in srgb, #059669 10%, var(--card));
+    --project-accent-border: color-mix(in srgb, #059669 22%, var(--border));
+  }
+
+  .devocion-case-study .project-accent-text {
+    color: var(--project-accent);
+  }
+
+  .devocion-case-study .project-impact-card {
+    border-color: var(--project-accent-border);
+    background-color: var(--project-accent-subtle);
+  }
+
+  .devocion-case-study .project-tech-badge {
+    border-color: color-mix(in srgb, #059669 24%, var(--border));
+    background-color: var(--project-accent-subtle);
+    color: var(--project-accent);
+  }
+
+  .devocion-case-study .project-bullet {
+    background-color: color-mix(in srgb, #059669 70%, transparent);
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .surface-card-interactive {
       transition: none;

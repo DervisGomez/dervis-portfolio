@@ -59,7 +59,11 @@
     "platformsLabel": "Plataformas",
     "statusLabel": "Estado",
     "productionStatus": "Producción",
+    "activeDevelopmentStatus": "Desarrollo Activo",
     "viewLive": "Ver Proyecto en Vivo",
+    "viewProject": "Ver Proyecto",
+    "caseStudyComingSoon": "Caso de Estudio (próximamente)",
+    "technicalHighlightsLabel": "Aspectos Técnicos Destacados",
     "viewWebsite": "Visitar Sitio Web",
     "viewApplication": "Abrir Aplicación",
     "viewCaseStudy": "Ver Caso de Estudio",
@@ -204,20 +208,59 @@
       },
       "devocion": {
         "name": "Devoción Diaria",
-        "category": "Plataforma Móvil",
-        "description": "Plataforma móvil de devocionales con panel de administración completo para gestión de contenido, engagement y analíticas.",
-        "role": "Full Stack Developer",
+        "category": "Plataforma de Productividad Espiritual",
+        "description": "Devoción Diaria es una plataforma diseñada para ayudar a creyentes a construir hábitos espirituales consistentes mediante journaling devocional, seguimiento de oración e insights de crecimiento personal.",
+        "longDescription": "Devoción Diaria combina journaling devocional, peticiones de oración, seguimiento de hábitos espirituales y herramientas de administración para iglesias en una sola plataforma. El proyecto incluye experiencia móvil, aplicación web progresiva y panel administrativo para iglesias y líderes comunitarios.",
+        "platformSummary": "Web App · PWA · Android (en desarrollo)",
+        "role": "Founder & Full Stack Developer",
         "imageAlt": "Captura de pantalla de la plataforma Devoción Diaria",
         "impact": {
-          "metric": "Contenido diario",
-          "description": "Entrega devocionales diarios a usuarios móviles con un panel admin para gestionar contenido, engagement y métricas."
+          "metric": "Propiedad del Producto",
+          "description": "Diseñado y desarrollado como producto de software independiente, enfocado en ayudar a los usuarios a cultivar hábitos devocionales y de oración diaria a través de una experiencia digital moderna."
         },
         "responsibilities": {
-          "0": "Desarrollé la app móvil con Ionic y Angular.",
-          "1": "Construí el panel de administración y APIs con Node.js.",
-          "2": "Integré Firebase para contenido, usuarios y notificaciones.",
-          "3": "Implementé módulos de analíticas y gestión de contenido.",
-          "4": "Mantuve y evolucioné la plataforma según necesidades del negocio."
+          "0": "Arquitectura del producto.",
+          "1": "Diseño UX y de funcionalidades.",
+          "2": "Desarrollo frontend.",
+          "3": "Desarrollo backend.",
+          "4": "Diseño de base de datos.",
+          "5": "Infraestructura Firebase.",
+          "6": "Desarrollo del dashboard.",
+          "7": "Despliegue y mantenimiento."
+        },
+        "highlights": {
+          "0": {
+            "title": "Journaling devocional",
+            "description": "Sistema de registro y reflexión espiritual diaria."
+          },
+          "1": {
+            "title": "Peticiones de oración",
+            "description": "Gestión y seguimiento de solicitudes de oración."
+          },
+          "2": {
+            "title": "Estadísticas de crecimiento",
+            "description": "Insights sobre hábitos y progreso espiritual personal."
+          },
+          "3": {
+            "title": "Seguimiento de rachas",
+            "description": "Motivación mediante constancia y hábitos diarios."
+          },
+          "4": {
+            "title": "Progressive Web App",
+            "description": "Experiencia web instalable con capacidades offline."
+          },
+          "5": {
+            "title": "Dashboard para iglesias",
+            "description": "Panel administrativo para líderes y comunidades."
+          },
+          "6": {
+            "title": "Autenticación y perfiles",
+            "description": "Gestión de usuarios y perfiles personalizados."
+          },
+          "7": {
+            "title": "Sincronización en tiempo real",
+            "description": "Datos sincronizados entre dispositivos con Firestore."
+          }
         }
       },
       "ubicatupuesto": {

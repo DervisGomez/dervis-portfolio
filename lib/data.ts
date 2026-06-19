@@ -40,8 +40,8 @@ export const featuredProductIds = [
   "ubicatupuesto",
 ] as const;
 
-export const primaryProductIds = ["veyco", "enaex", "formidavel"] as const satisfies readonly FeaturedProductId[];
-export const secondaryProductIds = ["area33", "devocion", "ubicatupuesto"] as const satisfies readonly FeaturedProductId[];
+export const primaryProductIds = ["devocion", "veyco", "enaex", "formidavel"] as const satisfies readonly FeaturedProductId[];
+export const secondaryProductIds = ["area33", "ubicatupuesto"] as const satisfies readonly FeaturedProductId[];
 
 export type FeaturedProductId = (typeof featuredProductIds)[number];
 
@@ -58,8 +58,10 @@ export const productMeta: Record<
     platformUrls?: Partial<Record<string, string>>;
     highlightKeys?: readonly string[];
     statisticKeys?: readonly string[];
-    status?: "production";
-    cta?: "live" | "enterprise";
+    status?: "production" | "activeDevelopment";
+    cta?: "live" | "enterprise" | "product";
+    theme?: "devocion";
+    prominent?: boolean;
   }
 > = {
   veyco: {
@@ -134,8 +136,26 @@ export const productMeta: Record<
     responsibilityKeys: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   },
   devocion: {
-    stack: ["Ionic", "Angular", "Firebase", "Node.js"],
-    responsibilityKeys: ["0", "1", "2", "3", "4"],
+    image: "/DevocionDiaria.png",
+    url: "#devocion-highlights",
+    stack: [
+      "Angular",
+      "Ionic",
+      "Capacitor",
+      "React",
+      "Next.js",
+      "Firebase",
+      "Firestore",
+      "Cloud Functions",
+      "PWA",
+      "TypeScript",
+    ],
+    highlightKeys: ["0", "1", "2", "3", "4", "5", "6", "7"],
+    status: "activeDevelopment",
+    cta: "product",
+    theme: "devocion",
+    prominent: true,
+    responsibilityKeys: ["0", "1", "2", "3", "4", "5", "6", "7"],
   },
   ubicatupuesto: {
     stack: ["Angular", "Node.js", "PostgreSQL", "TypeScript"],
