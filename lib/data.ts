@@ -81,8 +81,7 @@ export const navAnchors = [
   { key: "projects" as const, href: "#projects" },
   { key: "experience" as const, href: "#experience" },
   { key: "stack" as const, href: "#stack" },
-  { key: "contact" as const, href: "#contact" },
-];
+] as const;
 
 export const featuredProductIds = [
   "devocion",
