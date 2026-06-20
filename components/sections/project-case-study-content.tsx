@@ -2,12 +2,15 @@
 
 import {
   BarChart3,
+  Bell,
   BookOpen,
   Building2,
+  Cloud,
   Download,
   Factory,
   FileStack,
   Flame,
+  FolderOpen,
   Globe,
   Globe2,
   Handshake,
@@ -15,20 +18,27 @@ import {
   Languages,
   LayoutDashboard,
   MapPin,
+  Monitor,
+  Newspaper,
   Package,
   PenTool,
   QrCode,
   RefreshCw,
+  Share2,
   Sheet,
   ShoppingCart,
   Smartphone,
+  Sparkles,
+  TabletSmartphone,
   Tags,
   TrendingUp,
   Upload,
   User,
   UserCircle,
   Users,
+  Video,
   WifiOff,
+  Zap,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -48,6 +58,9 @@ const formidavelCapabilityIcons: Record<string, LucideIcon> = {
   qr: QrCode,
   excel: Sheet,
   pdf: FileStack,
+  n8nAutomations: Zap,
+  brevoEmail: Bell,
+  openAiForms: Sparkles,
 };
 
 const enaexCapabilityIcons: Record<string, LucideIcon> = {
@@ -68,6 +81,14 @@ const projectCapabilityIcons: Partial<
 > = {
   formidavel: formidavelCapabilityIcons,
   enaex: enaexCapabilityIcons,
+  msmpackaging: {
+    multiLanguage: Languages,
+    internationalSeo: Globe,
+    productCatalog: Tags,
+    leadGeneration: TrendingUp,
+    corporateBranding: LayoutDashboard,
+    performanceOptimization: Zap,
+  },
 };
 
 const devocionHighlightIcons: Record<string, LucideIcon> = {
@@ -79,6 +100,7 @@ const devocionHighlightIcons: Record<string, LucideIcon> = {
   "5": LayoutDashboard,
   "6": UserCircle,
   "7": RefreshCw,
+  "8": Bell,
 };
 
 const veycoHighlightIcons: Record<string, LucideIcon> = {
@@ -90,6 +112,49 @@ const veycoHighlightIcons: Record<string, LucideIcon> = {
   adminPanel: LayoutDashboard,
   activitySummaries: BarChart3,
   commercialEcosystem: Handshake,
+  pushNotifications: Bell,
+};
+
+const enfoqueglobalHighlightIcons: Record<string, LucideIcon> = {
+  churchManagement: Building2,
+  digitalMentorship: Handshake,
+  communityFeed: Newspaper,
+  resourceLibrary: FolderOpen,
+  excelReports: Sheet,
+  documentSharing: Share2,
+  multiCountry: Globe2,
+  mobileApp: Smartphone,
+  webPlatform: Monitor,
+};
+
+const area33HighlightIcons: Record<string, LucideIcon> = {
+  videoCourses: Video,
+  learningPaths: BookOpen,
+  progressTracking: TrendingUp,
+  userManagement: UserCircle,
+  firebaseInfra: Cloud,
+  androidApp: Smartphone,
+  iosApp: TabletSmartphone,
+  hybridArchitecture: Zap,
+};
+
+const ubicaturepuestoHighlightIcons: Record<string, LucideIcon> = {
+  quoteEngine: FileStack,
+  emailAutomation: RefreshCw,
+  phpWebService: Cloud,
+  specializedMarketplace: ShoppingCart,
+  orderManagement: Package,
+  adminPanel: LayoutDashboard,
+  productCatalog: Tags,
+};
+
+const msmpackagingHighlightIcons: Record<string, LucideIcon> = {
+  astroArchitecture: Monitor,
+  advancedSeo: Globe,
+  multiLanguageExperience: Languages,
+  productCatalog: Tags,
+  highPerformance: Zap,
+  responsiveDesign: TabletSmartphone,
 };
 
 const projectHighlightIcons: Partial<
@@ -97,6 +162,10 @@ const projectHighlightIcons: Partial<
 > = {
   devocion: devocionHighlightIcons,
   veyco: veycoHighlightIcons,
+  enfoqueglobal: enfoqueglobalHighlightIcons,
+  area33: area33HighlightIcons,
+  ubicaturepuesto: ubicaturepuestoHighlightIcons,
+  msmpackaging: msmpackagingHighlightIcons,
 };
 
 function FeatureHighlightGrid({
@@ -123,12 +192,14 @@ function FeatureHighlightGrid({
 
           return (
             <div key={key} className={HIGHLIGHT_CARD_CLASS}>
-              {Icon ? (
-                <Icon className="mb-2.5 h-4 w-4 text-[#059669]" aria-hidden />
-              ) : null}
-              <h4 className="text-sm font-semibold tracking-tight text-[#059669]">
-                {t(`items.${id}.${contentKey}.${key}.title`)}
-              </h4>
+              <div className="flex items-center gap-2">
+                {Icon ? (
+                  <Icon className="h-4 w-4 shrink-0 text-[#059669]" aria-hidden />
+                ) : null}
+                <h4 className="text-sm font-semibold tracking-tight text-[#059669]">
+                  {t(`items.${id}.${contentKey}.${key}.title`)}
+                </h4>
+              </div>
               <p className="text-body mt-1.5 text-sm leading-snug">
                 {t(`items.${id}.${contentKey}.${key}.description`)}
               </p>
@@ -153,6 +224,9 @@ export function PlatformsSection({ id }: { id: PortfolioProjectId }) {
       return t(`items.${id}.platformBadges.${platform}`);
     }
     if (meta.platformKeys) {
+      if (platform === "web" || platform === "android" || platform === "ios") {
+        return t(`platforms.${platform}`);
+      }
       return t(`items.${id}.platforms.${platform}`);
     }
     return t(`platforms.${platform as "web" | "android" | "ios"}`);
@@ -212,7 +286,7 @@ export function ProjectCaseStudyContent({ id }: { id: PortfolioProjectId }) {
       <p className="text-body text-sm leading-relaxed">
         {t(`items.${id}.description`)}
       </p>
-      {id === "devocion" ? (
+      {t.has(`items.${id}.longDescription`) ? (
         <p className="text-body mt-3 text-sm leading-relaxed">
           {t(`items.${id}.longDescription`)}
         </p>

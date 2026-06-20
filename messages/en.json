@@ -55,6 +55,8 @@
     "moreProjects": "More projects",
     "moreProjectsTitle": "More projects",
     "moreProjectsDescription": "I've contributed to the development of multiple web, mobile and enterprise platform applications.",
+    "moreProjectsCount": "{count} additional projects",
+    "moreProjectsHint": "Explore the rest of the portfolio",
     "showMoreProjects": "View more projects",
     "hideMoreProjects": "Show fewer projects",
     "viewDetail": "View details",
@@ -67,6 +69,14 @@
     "moreTech": "+{count} more",
     "overviewLabel": "Overview",
     "roleLabel": "My Role",
+    "executorCompanyName": "APPI.CL",
+    "independentCompanyName": "Independent project",
+    "ownProjectCompanyName": "Own product",
+    "engagement": {
+      "endClientLabel": "End client",
+      "executorCompanyLabel": "Executing company",
+      "roleLabel": "Role"
+    },
     "responsibilitiesLabel": "Key Responsibilities",
     "impactLabel": "Business Impact",
     "technologiesLabel": "Technologies",
@@ -95,7 +105,7 @@
           "0": "Mobile application",
           "1": "PWA",
           "2": "Admin dashboard",
-          "3": "Firebase architecture"
+          "3": "Push notifications"
         }
       },
       "veyco": {
@@ -105,7 +115,7 @@
           "0": "Full marketplace",
           "1": "Order management",
           "2": "User roles",
-          "3": "Admin dashboard"
+          "3": "Push notifications"
         }
       },
       "enaex": {
@@ -179,6 +189,10 @@
           "commercialEcosystem": {
             "title": "Commercial Ecosystem",
             "description": "Segmentation and management of buyers and sellers within the marketplace."
+          },
+          "pushNotifications": {
+            "title": "Push notifications",
+            "description": "Real-time alerts for orders, commercial activity and platform updates."
           }
         },
         "responsibilities": {
@@ -194,19 +208,60 @@
       "area33": {
         "name": "Area33",
         "category": "Mobile Application",
-        "description": "Cross-platform mobile application published on Android and iOS, delivering a seamless native experience for end users.",
+        "subtitle": "Personal growth and digital training platform.",
+        "description": "Mobile application focused on personal transformation through multimedia content, learning paths and user progress tracking.",
+        "longDescription": "Area33 is a mobile training platform that provides access to educational content, guided programs, video classes and structured learning experiences from mobile devices. I contributed to the development and evolution of the mobile applications, integrating features, backend services and app store publishing processes.",
         "role": "Full Stack Developer",
         "imageAlt": "Area33 mobile application screenshot",
+        "engagement": {
+          "endClient": "Area33",
+          "participationNote": "I contributed to the development and evolution of the Android and iOS mobile applications as part of the APPI.CL team."
+        },
         "impact": {
-          "metric": "Android & iOS",
-          "description": "Published app on both stores, delivering a native and accessible experience to end users on mobile devices."
+          "metric": "Android & iOS · Production",
+          "description": "Production mobile apps for digital training, with multimedia content, learning paths and user progress tracking."
         },
         "responsibilities": {
-          "0": "Developed the mobile app with Ionic, Angular and Capacitor.",
-          "1": "Integrated Firebase for authentication, database and cloud services.",
-          "2": "Implemented native features for iOS and Android.",
-          "3": "Optimized performance and user experience on mobile devices.",
-          "4": "Managed publishing and updates on Google Play and App Store."
+          "0": "Developed and maintained the mobile applications with Ionic, Angular and Capacitor.",
+          "1": "Integrated Firebase, Firestore and Cloud Functions into the apps.",
+          "2": "Implemented video courses, learning paths and progress tracking.",
+          "3": "Built authentication, profiles and user management on mobile.",
+          "4": "Optimized performance and user experience on Android and iOS.",
+          "5": "Managed publishing and updates on Google Play and App Store."
+        },
+        "highlights": {
+          "videoCourses": {
+            "title": "Course platform",
+            "description": "Multimedia content and training program playback."
+          },
+          "learningPaths": {
+            "title": "Learning paths",
+            "description": "Structured experiences to support user growth."
+          },
+          "progressTracking": {
+            "title": "Progress tracking",
+            "description": "Recording of advancement and content consumption."
+          },
+          "userManagement": {
+            "title": "User management",
+            "description": "Authentication and personalized profiles."
+          },
+          "firebaseInfra": {
+            "title": "Firebase infrastructure",
+            "description": "Serverless backend with real-time synchronization."
+          },
+          "androidApp": {
+            "title": "Android application",
+            "description": "Published on Google Play."
+          },
+          "iosApp": {
+            "title": "iOS application",
+            "description": "Published on App Store."
+          },
+          "hybridArchitecture": {
+            "title": "Hybrid architecture",
+            "description": "Built with Ionic + Angular + Capacitor."
+          }
         }
       },
       "enaex": {
@@ -217,6 +272,10 @@
         "description": "Corporate organizational recognition platform designed to strengthen company culture, increase employee participation and provide strategic metrics for teams distributed across multiple countries.",
         "role": "Full Stack Developer",
         "imageAlt": "Espíritu Enaex platform screenshot",
+        "engagement": {
+          "endClient": "Enaex",
+          "participationNote": "I contributed to the development of the corporate platform as part of the APPI.CL team for Enaex."
+        },
         "organizationalImpact": "Implemented for international teams with segmentation by country, plant, area, category and user, enabling analysis of participation and recognition across the organization through consolidated indicators.",
         "impact": {
           "metric": "Multi-country · Web & Mobile",
@@ -280,8 +339,12 @@
         "subtitle": "Platform for process digitization and automation.",
         "tagline": "Process digitization · PWA & Mobile · Production",
         "description": "Enterprise platform for operational process digitization, field inspections, document management and workflow automation. Used to capture, process and distribute information efficiently across different operational environments.",
-        "role": "Lead Full Stack Developer",
+        "role": "Full Stack Developer",
         "imageAlt": "Formidável platform screenshot",
+        "engagement": {
+          "endClient": "Formidável",
+          "participationNote": "I contributed to enterprise digitization and automation solutions as part of the APPI.CL team."
+        },
         "impact": {
           "metric": "Enterprise SaaS · Digital Transformation",
           "description": "Formidável enables organizations to replace paper forms and manual processes with digital workflows, improving operational visibility, field productivity and data quality."
@@ -296,13 +359,13 @@
           "0": "Developed and maintained the Angular application.",
           "1": "Built mobile experiences using Ionic and Capacitor.",
           "2": "Designed and implemented core platform modules.",
-          "3": "Developed dynamic forms and data collection workflows.",
+          "3": "Developed dynamic forms with OpenAI for intelligent creation and autofill.",
           "4": "Implemented offline-first capabilities.",
           "5": "Integrated Firebase services and cloud infrastructure.",
           "6": "Developed reporting and analytics modules.",
-          "7": "Built QR code and document management features.",
+          "7": "Built QR code and document management features with PDFMonkey.",
           "8": "Implemented image processing and file management workflows.",
-          "9": "Participated in architecture, optimization and product evolution."
+          "9": "Integrated n8n automations and transactional email delivery with Brevo."
         },
         "capabilities": {
           "gpsRoutes": {
@@ -327,7 +390,19 @@
           },
           "pdf": {
             "title": "Bulk PDF generation",
-            "description": "Automatic creation of multiple documents and reports."
+            "description": "Automatic document and report creation powered by PDFMonkey."
+          },
+          "n8nAutomations": {
+            "title": "n8n automations",
+            "description": "Automated workflows for processing, notifications and operational tasks."
+          },
+          "brevoEmail": {
+            "title": "Brevo transactional email",
+            "description": "Automated notifications and communications to users and teams."
+          },
+          "openAiForms": {
+            "title": "OpenAI-powered forms",
+            "description": "Intelligent form creation and autofill powered by artificial intelligence."
           }
         },
         "statistics": {
@@ -394,6 +469,10 @@
           "7": {
             "title": "Real-time sync",
             "description": "Data synchronized across devices with Firestore."
+          },
+          "8": {
+            "title": "Push notifications",
+            "description": "Devotional reminders, prayer alerts and updates on mobile devices."
           }
         }
       },
@@ -415,39 +494,196 @@
           "4": "Participated in architecture, deployment and platform maintenance."
         }
       },
-      "enfoqueglobal": {
-        "name": "Enfoque Global",
-        "category": "Web Platform",
-        "description": "Web application for content and business operations management, with a responsive experience and cloud deployment.",
+      "ubicaturepuesto": {
+        "name": "UbicaTuRepuesto.cl",
+        "category": "Automotive Marketplace",
+        "subtitle": "Marketplace specialized in automotive spare parts.",
+        "description": "Marketplace specialized in searching and quoting automotive spare parts. The platform connects users with suppliers, allowing quote requests, offer comparison and order management from web and mobile devices.",
+        "longDescription": "UbicaTuRepuesto.cl is an automotive commerce platform focused on spare part search and quotation workflows. It enables quote requests to multiple suppliers, offer comparison and centralized order management across web and mobile. Project delivered through APPI.CL for the Chilean automotive market.",
         "role": "Full Stack Developer",
-        "imageAlt": "Enfoque Global platform screenshot",
+        "imageAlt": "UbicaTuRepuesto.cl platform screenshot",
         "impact": {
-          "metric": "Web · Cross-platform",
-          "description": "Web platform accessible from multiple devices for business operations and content management."
+          "metric": "Marketplace · Production",
+          "description": "Production platform connecting buyers and spare part suppliers with quote workflows, offer comparison and order management."
         },
         "responsibilities": {
-          "0": "Developed the frontend with Angular and TypeScript.",
-          "1": "Integrated Firebase for authentication, database and hosting.",
-          "2": "Implemented content and user management modules.",
-          "3": "Optimized performance and responsive experience.",
-          "4": "Participated in deployment, maintenance and feature evolution."
+          "0": "Developed modules for a multi-supplier quote engine.",
+          "1": "Integrated PHP webservices for business logic and supplier communication.",
+          "2": "Implemented automated emails for notifications and follow-up.",
+          "3": "Built offer and price comparison features.",
+          "4": "Developed order management, tracking and purchase status flows.",
+          "5": "Implemented product catalog, categories and spare parts search.",
+          "6": "Contributed to the admin panel, user management and marketplace evolution."
+        },
+        "highlights": {
+          "quoteEngine": {
+            "title": "Quote engine",
+            "description": "Allows spare part requests to be created and distributed to multiple suppliers."
+          },
+          "emailAutomation": {
+            "title": "Email automation",
+            "description": "Sends notifications, responses and follow-up messages via email."
+          },
+          "phpWebService": {
+            "title": "PHP webservice",
+            "description": "Integration with PHP backend services for quotes, suppliers and business logic."
+          },
+          "specializedMarketplace": {
+            "title": "Specialized marketplace",
+            "description": "Connects buyers and automotive spare part suppliers."
+          },
+          "orderManagement": {
+            "title": "Order management",
+            "description": "Complete tracking of the purchase lifecycle."
+          },
+          "adminPanel": {
+            "title": "Admin dashboard",
+            "description": "Management of users, listings and marketplace activity."
+          },
+          "productCatalog": {
+            "title": "Product catalog",
+            "description": "Category organization and spare part search capabilities."
+          }
+        }
+      },
+      "enfoqueglobal": {
+        "name": "Enfoque Global",
+        "category": "Mentorship Platform",
+        "subtitle": "Platform for mentorship, mobilization and Christian collaboration.",
+        "description": "Platform for mentorship, mobilization and collaboration between churches and Christian leaders.",
+        "role": "Lead Full Stack Developer",
+        "imageAlt": "Enfoque Global platform screenshot",
+        "impact": {
+          "metric": "Web & Android · Multi-country",
+          "description": "Production platform connecting churches, mentors and Christian leaders through digital collaboration and training resources."
+        },
+        "platforms": {
+          "web": "Web",
+          "android": "Android",
+          "multiCountry": "Multi-country"
+        },
+        "responsibilities": {
+          "0": "Developed the web application with Angular and Ionic.",
+          "1": "Built the mobile app with Capacitor for Android.",
+          "2": "Integrated Firebase, Firestore and Cloud Functions.",
+          "3": "Implemented church management and mentorship modules.",
+          "4": "Developed community publications, resource library, document sharing and Excel report exports.",
+          "5": "Participated in deployment, Google Play release and maintenance."
+        },
+        "highlights": {
+          "churchManagement": {
+            "title": "Church management",
+            "description": "Administration and tracking of local and mentored churches."
+          },
+          "digitalMentorship": {
+            "title": "Digital mentorship",
+            "description": "Structured guidance for leaders and churches through defined processes."
+          },
+          "communityFeed": {
+            "title": "Community publications",
+            "description": "Private social network to share news, resources and events."
+          },
+          "resourceLibrary": {
+            "title": "Resource library",
+            "description": "Organization of materials, documents and training content."
+          },
+          "excelReports": {
+            "title": "Excel reports",
+            "description": "Download of consolidated reports and information in Excel format."
+          },
+          "documentSharing": {
+            "title": "Document sharing",
+            "description": "Distribution of Word, Excel, PowerPoint and PDF files within the platform."
+          },
+          "multiCountry": {
+            "title": "Multi-country",
+            "description": "Collaboration between churches and leaders from different countries."
+          },
+          "mobileApp": {
+            "title": "Android application",
+            "description": "Mobile app published on Google Play with an optimized experience."
+          },
+          "webPlatform": {
+            "title": "Web platform",
+            "description": "Web version accessible from any browser."
+          }
         }
       },
       "msmpackaging": {
-        "name": "MSM Packaging",
-        "category": "Enterprise Platform",
-        "description": "Web system for operational and commercial management of a packaging company, centralizing business processes and data.",
+        "name": "MSM Packaging Solutions",
+        "category": "International Corporate Platform",
+        "subtitle": "International corporate platform for industrial packaging solutions.",
+        "description": "International corporate website for a company specialized in packaging, bottling and industrial automation solutions for food, beverage and packaged goods industries.",
+        "longDescription": "MSM Packaging Solutions showcases its brands, industrial solutions, machinery and services for food and beverage companies. The website is optimized for international SEO, modern user experience and business opportunity generation. Corporate website developed for MSM Packaging Solutions, a company specialized in automation, bottling and industrial solutions for food and beverage.",
         "role": "Full Stack Developer",
-        "imageAlt": "MSM Packaging platform screenshot",
+        "imageAlt": "MSM Packaging Solutions corporate website screenshot",
+        "engagement": {
+          "endClient": "MSM Packaging Solutions",
+          "participationNote": "I contributed to the development of the corporate website as part of the APPI.CL team for MSM Packaging Solutions."
+        },
         "impact": {
-          "metric": "Operational digitization",
-          "description": "Centralized commercial and operational processes in a web platform to improve business management."
+          "metric": "Corporate website · Production",
+          "description": "Production international web platform focused on corporate branding, industrial catalog, SEO and commercial lead acquisition."
         },
         "responsibilities": {
-          "0": "Developed the frontend with Angular and TypeScript.",
-          "1": "Built backend services with Node.js and PostgreSQL.",
-          "2": "Implemented commercial and operational management modules.",
-          "3": "Participated in architecture, deployment and maintenance."
+          "0": "Designed and implemented the site architecture with Astro.",
+          "1": "Developed product catalog, brands and industrial solutions sections.",
+          "2": "Implemented advanced SEO optimization for international visibility.",
+          "3": "Built contact forms with Brevo integration for lead acquisition.",
+          "4": "Optimized performance, image loading and Core Web Vitals metrics.",
+          "5": "Implemented responsive experience for desktop, tablet and mobile."
+        },
+        "capabilities": {
+          "multiLanguage": {
+            "title": "Multi-language",
+            "description": "Experience prepared for users across different markets."
+          },
+          "internationalSeo": {
+            "title": "International SEO",
+            "description": "Search optimization focused on global discoverability."
+          },
+          "productCatalog": {
+            "title": "Product catalog",
+            "description": "Structured presentation of machinery, brands and solutions."
+          },
+          "leadGeneration": {
+            "title": "Lead generation",
+            "description": "Forms and CTAs with automated contact delivery through Brevo."
+          },
+          "corporateBranding": {
+            "title": "Corporate branding",
+            "description": "Consistent visual communication for brand positioning."
+          },
+          "performanceOptimization": {
+            "title": "Performance optimization",
+            "description": "Architecture focused on speed, stability and user experience."
+          }
+        },
+        "highlights": {
+          "astroArchitecture": {
+            "title": "Astro architecture",
+            "description": "Website built with Astro to maximize performance and loading speed."
+          },
+          "advancedSeo": {
+            "title": "Advanced SEO",
+            "description": "Search engine optimization with international focus."
+          },
+          "multiLanguageExperience": {
+            "title": "Multi-language",
+            "description": "Experience prepared for users in different markets."
+          },
+          "productCatalog": {
+            "title": "Product catalog",
+            "description": "Organized showcase of solutions, equipment and brands."
+          },
+          "highPerformance": {
+            "title": "High performance",
+            "description": "Image optimization, fast loading and strong Core Web Vitals metrics."
+          },
+          "responsiveDesign": {
+            "title": "Responsive design",
+            "description": "Experience adapted for desktop, tablet and mobile devices."
+          }
         }
       },
       "vitrogourmet": {

@@ -336,6 +336,38 @@
     @apply h-auto min-h-10 cursor-pointer rounded-full px-3.5 py-2 text-[13px] leading-none md:h-8 md:min-h-8 md:py-0;
   }
 
+  .project-engagement-card {
+    @apply rounded-xl border border-border/80 bg-muted/25 px-4 py-3.5 dark:border-white/[0.08] dark:bg-white/[0.03];
+  }
+
+  .project-engagement-card--compact {
+    @apply px-3.5 py-3;
+  }
+
+  .project-engagement-card--compact .project-engagement-label {
+    @apply text-[9px] tracking-[0.1em];
+  }
+
+  .project-engagement-card--compact .project-engagement-value {
+    @apply text-[13px] leading-snug;
+  }
+
+  .project-engagement-label {
+    @apply text-[10px] font-medium uppercase tracking-[0.12em] text-muted-foreground/80;
+  }
+
+  .project-engagement-value {
+    @apply text-sm font-medium leading-snug text-foreground;
+  }
+
+  .project-context-chip {
+    @apply inline-flex items-center rounded-full border border-border/80 bg-muted/35 px-2.5 py-1 text-[11px] font-medium leading-none text-foreground/90 dark:border-white/[0.08] dark:bg-white/[0.03];
+  }
+
+  .project-capability-chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-border/80 bg-muted/25 px-2.5 py-1 text-[12px] font-medium leading-none text-foreground/90 dark:border-white/[0.08] dark:bg-white/[0.03];
+  }
+
   .project-modal-panel {
     box-shadow:
       0 0 0 1px rgb(0 0 0 / 0.04),
@@ -363,10 +395,47 @@
     transform: translateY(-1px);
   }
 
-  .dark .secondary-project-card:hover {
+  .dark   .secondary-project-card:hover {
     box-shadow:
       0 0 0 1px rgb(255 255 255 / 0.05),
       0 4px 20px rgb(0 0 0 / 0.28);
+  }
+
+  .more-projects-cta {
+    @apply relative overflow-hidden rounded-[1.375rem] border border-brand/20 ring-1 ring-brand/10;
+    background:
+      linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--brand) 9%, var(--card)) 0%,
+        var(--card) 48%,
+        color-mix(in srgb, #059669 6%, var(--card)) 100%
+      );
+    box-shadow:
+      0 1px 2px rgb(0 0 0 / 0.04),
+      0 8px 32px -8px color-mix(in srgb, var(--brand) 22%, transparent);
+  }
+
+  .dark .more-projects-cta {
+    @apply border-brand/25 ring-brand/15;
+    background:
+      linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--brand) 14%, var(--card)) 0%,
+        var(--card) 52%,
+        color-mix(in srgb, #059669 10%, var(--card)) 100%
+      );
+    box-shadow:
+      0 0 0 1px rgb(255 255 255 / 0.04) inset,
+      0 8px 32px -8px color-mix(in srgb, var(--brand) 28%, transparent);
+  }
+
+  .more-projects-cta__glow {
+    @apply pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full opacity-60 blur-3xl;
+    background: color-mix(in srgb, var(--brand) 28%, transparent);
+  }
+
+  .more-projects-cta__count {
+    @apply font-mono text-[2.5rem] font-semibold leading-none tracking-tight text-brand sm:text-[3rem];
   }
 
   .devocion-case-study {
@@ -417,6 +486,10 @@
 
     .secondary-project-card:hover {
       transform: none;
+    }
+
+    .more-projects-cta {
+      transition: none;
     }
   }
 }

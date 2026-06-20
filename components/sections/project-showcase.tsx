@@ -2,10 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ArrowUpRight, Check, ExternalLink } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
+import { ProjectEngagementCard } from "@/components/sections/project-engagement-card";
 import type { PortfolioProjectId } from "@/lib/data";
 import { productMeta, projectImpactHighlights } from "@/lib/data";
 import { cn } from "@/lib/utils";
@@ -57,24 +58,27 @@ function ProjectHeroImage({
   );
 }
 
-function ProjectImpactBullets({ id }: { id: PortfolioProjectId }) {
+function ProjectCapabilityChips({ id }: { id: PortfolioProjectId }) {
   const t = useTranslations("projects.impactOverview");
   const highlights = projectImpactHighlights[id as keyof typeof projectImpactHighlights];
 
   if (!highlights) return null;
 
   return (
-    <ul className="mt-5 grid gap-2 sm:grid-cols-2">
+    <div className="mt-5">
+      <p className="field-label mb-2.5 opacity-80">{t(`${id}.type`)}</p>
+      <ul className="grid gap-2 sm:grid-cols-2">
       {highlights.map((key) => (
         <li
           key={key}
-          className="flex items-start gap-2 text-[13px] leading-snug text-muted-foreground"
+          className="project-capability-chip"
         >
-          <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand/80" aria-hidden />
+          <Sparkles className="h-3.5 w-3.5 shrink-0 text-brand/85" aria-hidden />
           <span>{t(`${id}.highlights.${key}`)}</span>
         </li>
       ))}
-    </ul>
+      </ul>
+    </div>
   );
 }
 
@@ -213,21 +217,10 @@ function ProjectActions({
   );
 }
 
-function getStatusLabel(
-  id: PortfolioProjectId,
-  t: ReturnType<typeof useTranslations<"projects">>
-) {
-  const meta = productMeta[id];
-  if (meta.status === "production") return t("productionStatus");
-  if (meta.status === "activeDevelopment") return t("activeDevelopmentStatus");
-  return null;
-}
-
 export function ProjectShowcase({ id, onOpenCaseStudy }: ProjectShowcaseProps) {
   const t = useTranslations("projects");
   const meta = productMeta[id];
   const isDevocion = meta.theme === "devocion";
-  const statusLabel = getStatusLabel(id, t);
 
   return (
     <article
@@ -255,25 +248,9 @@ export function ProjectShowcase({ id, onOpenCaseStudy }: ProjectShowcaseProps) {
             {t(`items.${id}.subtitle`)}
           </p>
 
-          <p className="mt-4 text-sm font-medium text-foreground">
-            {t(`items.${id}.role`)}
-          </p>
+          <ProjectEngagementCard id={id} compact />
 
-          {statusLabel ? (
-            <p className="mt-2 text-xs text-muted-foreground/75">
-              {t(`items.${id}.category`)} · {statusLabel}
-            </p>
-          ) : (
-            <p className="mt-2 text-xs text-muted-foreground/75">
-              {t(`items.${id}.category`)}
-            </p>
-          )}
-
-          <p className="text-body mt-5 line-clamp-2 text-[15px] leading-relaxed">
-            {t(`items.${id}.description`)}
-          </p>
-
-          <ProjectImpactBullets id={id} />
+          <ProjectCapabilityChips id={id} />
         </div>
 
         <div className="min-w-0 md:pt-1">

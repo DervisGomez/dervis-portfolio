@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@teispace/next-themes";
-import { getTheme, getThemeScript } from "@teispace/next-themes/server";
+import { getTheme } from "@teispace/next-themes/server";
 import { NextIntlClientProvider } from "next-intl";
 import {
   getMessages,
@@ -12,7 +12,7 @@ import { hasLocale } from "next-intl";
 
 import { inter, geistMono } from "../layout";
 import { routing } from "@/i18n/routing";
-import { themeConfig, themeScriptConfig } from "@/lib/theme-config";
+import { themeConfig } from "@/lib/theme-config";
 
 import "../globals.css";
 
@@ -57,10 +57,6 @@ export default async function LocaleLayout({ children, params }: Props) {
   setRequestLocale(locale);
   const messages = await getMessages();
   const initialTheme = await getTheme();
-  const themeScript = getThemeScript({
-    ...themeScriptConfig,
-    initialTheme: initialTheme ?? undefined,
-  });
 
   return (
     <html
@@ -68,15 +64,8 @@ export default async function LocaleLayout({ children, params }: Props) {
       suppressHydrationWarning
       className={`${inter.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <ThemeProvider
-          {...themeConfig}
-          initialTheme={initialTheme ?? undefined}
-          noScript
-        >
+        <ThemeProvider {...themeConfig} initialTheme={initialTheme ?? undefined}>
           <NextIntlClientProvider messages={messages}>
             {children}
           </NextIntlClientProvider>

@@ -21,6 +21,16 @@ export const veycoStoreUrls = {
   android: "https://play.google.com/store/apps/details?id=app.veycoo.co",
 } as const;
 
+export const enfoqueGlobalStoreUrls = {
+  android:
+    "https://play.google.com/store/apps/details?id=us.enfoquegloblal.app",
+} as const;
+
+export const area33StoreUrls = {
+  android: "https://play.google.com/store/apps/details?id=cl.area33.app",
+  ios: "https://apps.apple.com/cl/app/area33/id6740711768",
+} as const;
+
 export const trustMetricIds = [
   "experience",
   "projects",
@@ -91,6 +101,7 @@ export const featuredProductIds = [
   "enfoqueglobal",
   "area33",
   "ubicatupuesto",
+  "ubicaturepuesto",
   "msmpackaging",
   "vitrogourmet",
   "churchapi",
@@ -112,12 +123,24 @@ export const primaryProductIds = [
 export const secondaryProductIds = [
   "enfoqueglobal",
   "area33",
-  "ubicatupuesto",
+  "ubicaturepuesto",
   "msmpackaging",
-  "vitrogourmet",
-  "churchapi",
-  "devocionadmin",
 ] as const satisfies readonly PortfolioProjectId[];
+
+export const appiExecutorProjectIds = [
+  "enaex",
+  "formidavel",
+  "area33",
+  "msmpackaging",
+] as const satisfies readonly PortfolioProjectId[];
+
+export type AppiExecutorProjectId = (typeof appiExecutorProjectIds)[number];
+
+export function isAppiExecutorProject(
+  id: PortfolioProjectId
+): id is AppiExecutorProjectId {
+  return (appiExecutorProjectIds as readonly PortfolioProjectId[]).includes(id);
+}
 
 export const projectImpactHighlights: Record<
   (typeof primaryProductIds)[number],
@@ -178,13 +201,41 @@ export const productMeta: Record<
       "adminPanel",
       "activitySummaries",
       "commercialEcosystem",
+      "pushNotifications",
     ],
     status: "production",
     cta: "live",
   },
   area33: {
-    stack: ["Ionic", "Angular", "Firebase", "Capacitor"],
-    responsibilityKeys: ["0", "1", "2", "3", "4"],
+    image: "/area33.png",
+    storeAppUrls: {
+      android: area33StoreUrls.android,
+      ios: area33StoreUrls.ios,
+    },
+    stack: [
+      "Angular",
+      "Ionic",
+      "Capacitor",
+      "Firebase",
+      "Firestore",
+      "Cloud Functions",
+      "TypeScript",
+    ],
+    platforms: ["android", "ios"],
+    highlightKeys: [
+      "videoCourses",
+      "learningPaths",
+      "progressTracking",
+      "userManagement",
+      "firebaseInfra",
+      "androidApp",
+      "iosApp",
+      "hybridArchitecture",
+    ],
+    status: "production",
+    cta: "live",
+    theme: "devocion",
+    responsibilityKeys: ["0", "1", "2", "3", "4", "5"],
   },
   enaex: {
     image: "/enaex.png",
@@ -241,6 +292,10 @@ export const productMeta: Record<
       "Dexie",
       "Chart.js",
       "QR Code",
+      "n8n",
+      "Brevo",
+      "PDFMonkey",
+      "OpenAI",
     ],
     platformKeys: ["webApp", "pwa", "mobile", "desktop"],
     businessCapabilityKeys: [
@@ -250,6 +305,9 @@ export const productMeta: Record<
       "qr",
       "excel",
       "pdf",
+      "n8nAutomations",
+      "brevoEmail",
+      "openAiForms",
     ],
     statisticKeys: ["0", "1", "2", "3", "4"],
     status: "production",
@@ -271,7 +329,7 @@ export const productMeta: Record<
       "PWA",
       "TypeScript",
     ],
-    highlightKeys: ["0", "1", "2", "3", "4", "5", "6", "7"],
+    highlightKeys: ["0", "1", "2", "3", "4", "5", "6", "7", "8"],
     status: "activeDevelopment",
     cta: "product",
     theme: "devocion",
@@ -282,13 +340,92 @@ export const productMeta: Record<
     stack: ["Angular", "Node.js", "PostgreSQL", "TypeScript"],
     responsibilityKeys: ["0", "1", "2", "3", "4"],
   },
+  ubicaturepuesto: {
+    image: "/ubicaturepuesto.png",
+    url: "https://ubicaturepuesto.cl/",
+    stack: [
+      "Angular",
+      "Ionic",
+      "Capacitor",
+      "Firebase",
+      "Cloud Functions",
+      "TypeScript",
+      "REST APIs",
+      "PHP",
+    ],
+    platforms: ["web", "android", "ios"],
+    highlightKeys: [
+      "quoteEngine",
+      "emailAutomation",
+      "phpWebService",
+      "specializedMarketplace",
+      "orderManagement",
+      "adminPanel",
+      "productCatalog",
+    ],
+    status: "production",
+    cta: "live",
+    responsibilityKeys: ["0", "1", "2", "3", "4", "5", "6"],
+  },
   enfoqueglobal: {
-    stack: ["Angular", "Firebase", "TypeScript", "Capacitor"],
-    responsibilityKeys: ["0", "1", "2", "3", "4"],
+    image: "/enfoqueglobal.png",
+    url: "https://appenfoqueglobal.web.app/",
+    platformUrls: {
+      web: "https://appenfoqueglobal.web.app/",
+    },
+    storeAppUrls: {
+      android: enfoqueGlobalStoreUrls.android,
+    },
+    stack: [
+      "Angular",
+      "Ionic",
+      "Capacitor",
+      "Firebase",
+      "Firestore",
+      "Cloud Functions",
+      "PWA",
+      "TypeScript",
+    ],
+    platformKeys: ["web", "android", "multiCountry"],
+    highlightKeys: [
+      "churchManagement",
+      "digitalMentorship",
+      "communityFeed",
+      "resourceLibrary",
+      "excelReports",
+      "documentSharing",
+      "multiCountry",
+      "mobileApp",
+      "webPlatform",
+    ],
+    status: "production",
+    cta: "live",
+    responsibilityKeys: ["0", "1", "2", "3", "4", "5"],
   },
   msmpackaging: {
-    stack: ["Angular", "Node.js", "TypeScript", "PostgreSQL"],
-    responsibilityKeys: ["0", "1", "2", "3"],
+    image: "/msm.png",
+    url: "https://msmpackaging.com/",
+    stack: ["Astro", "TypeScript", "JavaScript", "HTML5", "CSS3", "Brevo"],
+    platforms: ["web"],
+    businessCapabilityKeys: [
+      "multiLanguage",
+      "internationalSeo",
+      "productCatalog",
+      "leadGeneration",
+      "corporateBranding",
+      "performanceOptimization",
+    ],
+    highlightKeys: [
+      "astroArchitecture",
+      "advancedSeo",
+      "multiLanguageExperience",
+      "productCatalog",
+      "highPerformance",
+      "responsiveDesign",
+    ],
+    status: "production",
+    cta: "live",
+    responsibilityKeys: ["0", "1", "2", "3", "4", "5"],
   },
   vitrogourmet: {
     stack: ["Angular", "Firebase", "TypeScript", "Ionic"],

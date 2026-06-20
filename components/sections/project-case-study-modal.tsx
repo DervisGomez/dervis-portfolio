@@ -7,13 +7,11 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, ExternalLink, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-import {
-  PlatformsSection,
-  ProjectCaseStudyContent,
-} from "@/components/sections/project-case-study-content";
+import { ProjectCaseStudyContent } from "@/components/sections/project-case-study-content";
+import { ProjectEngagementCard } from "@/components/sections/project-engagement-card";
 import { Button } from "@/components/ui/button";
 import type { PortfolioProjectId } from "@/lib/data";
-import { productMeta } from "@/lib/data";
+import { isAppiExecutorProject, productMeta } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 function useHasMounted() {
@@ -73,11 +71,8 @@ function ModalExternalLinks({ id }: { id: PortfolioProjectId }) {
   const projectUrl = getProjectUrl(id);
   const urls = meta.storeAppUrls;
   const hasStoreLinks = Boolean(urls?.android || urls?.ios);
-  const hasPlatforms =
-    (meta.platformBadgeKeys ?? meta.platformKeys ?? meta.platforms ?? []).length >
-    0;
 
-  if (!projectUrl && !hasStoreLinks && !hasPlatforms) return null;
+  if (!projectUrl && !hasStoreLinks) return null;
 
   const linkBtnClass =
     "project-showcase-btn h-auto min-h-10 justify-center gap-2 font-medium";
@@ -148,12 +143,6 @@ function ModalExternalLinks({ id }: { id: PortfolioProjectId }) {
           </Button>
         ) : null}
       </div>
-
-      {hasPlatforms ? (
-        <div className="mt-5">
-          <PlatformsSection id={id} />
-        </div>
-      ) : null}
     </div>
   );
 }
@@ -269,9 +258,13 @@ export function ProjectCaseStudyModal({
                 category={t(`items.${projectId}.category`)}
               />
 
-              <p className="mt-5 text-sm font-medium text-foreground">
-                {t("roleLabel")}: {t(`items.${projectId}.role`)}
-              </p>
+              {isAppiExecutorProject(projectId) ? (
+                <ProjectEngagementCard id={projectId} className="mt-5" />
+              ) : (
+                <p className="mt-5 text-sm font-medium text-foreground">
+                  {t("roleLabel")}: {t(`items.${projectId}.role`)}
+                </p>
+              )}
 
               <div className="mt-6">
                 <ProjectCaseStudyContent id={projectId} />
