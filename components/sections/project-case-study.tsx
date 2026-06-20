@@ -40,7 +40,7 @@ function ProjectScreenshot({
         prominent ? "aspect-[16/9] md:aspect-[2.05/1]" : "aspect-[16/10] md:aspect-[2/1]"
       )}
     >
-      <div className="absolute inset-x-0 top-0 z-10 flex h-10 items-center gap-2 border-b border-border bg-card/90 px-5 backdrop-blur-sm dark:border-white/[0.06]">
+      <div className="absolute inset-x-0 top-0 z-10 flex h-9 items-center gap-1.5 border-b border-border bg-card/90 px-3 backdrop-blur-sm sm:h-10 sm:gap-2 sm:px-5 dark:border-white/[0.06]">
         <span className="h-2 w-2 rounded-full bg-border dark:bg-white/10" aria-hidden />
         <span className="h-2 w-2 rounded-full bg-border dark:bg-white/10" aria-hidden />
         <span className="h-2 w-2 rounded-full bg-border dark:bg-white/10" aria-hidden />
@@ -48,7 +48,7 @@ function ProjectScreenshot({
       </div>
 
       {showImage ? (
-        <div className="absolute inset-0 pt-10">
+        <div className="absolute inset-0 pt-9 sm:pt-10">
           <Image
             src={image!}
             alt={alt}
@@ -60,7 +60,7 @@ function ProjectScreenshot({
           />
         </div>
       ) : (
-        <div className="flex h-full flex-col items-center justify-center px-6 pt-10 text-center">
+        <div className="flex h-full flex-col items-center justify-center px-4 pt-9 text-center sm:px-6 sm:pt-10">
           <p className="field-label text-brand">{category}</p>
           <p className="heading-card mt-3 text-foreground/20">{name}</p>
         </div>
@@ -103,14 +103,14 @@ export function ProjectCaseStudy({ id }: ProjectCaseStudyProps) {
           prominent={meta.prominent}
         />
 
-        <div className="scroll-mt-28 p-6 md:p-10 lg:p-12">
-          <div className="grid gap-10 lg:grid-cols-[1.35fr_1fr] lg:gap-14 xl:gap-16">
-            <div>
-              <div className="flex flex-wrap items-center gap-3">
+        <div className="p-5 sm:p-6 md:p-10 lg:p-12">
+          <div className="grid gap-8 lg:grid-cols-[1.35fr_1fr] lg:gap-14 xl:gap-16">
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-start gap-2.5 sm:items-center sm:gap-3">
                 <h3
                   className={cn(
-                    "heading-card md:text-3xl lg:text-[2rem]",
-                    meta.prominent && "text-[1.75rem] md:text-[2.125rem] lg:text-[2.25rem]"
+                    "min-w-0 flex-1 heading-card md:text-3xl lg:text-[2rem]",
+                    meta.prominent && "text-[1.5rem] sm:text-[1.75rem] md:text-[2.125rem] lg:text-[2.25rem]"
                   )}
                 >
                   {t(`items.${id}.name`)}
@@ -237,14 +237,14 @@ export function ProjectCaseStudy({ id }: ProjectCaseStudyProps) {
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <div className="mt-8 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-3">
                 {meta.cta === "product" ? (
                   <>
                     {meta.url ? (
                       <Button
                         asChild
                         className={cn(
-                          "w-full rounded-full sm:w-auto",
+                          "btn-mobile-wrap w-full rounded-full sm:w-auto",
                           isDevocion &&
                             "bg-[var(--project-accent)] text-white hover:bg-[#047857]"
                         )}
@@ -258,7 +258,7 @@ export function ProjectCaseStudy({ id }: ProjectCaseStudyProps) {
                     <Button
                       disabled
                       variant="outline"
-                      className="w-full rounded-full sm:w-auto"
+                      className="btn-mobile-wrap w-full rounded-full sm:w-auto"
                     >
                       {t("caseStudyComingSoon")}
                     </Button>
@@ -266,7 +266,7 @@ export function ProjectCaseStudy({ id }: ProjectCaseStudyProps) {
                 ) : meta.cta === "enterprise" ? (
                   <>
                     {meta.url ? (
-                      <Button asChild className="w-full rounded-full sm:w-auto">
+                      <Button asChild className="btn-mobile-wrap w-full rounded-full sm:w-auto">
                         <a
                           href={meta.url}
                           target="_blank"
@@ -279,7 +279,7 @@ export function ProjectCaseStudy({ id }: ProjectCaseStudyProps) {
                       </Button>
                     ) : null}
                     {meta.applicationUrl ? (
-                      <Button asChild variant="outline" className="w-full rounded-full sm:w-auto">
+                      <Button asChild variant="outline" className="btn-mobile-wrap w-full rounded-full sm:w-auto">
                         <a
                           href={meta.applicationUrl}
                           target="_blank"
@@ -291,20 +291,20 @@ export function ProjectCaseStudy({ id }: ProjectCaseStudyProps) {
                         </a>
                       </Button>
                     ) : null}
-                    <Button asChild variant="outline" className="w-full rounded-full sm:w-auto">
+                    <Button asChild variant="outline" className="btn-mobile-wrap w-full rounded-full sm:w-auto">
                       <a href={`#${highlightsId}`}>
                         {t("viewCaseStudy")}
                         <ArrowUpRight />
                       </a>
                     </Button>
-                    <Button asChild variant="outline" className="w-full rounded-full sm:w-auto">
+                    <Button asChild variant="outline" className="btn-mobile-wrap w-full rounded-full sm:w-auto">
                       <a href={`#${sidebarId}`}>{t("viewProjectDetails")}</a>
                     </Button>
                   </>
                 ) : (
                   <>
                     {meta.url ? (
-                      <Button asChild className="w-full rounded-full sm:w-auto">
+                      <Button asChild className="btn-mobile-wrap w-full rounded-full sm:w-auto">
                         <a
                           href={meta.url}
                           target="_blank"
@@ -316,7 +316,7 @@ export function ProjectCaseStudy({ id }: ProjectCaseStudyProps) {
                         </a>
                       </Button>
                     ) : null}
-                    <Button asChild variant="outline" className="w-full rounded-full sm:w-auto">
+                    <Button asChild variant="outline" className="btn-mobile-wrap w-full rounded-full sm:w-auto">
                       <a href="#contact">{t("contactCta")}</a>
                     </Button>
                   </>
@@ -326,7 +326,7 @@ export function ProjectCaseStudy({ id }: ProjectCaseStudyProps) {
 
             <div
               id={sidebarId}
-              className="scroll-mt-28 space-y-8 lg:border-l lg:border-border lg:pl-10 dark:lg:border-white/[0.06] xl:pl-12"
+              className="space-y-8 lg:border-l lg:border-border lg:pl-10 dark:lg:border-white/[0.06] xl:pl-12"
             >
               <div>
                 <p className="field-label">{t("roleLabel")}</p>
@@ -363,7 +363,7 @@ export function ProjectCaseStudy({ id }: ProjectCaseStudyProps) {
       </article>
 
       {meta.highlightKeys?.length ? (
-        <div id={highlightsId} className="scroll-mt-28 space-y-4">
+        <div id={highlightsId} className="space-y-4">
           {isDevocion ? (
             <p className="field-label">{t("technicalHighlightsLabel")}</p>
           ) : null}
@@ -377,7 +377,7 @@ export function ProjectCaseStudy({ id }: ProjectCaseStudyProps) {
               <div
                 key={key}
                 className={cn(
-                  "surface-card p-5 md:p-6",
+                  "surface-card p-4 sm:p-5 md:p-6",
                   isDevocion && "ring-[var(--project-accent-border)]"
                 )}
               >

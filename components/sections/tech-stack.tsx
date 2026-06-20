@@ -25,7 +25,7 @@ export function TechStack() {
         <StaggerContainer className="grid gap-4 md:grid-cols-2">
           {techCategoriesData.map((category) => (
             <StaggerItem key={category.key}>
-              <div className="surface-card p-6 md:p-8">
+              <div className="surface-card p-5 md:p-8">
                 <h3 className="field-label normal-case tracking-normal text-sm">
                   {t(`categories.${category.key}`)}
                 </h3>

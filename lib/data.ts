@@ -1,6 +1,8 @@
 export const siteConfig = {
   name: "Dervis Gómez",
   profileImage: "/Profile.png",
+  heroImage: "/hero.png",
+  heroMobileImage: "/hero-movil.png",
   cvUrl: "/CV.pdf",
   email: "dervis@appi.cl",
   linkedin: "https://linkedin.com/in/dervisgomez",
@@ -8,12 +10,52 @@ export const siteConfig = {
   whatsapp: "https://wa.me/56900000000",
 };
 
-export const trustMetricsData = [
-  { type: "counter" as const, value: 9, suffix: "+", labelKey: "yearsExperience" as const },
-  { type: "counter" as const, value: 20, suffix: "+", labelKey: "projectsDelivered" as const },
-  { type: "counter" as const, value: 6, suffix: "+", labelKey: "mobileApps" as const },
-  { type: "text" as const, valueKey: "companiesValue" as const, labelKey: "companiesAcrossLatam" as const },
-];
+export const trustMetricIds = [
+  "experience",
+  "projects",
+  "mobile",
+  "organizations",
+] as const;
+
+export type TrustMetricId = (typeof trustMetricIds)[number];
+
+export const trustMetricsData: Record<
+  TrustMetricId,
+  {
+    icon: "zap" | "rocket" | "smartphone" | "globe";
+    value: string;
+    labelKey:
+      | "yearsExperience"
+      | "projectsDelivered"
+      | "mobileApps"
+      | "organizations";
+    counter?: { value: number; suffix: string };
+  }
+> = {
+  experience: {
+    icon: "zap",
+    value: "9+",
+    labelKey: "yearsExperience",
+    counter: { value: 9, suffix: "+" },
+  },
+  projects: {
+    icon: "rocket",
+    value: "20+",
+    labelKey: "projectsDelivered",
+    counter: { value: 20, suffix: "+" },
+  },
+  mobile: {
+    icon: "smartphone",
+    value: "6+",
+    labelKey: "mobileApps",
+    counter: { value: 6, suffix: "+" },
+  },
+  organizations: {
+    icon: "globe",
+    value: "+10",
+    labelKey: "organizations",
+  },
+};
 
 export const heroTechnologies = [
   "Angular",

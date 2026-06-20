@@ -31,10 +31,10 @@ export function LanguageSwitcher({ className }: { className?: string }) {
           type="button"
           onClick={() => switchLocale(loc)}
           className={cn(
-            "rounded-full px-2.5 py-1 text-xs font-medium transition-colors",
+            "cursor-pointer rounded-full px-2.5 py-1 text-xs font-medium transition-colors duration-200",
             locale === loc
               ? "bg-brand-subtle text-brand shadow-sm dark:shadow-[inset_0_0_0_1px_rgb(255,255,255,0.06)]"
-              : "text-muted-foreground hover:text-brand dark:hover:bg-white/[0.04]"
+              : "text-muted-foreground hover:bg-muted/60 hover:text-brand dark:hover:bg-white/[0.06]"
           )}
           aria-pressed={locale === loc}
         >

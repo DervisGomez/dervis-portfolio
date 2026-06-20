@@ -15,7 +15,7 @@ function CompactProjectCard({ id }: { id: FeaturedProductId }) {
   const meta = productMeta[id];
 
   return (
-    <article className="surface-card flex flex-col gap-5 p-6">
+    <article className="surface-card flex flex-col gap-4 p-5 sm:gap-5 sm:p-6">
       <div>
         <p className="section-indicator text-[11px]">{t(`items.${id}.category`)}</p>
         <h3 className="heading-card mt-2 text-[1.1rem]">{t(`items.${id}.name`)}</h3>
@@ -49,7 +49,7 @@ export function FeaturedProducts() {
         </FadeIn>
 
         {/* Primary case studies — full detail */}
-        <StaggerContainer className="flex flex-col gap-12 md:gap-14 [&>:first-child]:mb-2">
+        <StaggerContainer className="flex flex-col gap-10 md:gap-14 [&>:first-child]:mb-2">
           {primaryProductIds.map((id) => (
             <StaggerItem key={id}>
               <ProjectCaseStudy id={id} />

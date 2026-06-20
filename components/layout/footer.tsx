@@ -11,7 +11,7 @@ export async function Footer() {
   return (
     <footer className="border-t border-border dark:border-white/[0.06]">
       <div className="page-container py-14 md:py-16">
-        <div className="flex flex-col gap-12 md:flex-row md:justify-between">
+        <div className="flex flex-col gap-10 md:flex-row md:justify-between md:gap-12">
           <div className="max-w-sm">
             <p className="text-[15px] font-medium text-foreground">
               {siteConfig.name}
@@ -20,7 +20,7 @@ export async function Footer() {
             <p className="text-caption mt-4 leading-relaxed">{t("bio")}</p>
           </div>
 
-          <div className="flex flex-wrap gap-12 text-sm sm:gap-16">
+          <div className="flex flex-wrap gap-8 text-sm sm:gap-16">
             <div>
               <p className="field-label mb-4">{t("navigate")}</p>
               <ul className="space-y-2.5">
@@ -57,7 +57,7 @@ export async function Footer() {
           </div>
         </div>
 
-        <p className="text-caption mt-12">
+        <p className="text-caption mt-10 md:mt-12">
           © {year} {siteConfig.name}. {t("rights")}
         </p>
       </div>

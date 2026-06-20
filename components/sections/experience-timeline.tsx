@@ -24,7 +24,7 @@ export function ExperienceTimeline() {
         <div>
           {experienceIds.map((id, index) => (
             <FadeIn key={id} delay={index * 0.05}>
-              <article className="grid gap-4 border-t border-border py-10 dark:border-white/[0.06] md:grid-cols-[200px_1fr] md:gap-12 md:py-11">
+              <article className="grid gap-3 border-t border-border py-8 dark:border-white/[0.06] sm:gap-4 md:grid-cols-[200px_1fr] md:gap-12 md:py-11">
                 <div>
                   <p className="font-mono text-sm text-brand">
                     {id === "appi"

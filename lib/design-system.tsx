@@ -29,3 +29,8 @@ export const designSystem = {
 export const richHighlight = {
   highlight: (chunks: ReactNode) => <TextHighlight>{chunks}</TextHighlight>,
 };
+
+export const richHeadline = {
+  ...richHighlight,
+  line: (chunks: ReactNode) => <span className="block">{chunks}</span>,
+};

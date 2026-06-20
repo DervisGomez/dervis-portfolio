@@ -28,21 +28,21 @@
   "hero": {
     "name": "Dervis Gómez",
     "subtitle": "Full Stack Developer",
-    "headline": "Building digital products that <highlight>real companies</highlight> run on.",
-    "description": "Full Stack Developer with 9+ years shipping web platforms, mobile apps, and enterprise systems for companies across Latin America.",
+    "headline": "<line>Building digital products</line><line>that <highlight>real companies</highlight></line><line>run on.</line>",
+    "description": "I design and build web platforms, mobile apps, and enterprise systems for teams across Latin America — from architecture through production deployment.",
     "viewProjects": "View Projects",
     "downloadCv": "Download CV",
-    "experienceBadge": "9+ years of experience",
+    "focusBadge": "Web, mobile & enterprise systems",
     "profileAlt": "Dervis Gómez — Full Stack Developer",
+    "heroImageAlt": "Web and mobile product screenshots built by Dervis Gómez",
     "scroll": "Scroll",
     "scrollAria": "Scroll to metrics"
   },
   "metrics": {
-    "yearsExperience": "Years of Experience",
-    "projectsDelivered": "Projects Delivered",
-    "mobileApps": "Published Mobile Apps",
-    "companiesValue": "Multiple",
-    "companiesAcrossLatam": "Companies Across Latin America"
+    "yearsExperience": "Years of experience",
+    "projectsDelivered": "Projects delivered",
+    "mobileApps": "Mobile apps",
+    "organizations": "Organizations"
   },
   "trustMetrics": {
     "ariaLabel": "Trust metrics"

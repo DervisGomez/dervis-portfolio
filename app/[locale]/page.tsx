@@ -30,7 +30,7 @@ export default async function HomePage({ params }: Props) {
         {t("skipToContent")}
       </a>
       <Header />
-      <main id="main-content" className="flex-1">
+      <main id="main-content" className="flex-1 min-w-0">
         <Hero />
         <TrustMetrics />
         <OrganizationsContributed />

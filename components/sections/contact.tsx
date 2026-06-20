@@ -53,9 +53,9 @@ export function Contact() {
                   aria-label={
                     isExternal ? `${label} ${t("opensInNewTab")}` : label
                   }
-                  className="surface-card surface-card-interactive group flex items-center justify-between p-6 md:p-7"
+                  className="surface-card surface-card-interactive group flex min-w-0 items-center justify-between gap-3 p-5 sm:p-6 md:p-7"
                 >
-                  <div className="flex items-center gap-4">
+                  <div className="flex min-w-0 items-center gap-3 sm:gap-4">
                     <span className="text-brand">
                       {channel.key === "linkedin" && <LinkedInIcon />}
                       {channel.key === "github" && <GitHubIcon />}
@@ -64,11 +64,11 @@ export function Contact() {
                         <MessageCircle className="h-5 w-5" />
                       )}
                     </span>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-[15px] font-medium text-foreground transition-colors group-hover:text-brand">
                         {label}
                       </p>
-                      <p className="text-caption mt-0.5">
+                      <p className="text-caption mt-0.5 break-all sm:break-normal">
                         {channel.descriptionKey
                           ? t(channel.descriptionKey)
                           : siteConfig.email}
