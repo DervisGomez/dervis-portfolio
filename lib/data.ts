@@ -1,5 +1,6 @@
 export const siteConfig = {
   name: "Dervis Gómez",
+  url: "https://dervisgomez.dev",
   profileImage: "/Profile.png",
   heroImage: "/hero.png",
   heroMobileImage: "/hero-movil.png",

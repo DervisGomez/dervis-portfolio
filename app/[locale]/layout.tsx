@@ -12,6 +12,7 @@ import { hasLocale } from "next-intl";
 
 import { inter, geistMono } from "../layout";
 import { routing } from "@/i18n/routing";
+import { siteConfig } from "@/lib/data";
 import { themeConfig } from "@/lib/theme-config";
 
 import "../globals.css";
@@ -30,15 +31,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "metadata" });
 
   return {
+    metadataBase: new URL(siteConfig.url),
     title: t("title"),
     description: t("description"),
     openGraph: {
       title: t("title"),
       description: t("description"),
+      url: locale === "es" ? "/" : `/${locale}`,
+      siteName: siteConfig.name,
       type: "website",
       locale: locale === "es" ? "es_ES" : "en_US",
     },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+    },
     alternates: {
+      canonical: locale === "es" ? "/" : `/${locale}`,
       languages: {
         es: "/",
         en: "/en",

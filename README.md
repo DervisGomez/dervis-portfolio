@@ -1,31 +1,39 @@
-# Dervis Gómez — Portfolio
+# Dervis Gómez - Portfolio
 
-Portafolio personal de **Dervis Gómez**, Full Stack Developer con más de 9 años de experiencia construyendo productos web, móviles y plataformas empresariales para compañías en Latinoamérica.
+Portfolio personal de **Dervis Gómez**, Full Stack Developer con más de 9 años de experiencia construyendo productos web, aplicaciones móviles y plataformas empresariales para compañías en Latinoamérica.
 
-Diseñado con enfoque minimalista y orientado a producto: case studies reales, métricas de trayectoria y experiencia profesional presentada con claridad.
+El proyecto está pensado como una pieza técnica y profesional para reclutadores: no solo muestra una interfaz visual, también presenta case studies reales, responsabilidades, impacto de negocio, stack usado y experiencia profesional de forma clara.
 
-## Características
+## Demo
 
-- **Case studies premium** — Proyectos destacados con screenshot, impacto de negocio, rol, responsabilidades y stack tecnológico
-- **Internacionalización** — Español (por defecto) e inglés con [next-intl](https://next-intl.dev)
-- **Tema claro / oscuro / sistema** — Soporte completo con `next-themes`
-- **Design system** — Tokens CSS, acento `#2563EB` y componentes reutilizables
-- **Responsive & accesible** — Skip link, focus visible, `prefers-reduced-motion`, navegación por anclas
-- **Optimizado para producción** — SSG con App Router, TypeScript estricto y ESLint
+- Español: `/`
+- Inglés: `/en`
+- Producción: <https://dervisgomez.dev>
 
-## Stack tecnológico
+## Qué Demuestra
+
+- Arquitectura con **Next.js App Router** y rutas localizadas.
+- Internacionalización completa con **next-intl**.
+- UI responsive con **Tailwind CSS v4**, tokens CSS y componentes reutilizables.
+- Tema claro, oscuro y sistema.
+- Case studies con información estructurada: rol, stack, responsabilidades, plataformas, enlaces y resultados.
+- Separación entre contenido traducible, metadata técnica y componentes visuales.
+- Accesibilidad base: skip link, foco visible, navegación por anclas y respeto por `prefers-reduced-motion`.
+
+## Stack
 
 | Área | Tecnologías |
-|------|-------------|
-| Framework | [Next.js 16](https://nextjs.org) (App Router) |
+| --- | --- |
+| Framework | Next.js 16, App Router |
 | Lenguaje | TypeScript |
-| Estilos | Tailwind CSS v4 |
-| UI | shadcn/ui, Radix UI, Lucide Icons |
+| UI | React 19, shadcn/ui, Radix UI, Lucide Icons |
+| Estilos | Tailwind CSS v4, CSS custom properties |
 | Animaciones | Framer Motion |
 | i18n | next-intl |
-| Fuentes | Inter, Geist Mono |
+| Tema | next-themes |
+| Calidad | ESLint, TypeScript strict |
 
-## Inicio rápido
+## Inicio Rápido
 
 ### Requisitos
 
@@ -46,7 +54,7 @@ npm install
 npm run dev
 ```
 
-Abre [http://localhost:3000](http://localhost:3000) — español en `/`, inglés en `/en`.
+Abre [http://localhost:3000](http://localhost:3000).
 
 ### Producción
 
@@ -61,91 +69,143 @@ npm run start
 npm run lint
 ```
 
+## Arquitectura
+
+El contenido del portfolio está dividido para que sea fácil mantenerlo y extenderlo:
+
+- `messages/es.json` y `messages/en.json`: textos traducibles de la interfaz.
+- `lib/data.ts`: metadata técnica y estructural de proyectos, experiencia, enlaces, métricas y stack.
+- `components/sections`: secciones principales del sitio como hero, proyectos, experiencia, stack y contacto.
+- `components/shared`: componentes transversales para animación, headings, contadores y navegación.
+- `components/ui`: componentes base reutilizables.
+- `i18n`: configuración de rutas, navegación localizada y request config de `next-intl`.
+- `app/[locale]`: layout y página principal localizada.
+
+Esta separación permite actualizar proyectos o traducciones sin mezclar copy, metadata y presentación en el mismo archivo.
+
 ## Estructura del proyecto
 
-```
+```txt
 dervis-portfolio/
 ├── app/
-│   ├── [locale]/          # Rutas localizadas (es, en)
-│   ├── globals.css        # Tokens, utilidades y design system
-│   └── layout.tsx         # Fuentes globales
+│   ├── [locale]/
+│   ├── globals.css
+│   └── layout.tsx
 ├── components/
-│   ├── layout/            # Header, footer, theme & language switchers
-│   ├── sections/          # Hero, proyectos, experiencia, contacto…
-│   ├── shared/            # SectionHeader, FadeIn, AnimatedCounter…
-│   └── ui/                # Button, Badge, Card (shadcn)
-├── hooks/                 # useActiveSection
-├── i18n/                  # Routing, navegación y request config
+│   ├── layout/
+│   ├── sections/
+│   ├── shared/
+│   └── ui/
+├── hooks/
+├── i18n/
 ├── lib/
-│   ├── data.ts            # Proyectos, métricas, navegación
-│   └── design-system.tsx  # Tokens y helpers i18n (richHighlight)
 ├── messages/
-│   ├── es.json            # Traducciones español
-│   └── en.json            # Traducciones inglés
-├── public/                # Assets estáticos
-└── middleware.ts          # Locale detection (next-intl)
+├── public/
+├── middleware.ts
+├── next.config.ts
+└── package.json
 ```
-
-## Assets en `public/`
-
-Coloca estos archivos antes de desplegar:
-
-| Archivo | Uso |
-|---------|-----|
-| `Profile.png` | Foto de perfil (hero) |
-| `CV.pdf` | Descarga de currículum |
-| `veyco.png` | Screenshot VE&CO |
-| `enaex.png` | Screenshot Espíritu Enaex |
 
 ## Internacionalización
 
-- **Español:** `/` (locale por defecto)
-- **Inglés:** `/en`
+El sitio soporta dos idiomas:
 
-Las traducciones viven en `messages/`. Para resaltar palabras en títulos, usa la etiqueta `<highlight>` en los JSON y el helper `richHighlight` de `lib/design-system.tsx`.
+| Locale | Ruta | Descripción |
+| --- | --- | --- |
+| `es` | `/` | Idioma por defecto |
+| `en` | `/en` | Versión en inglés |
 
-## Proyectos destacados
+Para agregar o editar contenido:
 
-Los case studies principales se configuran en `lib/data.ts` (`primaryProductIds`, `productMeta`) y su contenido en `messages/{locale}.json` bajo `projects.items`.
+1. Actualiza las claves correspondientes en `messages/es.json`.
+2. Replica la misma estructura en `messages/en.json`.
+3. Si el contenido corresponde a proyectos, revisa también `lib/data.ts`.
 
-Para añadir un proyecto:
+Los títulos pueden usar `<highlight>` en los archivos JSON. El renderizado enriquecido vive en `lib/design-system.tsx`.
 
-1. Agrega el `id` en `featuredProductIds` y `productMeta`
-2. Completa las traducciones en `es.json` y `en.json`
-3. Opcional: añade screenshot en `public/`
+## Proyectos Y Casos
 
-## Despliegue
+Los proyectos se configuran principalmente en `lib/data.ts`:
 
-Compatible con [Vercel](https://vercel.com). El proyecto incluye `vercel.json` con **framework: nextjs** para evitar detección incorrecta como Remix.
+- `primaryProductIds`: proyectos principales con mayor protagonismo.
+- `secondaryProductIds`: proyectos adicionales mostrados en la sección expandible.
+- `productMeta`: metadata de cada proyecto, incluyendo imagen, URL, stack, plataformas, estado y responsabilidades.
+
+El contenido narrativo de cada proyecto vive en `messages/{locale}.json`, dentro de `projects.items`.
+
+Para agregar un nuevo proyecto:
+
+1. Agrega el identificador en `featuredProductIds`.
+2. Define su metadata en `productMeta`.
+3. Decide si aparece en `primaryProductIds` o `secondaryProductIds`.
+4. Agrega sus traducciones en `messages/es.json` y `messages/en.json`.
+5. Opcionalmente, agrega una imagen en `public/`.
+
+## Assets Requeridos
+
+Antes de publicar, verifica que estos archivos existan en `public/`:
+
+| Archivo | Uso |
+| --- | --- |
+| `Profile.png` | Foto de perfil usada en hero y header |
+| `hero.png` | Imagen principal de escritorio |
+| `hero-movil.png` | Imagen principal de móvil |
+| `CV.pdf` | Descarga de currículum |
+| `veyco.png`, `enaex.png`, etc. | Screenshots de proyectos |
+
+Si `CV.pdf` no está presente, el botón de descarga del currículum apuntará a un archivo inexistente.
+
+## Calidad Previa
+
+Ejecuta al menos:
 
 ```bash
+npm run lint
 npm run build
 ```
 
-### Vercel — configuración recomendada
+También es recomendable agregar un script de typecheck:
+
+```json
+{
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  }
+}
+```
+
+Para un repositorio público orientado a reclutadores, una GitHub Action con `npm ci`, `npm run lint`, `npm run typecheck` y `npm run build` ayuda a mostrar disciplina técnica.
+
+## Despliegue
+
+El proyecto está preparado para desplegarse en [Vercel](https://vercel.com). Incluye `vercel.json` con `framework: nextjs` para evitar detección incorrecta del framework.
+
+Configuración recomendada:
 
 | Setting | Valor |
-|---------|--------|
-| Framework Preset | **Next.js** |
-| Root Directory | `.` (raíz del repo) |
+| --- | --- |
+| Framework Preset | Next.js |
+| Root Directory | `.` |
 | Build Command | `npm run build` |
-| Output Directory | *(dejar vacío — Next.js lo gestiona)* |
+| Output Directory | Dejar vacío |
 | Install Command | `npm install` |
 
-Si aparece el error `Failed to resolve "@remix-run/dev"`, el preset está en **Remix** por error. Cámbialo a **Next.js** en *Project Settings → General → Framework Preset* y redeploy.
+No requiere variables de entorno para funcionar en su versión base.
 
-No instales `@remix-run/dev`: este proyecto no usa Remix.
+## Notas Técnicas
 
-No requiere variables de entorno para funcionamiento básico.
+- El build puede requerir acceso a Google Fonts si se usan fuentes desde `next/font/google`.
+- Las imágenes grandes en `public/` pueden optimizarse a WebP o AVIF para mejorar Lighthouse.
+- Si Next.js marca `middleware.ts` como deprecado, revisar la migración a la convención vigente de Next.js y `next-intl`.
 
 ## Autor
 
-**Dervis Gómez** — Full Stack Developer
+**Dervis Gómez** - Full Stack Developer
 
-- [LinkedIn](https://linkedin.com/in/dervisgomez)
-- [GitHub](https://github.com/dervisgomez)
-- [Email](mailto:dervisgomez77@gmail.com)
+- LinkedIn: <https://linkedin.com/in/dervisgomez>
+- GitHub: <https://github.com/dervisgomez>
+- Email: <mailto:dervisgomez77@gmail.com>
 
 ## Licencia
 
-Proyecto privado. Todos los derechos reservados.
+Código publicado con fines de presentación profesional. Todos los derechos reservados, salvo que se indique otra licencia.
