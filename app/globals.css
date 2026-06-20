@@ -495,6 +495,67 @@
     @apply text-[15px] font-semibold tracking-tight text-foreground sm:text-base;
   }
 
+  .contact-primary-panel {
+    @apply relative overflow-hidden rounded-2xl border border-border/80 bg-card ring-1 ring-border/40 dark:border-white/[0.08];
+    box-shadow: var(--shadow-card);
+  }
+
+  .contact-primary-panel-accent {
+    @apply absolute inset-x-0 top-0 h-1;
+    background-color: var(--brand);
+  }
+
+  .contact-cta-btn {
+    @apply inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition-colors duration-200;
+  }
+
+  .contact-cta-btn--primary {
+    @apply text-white shadow-[var(--shadow-button)];
+    background-color: var(--accent-green);
+  }
+
+  .contact-cta-btn--primary:hover {
+    background-color: #047857;
+  }
+
+  .contact-channel-card {
+    @apply relative cursor-pointer;
+    transition:
+      box-shadow 200ms ease,
+      transform 200ms ease;
+  }
+
+  .contact-channel-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-3px);
+  }
+
+  .dark .contact-channel-card:hover {
+    box-shadow:
+      0 0 0 1px rgb(255 255 255 / 0.05),
+      0 8px 28px rgb(0 0 0 / 0.32);
+  }
+
+  .contact-channel-accent {
+    @apply absolute inset-x-0 top-0 z-10 h-1 transition-colors duration-200;
+    background-color: var(--brand);
+  }
+
+  .contact-channel-card:hover .contact-channel-accent {
+    background-color: var(--accent-green);
+  }
+
+  .contact-channel-icon {
+    @apply flex h-11 w-11 shrink-0 items-center justify-center rounded-[0.875rem] border text-[var(--accent-green)];
+    background-color: var(--accent-green-muted);
+    border-color: var(--accent-green-border);
+  }
+
+  .dark .contact-channel-icon {
+    background-color: color-mix(in srgb, var(--accent-green) 12%, var(--card));
+    border-color: color-mix(in srgb, var(--accent-green) 22%, var(--border));
+  }
+
   .project-modal-panel {
     box-shadow:
       0 0 0 1px rgb(0 0 0 / 0.04),

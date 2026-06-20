@@ -569,7 +569,7 @@ export const techCategoriesData = [
 export type TechCategoryKey = (typeof techCategoriesData)[number]["key"];
 export type TechCategoryIcon = (typeof techCategoriesData)[number]["icon"];
 
-export const contactChannels = [
+export const secondaryContactChannels = [
   {
     key: "linkedin" as const,
     href: siteConfig.linkedin,
@@ -585,6 +585,13 @@ export const contactChannels = [
     href: `mailto:${siteConfig.email}`,
     descriptionKey: null,
   },
+] as const;
+
+export type SecondaryContactChannelKey =
+  (typeof secondaryContactChannels)[number]["key"];
+
+export const contactChannels = [
+  ...secondaryContactChannels,
   {
     key: "whatsapp" as const,
     href: siteConfig.whatsapp,

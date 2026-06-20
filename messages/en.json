@@ -814,12 +814,13 @@
   },
   "contact": {
     "label": "Contact",
-    "title": "Let's <highlight>connect</highlight>",
-    "description": "Interested in working together or discussing a project? Reach out.",
+    "title": "Shall we work <highlight>together?</highlight>",
+    "description": "Available for web projects, mobile apps and enterprise platforms. If you have an idea or opportunity, let's talk.",
+    "primaryCta": "Contact me",
     "linkedinDescription": "Connect professionally",
     "githubDescription": "View my code and projects",
     "whatsappDescription": "Send a direct message",
-    "sendEmail": "Send me an email",
+    "channelsLabel": "You can also find me on",
     "opensInNewTab": "(opens in a new tab)",
     "channels": {
       "linkedin": "LinkedIn",
