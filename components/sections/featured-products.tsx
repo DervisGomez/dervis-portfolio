@@ -182,7 +182,7 @@ export function FeaturedProducts() {
   const openCaseStudy = (id: PortfolioProjectId) => setModalProjectId(id);
 
   return (
-    <section id="projects" className="section-muted pb-16 pt-10 md:pb-28 md:pt-14">
+    <section id="projects" className="section-muted pb-0 pt-10 md:pt-14">
       <div className="page-container">
         <FadeIn>
           <SectionHeader

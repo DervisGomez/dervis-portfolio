@@ -747,24 +747,46 @@
     "title": "Trayectoria <highlight>profesional</highlight>",
     "description": "Casi una década construyendo productos digitales para empresas de Latinoamérica — desde apps móviles hasta plataformas empresariales.",
     "present": "Actualidad",
+    "technologiesLabel": "Tecnologías",
     "items": {
       "appi": {
         "period": "2019 — {present}",
+        "duration": "6+ años",
+        "location": "Remoto · Chile",
         "role": "Full Stack Developer",
         "company": "APPI.CL",
         "description": "Desarrollé aplicaciones web, apps móviles y PWAs para múltiples clientes en Latinoamérica utilizando Angular, Ionic, Node.js, Firebase y tecnologías modernas."
       },
       "wonderchatt": {
         "period": "2018 — 2019",
+        "duration": "1 año",
+        "location": "Remoto · Colombia",
         "role": "Backend & Mobile Developer",
         "company": "WonderChatt",
         "description": "Construí servicios backend e integraciones móviles para una plataforma de comunicación en tiempo real, enfocándome en diseño de APIs y entrega multiplataforma."
       },
+      "sistemex": {
+        "period": "Sep 2017 — Ago 2018",
+        "duration": "1 año",
+        "location": "Venezuela",
+        "role": "Software Developer",
+        "company": "Sistemex",
+        "description": "Participé en el desarrollo y mantenimiento de aplicaciones empresariales orientadas a la gestión de procesos internos. Trabajé en la implementación de funcionalidades frontend y backend, integración de bases de datos y soporte a sistemas corporativos."
+      },
+      "pixelgrafia": {
+        "period": "Jun 2017 — Nov 2017",
+        "duration": "6 meses",
+        "location": "Venezuela",
+        "role": "Programador de Aplicaciones",
+        "company": "Pixelgrafia C.A.",
+        "description": "Desarrollé una aplicación Android nativa con Java y Android Studio, participando en el diseño, implementación y entrega de la app para el cliente."
+      },
       "uniserv": {
         "period": "2014 — 2016",
-        "role": "Mobile & Web Developer",
+        "duration": "2 años",
+        "role": "Android Developer",
         "company": "UNISERV",
-        "description": "Desarrollé soluciones móviles y web para clientes del sector servicios, contribuyendo tanto en interfaces frontend como en lógica backend."
+        "description": "Desarrollé aplicaciones Android nativas con Java y Android Studio para Aguas Cúcuta Kapital, implementando funcionalidades móviles y dando soporte a las apps en producción."
       }
     }
   },

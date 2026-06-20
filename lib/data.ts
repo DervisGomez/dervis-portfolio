@@ -442,9 +442,55 @@ export const productMeta: Record<
   },
 };
 
-export const experienceIds = ["appi", "wonderchatt", "uniserv"] as const;
+export const experienceIds = [
+  "appi",
+  "wonderchatt",
+  "sistemex",
+  "pixelgrafia",
+  "uniserv",
+] as const;
 
 export type ExperienceId = (typeof experienceIds)[number];
+
+export const experienceMeta: Record<
+  ExperienceId,
+  {
+    stack: readonly string[];
+    initials: string;
+    logo?: string;
+    present?: boolean;
+  }
+> = {
+  appi: {
+    stack: [
+      "Angular",
+      "Ionic",
+      "Capacitor",
+      "Node.js",
+      "Firebase",
+      "TypeScript",
+      "Next.js",
+    ],
+    initials: "AP",
+    present: true,
+  },
+  wonderchatt: {
+    stack: ["Node.js", "Express", "MongoDB", "REST APIs", "Mobile"],
+    initials: "WC",
+  },
+  sistemex: {
+    stack: ["JavaScript", "HTML", "CSS", "PHP", "MySQL"],
+    initials: "SX",
+  },
+  pixelgrafia: {
+    stack: ["Java", "Android Studio", "Android"],
+    initials: "PG",
+  },
+  uniserv: {
+    stack: ["Java", "Android Studio", "Android"],
+    initials: "UN",
+  },
+};
 
 export const techCategoriesData = [
   {

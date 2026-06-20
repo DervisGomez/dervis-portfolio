@@ -368,6 +368,56 @@
     @apply inline-flex items-center gap-1.5 rounded-full border border-border/80 bg-muted/25 px-2.5 py-1 text-[12px] font-medium leading-none text-foreground/90 dark:border-white/[0.08] dark:bg-white/[0.03];
   }
 
+  .experience-logo {
+    @apply flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border/80 bg-card dark:border-white/[0.08];
+  }
+
+  .experience-logo--lg {
+    @apply h-12 w-12 rounded-[0.875rem];
+  }
+
+  .experience-logo-fallback {
+    @apply text-xs font-semibold tracking-wide text-brand;
+    background: color-mix(in srgb, var(--brand) 10%, var(--card));
+  }
+
+  .experience-section-divider {
+    @apply border-t border-border/80 dark:border-white/[0.06];
+  }
+
+  .experience-card {
+    transition:
+      box-shadow 200ms ease,
+      transform 200ms ease;
+  }
+
+  .experience-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-1px);
+  }
+
+  .dark .experience-card:hover {
+    box-shadow:
+      0 0 0 1px rgb(255 255 255 / 0.05),
+      0 4px 20px rgb(0 0 0 / 0.28);
+  }
+
+  .experience-card-accent {
+    @apply hidden w-1 shrink-0 bg-brand/80 md:block;
+  }
+
+  .experience-meta-chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-border/80 bg-muted/30 px-2.5 py-1 text-[12px] font-medium leading-none text-foreground/90 dark:border-white/[0.08] dark:bg-white/[0.04];
+  }
+
+  .experience-present-badge {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-[color-mix(in_srgb,#059669_28%,var(--border))] bg-[color-mix(in_srgb,#059669_10%,var(--card))] px-2.5 py-1 text-[11px] font-medium leading-none text-[#059669];
+  }
+
+  .experience-present-dot {
+    @apply h-1.5 w-1.5 shrink-0 rounded-full bg-[#059669];
+  }
+
   .project-modal-panel {
     box-shadow:
       0 0 0 1px rgb(0 0 0 / 0.04),
