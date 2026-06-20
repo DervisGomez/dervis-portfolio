@@ -1,4 +1,4 @@
-import { setRequestLocale, getTranslations } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -21,13 +21,9 @@ export function generateStaticParams() {
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("nav");
 
   return (
     <>
-      <a href="#main-content" className="skip-link">
-        {t("skipToContent")}
-      </a>
       <Header />
       <main id="main-content" className="flex-1 min-w-0">
         <Hero />

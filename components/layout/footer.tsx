@@ -2,8 +2,9 @@ import Image from "next/image";
 import { ArrowUpRight, Mail } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
-import { Link } from "@/i18n/navigation";
-import { contactChannels, navAnchors, siteConfig } from "@/lib/data";
+import { FooterNavLinks } from "@/components/layout/footer-nav-links";
+import { ScrollToTopLink } from "@/components/shared/scroll-to-top-link";
+import { contactChannels, siteConfig } from "@/lib/data";
 import type { SecondaryContactChannelKey } from "@/lib/data";
 
 const footerConnectChannels = contactChannels.filter(
@@ -56,7 +57,7 @@ export async function Footer() {
       <div className="page-container py-12 md:py-14">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)_minmax(0,1fr)] lg:gap-12">
           <div className="min-w-0">
-            <Link
+            <ScrollToTopLink
               href="/"
               className="footer-brand group inline-flex items-center gap-3 rounded-lg outline-none"
             >
@@ -77,7 +78,7 @@ export async function Footer() {
                   {t("subtitle")}
                 </span>
               </span>
-            </Link>
+            </ScrollToTopLink>
 
             <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
               {t("bio")}
@@ -97,15 +98,13 @@ export async function Footer() {
 
           <div>
             <p className="field-label mb-4">{t("navigate")}</p>
-            <ul className="space-y-1">
-              {navAnchors.map((link) => (
-                <li key={link.href}>
-                  <a href={link.href} className="footer-nav-link">
-                    {tNav(link.key)}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <FooterNavLinks
+              labels={{
+                projects: tNav("projects"),
+                experience: tNav("experience"),
+                stack: tNav("stack"),
+              }}
+            />
           </div>
 
           <div>

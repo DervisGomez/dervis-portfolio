@@ -5,11 +5,12 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Menu, X } from "lucide-react";
 
+import { AnchorLink } from "@/components/shared/anchor-link";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { ThemeSwitcher } from "@/components/layout/theme-switcher";
 import { Button } from "@/components/ui/button";
+import { ScrollToTopLink } from "@/components/shared/scroll-to-top-link";
 import { useActiveSection } from "@/hooks/use-active-section";
-import { Link } from "@/i18n/navigation";
 import { navAnchors, siteConfig } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
@@ -20,7 +21,7 @@ function BrandMark() {
   const firstName = siteConfig.name.split(" ")[0];
 
   return (
-    <Link
+    <ScrollToTopLink
       href="/"
       className="group flex min-w-0 items-center gap-2.5 rounded-full outline-none sm:gap-3"
       aria-label={t("profileAlt")}
@@ -43,7 +44,7 @@ function BrandMark() {
       <span className="truncate text-sm font-medium tracking-tight text-foreground transition-colors group-hover:text-brand sm:text-[15px]">
         {firstName}
       </span>
-    </Link>
+    </ScrollToTopLink>
   );
 }
 
@@ -97,9 +98,13 @@ export function Header() {
           aria-label={t("mainNav")}
         >
           {navAnchors.map((link) => (
-            <a key={link.href} href={link.href} className={navLinkClass(link.href)}>
+            <AnchorLink
+              key={link.href}
+              href={link.href}
+              className={navLinkClass(link.href)}
+            >
               {t(link.key)}
-            </a>
+            </AnchorLink>
           ))}
         </nav>
 
@@ -111,7 +116,7 @@ export function Header() {
             size="sm"
             className="ml-1.5 rounded-full bg-[#059669] px-4 text-white shadow-[var(--shadow-button)] hover:bg-[#047857]"
           >
-            <a href="#contact">{t("contactMe")}</a>
+            <AnchorLink href="#contact">{t("contactMe")}</AnchorLink>
           </Button>
         </div>
 
@@ -148,23 +153,23 @@ export function Header() {
               aria-label={t("mainNav")}
             >
               {navAnchors.map((link) => (
-                <a
+                <AnchorLink
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
                   className={cn("py-3.5 text-base", navLinkClass(link.href))}
                 >
                   {t(link.key)}
-                </a>
+                </AnchorLink>
               ))}
               <Button
                 asChild
                 className="btn-mobile-wrap mt-4 w-full rounded-full bg-[#059669] text-white hover:bg-[#047857]"
                 size="lg"
               >
-                <a href="#contact" onClick={() => setMobileOpen(false)}>
+                <AnchorLink href="#contact" onClick={() => setMobileOpen(false)}>
                   {t("contactMe")}
-                </a>
+                </AnchorLink>
               </Button>
             </nav>
           </div>

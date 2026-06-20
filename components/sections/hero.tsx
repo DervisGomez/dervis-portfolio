@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Download } from "lucide-react";
 import { useTranslations } from "next-intl";
 
+import { AnchorLink } from "@/components/shared/anchor-link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { heroTechnologies, siteConfig } from "@/lib/data";
@@ -94,7 +95,7 @@ export function Hero() {
                 size="lg"
                 className="btn-mobile-wrap h-11 w-full rounded-full px-7 shadow-[var(--shadow-button)] sm:w-auto"
               >
-                <a href="#projects">{t("viewProjects")}</a>
+                <AnchorLink href="#projects">{t("viewProjects")}</AnchorLink>
               </Button>
               <Button
                 asChild
