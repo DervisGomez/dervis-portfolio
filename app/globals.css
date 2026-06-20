@@ -15,6 +15,16 @@
   --brand-muted: color-mix(in srgb, var(--brand) 10%, var(--card));
   --brand-subtle: color-mix(in srgb, var(--brand) 6%, var(--card));
 
+  --accent-green: #059669;
+  --accent-green-muted: color-mix(in srgb, var(--accent-green) 10%, var(--card));
+  --accent-green-subtle: color-mix(in srgb, var(--accent-green) 8%, var(--card));
+  --accent-green-border: color-mix(in srgb, var(--accent-green) 18%, var(--border));
+
+  --accent-green: #059669;
+  --accent-green-muted: color-mix(in srgb, var(--accent-green) 10%, var(--card));
+  --accent-green-subtle: color-mix(in srgb, var(--accent-green) 8%, var(--card));
+  --accent-green-border: color-mix(in srgb, var(--accent-green) 18%, var(--border));
+
   --primary: var(--brand);
   --primary-foreground: var(--brand-foreground);
   --secondary: #f4f4f5;
@@ -377,8 +387,15 @@
   }
 
   .experience-logo-fallback {
-    @apply text-xs font-semibold tracking-wide text-brand;
-    background: color-mix(in srgb, var(--brand) 10%, var(--card));
+    @apply text-xs font-semibold tracking-wide;
+    color: var(--accent-green);
+    background-color: var(--accent-green-muted);
+    border-color: var(--accent-green-border);
+  }
+
+  .dark .experience-logo-fallback {
+    background-color: color-mix(in srgb, var(--accent-green) 12%, var(--card));
+    border-color: color-mix(in srgb, var(--accent-green) 22%, var(--border));
   }
 
   .experience-section-divider {
@@ -411,11 +428,71 @@
   }
 
   .experience-present-badge {
-    @apply inline-flex items-center gap-1.5 rounded-full border border-[color-mix(in_srgb,#059669_28%,var(--border))] bg-[color-mix(in_srgb,#059669_10%,var(--card))] px-2.5 py-1 text-[11px] font-medium leading-none text-[#059669];
+    @apply inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-medium leading-none;
+    color: var(--accent-green);
+    background-color: var(--accent-green-muted);
+    border-color: var(--accent-green-border);
+  }
+
+  .dark .experience-present-badge {
+    background-color: color-mix(in srgb, var(--accent-green) 12%, var(--card));
+    border-color: color-mix(in srgb, var(--accent-green) 22%, var(--border));
   }
 
   .experience-present-dot {
-    @apply h-1.5 w-1.5 shrink-0 rounded-full bg-[#059669];
+    @apply h-1.5 w-1.5 shrink-0 rounded-full;
+    background-color: var(--accent-green);
+  }
+
+  .stack-category-card {
+    @apply relative h-full overflow-hidden;
+    transition:
+      box-shadow 200ms ease,
+      transform 200ms ease;
+  }
+
+  .stack-category-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-4px);
+  }
+
+  .dark .stack-category-card:hover {
+    box-shadow:
+      0 0 0 1px rgb(255 255 255 / 0.05),
+      0 8px 28px rgb(0 0 0 / 0.32);
+  }
+
+  .stack-category-accent {
+    @apply absolute inset-x-0 top-0 z-10 h-1 transition-colors duration-200;
+    background-color: var(--brand);
+  }
+
+  .stack-category-card:hover .stack-category-accent {
+    background-color: var(--accent-green);
+  }
+
+  .stack-primary-panel {
+    @apply rounded-2xl border border-border/80 bg-[color-mix(in_srgb,var(--brand)_5%,var(--card))] p-4 ring-1 ring-border/40 sm:p-5 dark:border-white/[0.08] dark:bg-[color-mix(in_srgb,var(--brand)_8%,var(--card))];
+    box-shadow: var(--shadow-card);
+  }
+
+  .stack-primary-chip {
+    @apply inline-flex items-center rounded-full border border-brand/30 bg-brand/12 px-3.5 py-1.5 text-[13px] font-semibold leading-none text-brand dark:border-brand/35 dark:bg-brand/18;
+  }
+
+  .stack-category-icon {
+    @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-full border text-[var(--accent-green)];
+    background-color: var(--accent-green-subtle);
+    border-color: var(--accent-green-border);
+  }
+
+  .dark .stack-category-icon {
+    background-color: color-mix(in srgb, var(--accent-green) 12%, var(--card));
+    border-color: color-mix(in srgb, var(--accent-green) 22%, var(--border));
+  }
+
+  .stack-category-title {
+    @apply text-[15px] font-semibold tracking-tight text-foreground sm:text-base;
   }
 
   .project-modal-panel {

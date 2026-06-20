@@ -792,13 +792,24 @@
   },
   "stack": {
     "label": "Technology",
-    "title": "Tools I <highlight>work with</highlight>",
-    "description": "A production-proven stack for building web applications, mobile apps and enterprise solutions.",
+    "title": "Technology <highlight>stack</highlight>",
+    "description": "Technologies used in production web, mobile, SaaS and enterprise platform projects.",
+    "primaryTitle": "Core technologies",
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
-      "databases": "Databases",
-      "other": "Other"
+      "cloud": "Cloud & Data",
+      "mobile": "Mobile",
+      "automation": "AI & Automation",
+      "devops": "Architecture & Deployment"
+    },
+    "categoryDescriptions": {
+      "frontend": "Modern web interfaces and scalable user experiences.",
+      "backend": "APIs, services and business logic.",
+      "cloud": "Persistence, synchronization and cloud services.",
+      "mobile": "Hybrid applications and cross-platform experiences.",
+      "automation": "Intelligent integrations and process automation.",
+      "devops": "Infrastructure, deployment and digital product maintenance."
     }
   },
   "contact": {

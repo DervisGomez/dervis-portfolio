@@ -28,7 +28,7 @@ export function Contact() {
   const t = useTranslations("contact");
 
   return (
-    <section id="contact" className="section-padding section-muted">
+    <section id="contact" className="section-muted pb-16 pt-10 md:pb-28 md:pt-12">
       <div className="page-container">
         <FadeIn>
           <SectionHeader

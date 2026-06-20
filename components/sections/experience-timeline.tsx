@@ -140,7 +140,7 @@ export function ExperienceTimeline() {
   const t = useTranslations("experience");
 
   return (
-    <section id="experience" className="section-muted pb-16 md:pb-28">
+    <section id="experience" className="section-muted pb-0">
       <div className="page-container">
         <div className="experience-section-divider pt-10 md:pt-14">
           <FadeIn>

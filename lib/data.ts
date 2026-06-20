@@ -492,24 +492,82 @@ export const experienceMeta: Record<
   },
 };
 
+export const primaryStackTechnologies = [
+  "Angular",
+  "Ionic",
+  "Firebase",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "ASP.NET Core",
+] as const;
+
 export const techCategoriesData = [
   {
     key: "frontend" as const,
-    technologies: ["Angular", "React", "Next.js", "TypeScript", "Tailwind CSS"],
+    icon: "monitor" as const,
+    technologies: [
+      "Angular",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "Astro",
+    ],
   },
   {
     key: "backend" as const,
-    technologies: ["Node.js", "Express", "ASP.NET Core"],
+    icon: "server" as const,
+    technologies: [
+      "Node.js",
+      "Express",
+      "ASP.NET Core",
+      "PHP",
+      "Firebase Functions",
+      "REST APIs",
+    ],
   },
   {
-    key: "databases" as const,
-    technologies: ["Firebase", "SQL Server", "PostgreSQL"],
+    key: "cloud" as const,
+    icon: "database" as const,
+    technologies: [
+      "Firebase",
+      "Firestore",
+      "SQL Server",
+      "MySQL",
+      "MongoDB",
+      "PostgreSQL",
+    ],
   },
   {
-    key: "other" as const,
-    technologies: ["Firebase", "OpenAI API", "n8n", "Git", "GitHub"],
+    key: "mobile" as const,
+    icon: "smartphone" as const,
+    technologies: ["Ionic", "Capacitor", "Android", "PWA"],
   },
-];
+  {
+    key: "automation" as const,
+    icon: "sparkles" as const,
+    technologies: ["OpenAI", "n8n", "Brevo", "PDFMonkey"],
+  },
+  {
+    key: "devops" as const,
+    icon: "cloud" as const,
+    technologies: [
+      "Firebase Hosting",
+      "Cloud Functions",
+      "Git",
+      "GitHub",
+      "REST APIs",
+      "PWA",
+    ],
+  },
+] as const;
+
+export type TechCategoryKey = (typeof techCategoriesData)[number]["key"];
+export type TechCategoryIcon = (typeof techCategoriesData)[number]["icon"];
 
 export const contactChannels = [
   {
