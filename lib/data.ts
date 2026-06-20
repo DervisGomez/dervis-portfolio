@@ -4,11 +4,22 @@ export const siteConfig = {
   heroImage: "/hero.png",
   heroMobileImage: "/hero-movil.png",
   cvUrl: "/CV.pdf",
-  email: "dervis@appi.cl",
+  email: "dervisgomez77@gmail.com",
   linkedin: "https://linkedin.com/in/dervisgomez",
   github: "https://github.com/dervisgomez",
-  whatsapp: "https://wa.me/56900000000",
+  whatsapp: "https://wa.me/573014587871",
 };
+
+/** URLs de las apps ENAEX en tiendas — actualizar `ios` cuando corresponda. */
+export const enaexStoreUrls = {
+  android:
+    "https://play.google.com/store/apps/details?id=com.enaex.programareconocimientos",
+  ios: "https://apps.apple.com/us/app/programa-de-reconocimiento/id1328394685?l=es-MX",
+} as const;
+
+export const veycoStoreUrls = {
+  android: "https://play.google.com/store/apps/details?id=app.veycoo.co",
+} as const;
 
 export const trustMetricIds = [
   "experience",
@@ -74,21 +85,53 @@ export const navAnchors = [
 ];
 
 export const featuredProductIds = [
+  "devocion",
   "veyco",
-  "area33",
   "enaex",
   "formidavel",
-  "devocion",
+  "enfoqueglobal",
+  "area33",
   "ubicatupuesto",
+  "msmpackaging",
+  "vitrogourmet",
+  "churchapi",
+  "devocionadmin",
 ] as const;
 
-export const primaryProductIds = ["devocion", "veyco", "enaex", "formidavel"] as const satisfies readonly FeaturedProductId[];
-export const secondaryProductIds = ["area33", "ubicatupuesto"] as const satisfies readonly FeaturedProductId[];
+export type PortfolioProjectId = (typeof featuredProductIds)[number];
 
-export type FeaturedProductId = (typeof featuredProductIds)[number];
+/** @deprecated Use PortfolioProjectId */
+export type FeaturedProductId = PortfolioProjectId;
+
+export const primaryProductIds = [
+  "devocion",
+  "veyco",
+  "enaex",
+  "formidavel",
+] as const satisfies readonly PortfolioProjectId[];
+
+export const secondaryProductIds = [
+  "enfoqueglobal",
+  "area33",
+  "ubicatupuesto",
+  "msmpackaging",
+  "vitrogourmet",
+  "churchapi",
+  "devocionadmin",
+] as const satisfies readonly PortfolioProjectId[];
+
+export const projectImpactHighlights: Record<
+  (typeof primaryProductIds)[number],
+  readonly string[]
+> = {
+  devocion: ["0", "1", "2", "3"],
+  veyco: ["0", "1", "2", "3"],
+  enaex: ["0", "1", "2", "3"],
+  formidavel: ["0", "1", "2", "3"],
+};
 
 export const productMeta: Record<
-  FeaturedProductId,
+  PortfolioProjectId,
   {
     image?: string;
     url?: string;
@@ -97,18 +140,25 @@ export const productMeta: Record<
     responsibilityKeys: readonly string[];
     platforms?: readonly ("web" | "android" | "ios")[];
     platformKeys?: readonly string[];
+    platformBadgeKeys?: readonly string[];
     platformUrls?: Partial<Record<string, string>>;
+    storeAppUrls?: { android?: string; ios?: string };
+    businessCapabilityKeys?: readonly string[];
     highlightKeys?: readonly string[];
     statisticKeys?: readonly string[];
     status?: "production" | "activeDevelopment";
     cta?: "live" | "enterprise" | "product";
     theme?: "devocion";
     prominent?: boolean;
+    organizationalImpact?: boolean;
   }
 > = {
   veyco: {
     image: "/veyco.png",
     url: "https://veycoo.com.co",
+    storeAppUrls: {
+      android: veycoStoreUrls.android,
+    },
     stack: [
       "Angular",
       "Ionic",
@@ -120,6 +170,18 @@ export const productMeta: Record<
       "REST APIs",
     ],
     responsibilityKeys: ["0", "1", "2", "3", "4", "5", "6"],
+    highlightKeys: [
+      "marketplace",
+      "favorites",
+      "orders",
+      "catalog",
+      "userRoles",
+      "adminPanel",
+      "activitySummaries",
+      "commercialEcosystem",
+    ],
+    status: "production",
+    cta: "live",
   },
   area33: {
     stack: ["Ionic", "Angular", "Firebase", "Capacitor"],
@@ -130,22 +192,34 @@ export const productMeta: Record<
     url: "https://reconocimiento.enaex.com/",
     platformUrls: {
       web: "https://reconocimiento.enaex.com/",
-      android:
-        "https://play.google.com/store/apps/details?id=com.enaex.programareconocimientos",
-      ios: "https://apps.apple.com/us/app/programa-de-reconocimiento/id1328394685?l=es-MX",
+    },
+    storeAppUrls: {
+      android: enaexStoreUrls.android,
+      ios: enaexStoreUrls.ios,
     },
     stack: [
       "Angular",
       "Ionic",
-      "TypeScript",
       "Capacitor",
       "Firebase",
-      "Firebase Functions",
+      "Cloud Functions",
       "REST APIs",
-      "Azure AD",
+      "Microsoft Azure AD",
+      "TypeScript",
     ],
-    platforms: ["web", "android", "ios"],
-    highlightKeys: ["0", "1", "2", "3"],
+    businessCapabilityKeys: [
+      "multiCountry",
+      "multiLanguage",
+      "organizationalAnalytics",
+      "plantStats",
+      "areaStats",
+      "countryStats",
+      "userMetrics",
+      "categoryMetrics",
+      "bulkImport",
+      "enterpriseExport",
+    ],
+    organizationalImpact: true,
     status: "production",
     cta: "enterprise",
     responsibilityKeys: ["0", "1", "2", "3", "4", "5", "6"],
@@ -162,16 +236,22 @@ export const productMeta: Record<
       "Ionic",
       "Capacitor",
       "Firebase",
-      "Firebase Functions",
       "Firestore",
-      "App Check",
+      "Cloud Functions",
       "TypeScript",
+      "Dexie",
       "Chart.js",
-      "QR Codes",
-      "PWA",
+      "QR Code",
     ],
     platformKeys: ["webApp", "pwa", "mobile", "desktop"],
-    highlightKeys: ["0", "1", "2", "3"],
+    businessCapabilityKeys: [
+      "gpsRoutes",
+      "digitalMarkup",
+      "offline",
+      "qr",
+      "excel",
+      "pdf",
+    ],
     statisticKeys: ["0", "1", "2", "3", "4"],
     status: "production",
     cta: "enterprise",
@@ -179,7 +259,7 @@ export const productMeta: Record<
   },
   devocion: {
     image: "/DevocionDiaria.png",
-    url: "#devocion-highlights",
+    url: "https://devociondiaria.web.app/",
     stack: [
       "Angular",
       "Ionic",
@@ -203,36 +283,27 @@ export const productMeta: Record<
     stack: ["Angular", "Node.js", "PostgreSQL", "TypeScript"],
     responsibilityKeys: ["0", "1", "2", "3", "4"],
   },
-};
-
-export const contributedOrganizationIds = [
-  "enaex",
-  "veyco",
-  "formidavel",
-  "appi",
-  "area33",
-  "devocion",
-  "ubicatupuesto",
-  "wonderchatt",
-  "uniserv",
-] as const;
-
-export type ContributedOrganizationId = (typeof contributedOrganizationIds)[number];
-
-/** Logo paths are optional — add SVG/PNG to public/logos/ when available */
-export const contributedOrganizations: Record<
-  ContributedOrganizationId,
-  { name: string; logo?: string }
-> = {
-  enaex: { name: "ENAEX", logo: "/logos/enaex.svg" },
-  veyco: { name: "VE&CO", logo: "/logos/veyco.svg" },
-  formidavel: { name: "Formidável", logo: "/logos/formidavel.svg" },
-  appi: { name: "APPI.CL", logo: "/logos/appi.svg" },
-  area33: { name: "Area33", logo: "/logos/area33.svg" },
-  devocion: { name: "Devoción Diaria", logo: "/logos/devocion.svg" },
-  ubicatupuesto: { name: "UbicaTuPuesto", logo: "/logos/ubicatupuesto.svg" },
-  wonderchatt: { name: "WonderChatt", logo: "/logos/wonderchatt.svg" },
-  uniserv: { name: "UNISERV", logo: "/logos/uniserv.svg" },
+  enfoqueglobal: {
+    stack: ["Angular", "Firebase", "TypeScript", "Capacitor"],
+    responsibilityKeys: ["0", "1", "2", "3", "4"],
+  },
+  msmpackaging: {
+    stack: ["Angular", "Node.js", "TypeScript", "PostgreSQL"],
+    responsibilityKeys: ["0", "1", "2", "3"],
+  },
+  vitrogourmet: {
+    stack: ["Angular", "Firebase", "TypeScript", "Ionic"],
+    responsibilityKeys: ["0", "1", "2", "3"],
+  },
+  churchapi: {
+    stack: ["Node.js", "Express", "Firebase", "TypeScript", "REST APIs"],
+    responsibilityKeys: ["0", "1", "2", "3", "4"],
+  },
+  devocionadmin: {
+    stack: ["Angular", "Firebase", "Firestore", "TypeScript", "Cloud Functions"],
+    responsibilityKeys: ["0", "1", "2", "3", "4", "5"],
+    theme: "devocion",
+  },
 };
 
 export const experienceIds = ["appi", "wonderchatt", "uniserv"] as const;

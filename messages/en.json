@@ -51,7 +51,21 @@
     "label": "Work",
     "title": "Products built for <highlight>real businesses</highlight>",
     "description": "Case studies of platforms shipped to production — marketplaces, enterprise PWAs, corporate systems, and mobile apps built for companies across Latin America.",
+    "descriptionShort": "Real products in production — marketplaces, enterprise PWAs, and corporate systems.",
     "moreProjects": "More projects",
+    "moreProjectsTitle": "More projects",
+    "moreProjectsDescription": "I've contributed to the development of multiple web, mobile and enterprise platform applications.",
+    "showMoreProjects": "View more projects",
+    "hideMoreProjects": "Show fewer projects",
+    "viewDetail": "View details",
+    "closeModal": "Close",
+    "externalLinksLabel": "External links",
+    "expandCaseStudy": "View technical case",
+    "viewCaseStudy": "View technical case",
+    "contextLabel": "Context",
+    "resultsLabel": "Results",
+    "moreTech": "+{count} more",
+    "overviewLabel": "Overview",
     "roleLabel": "My Role",
     "responsibilitiesLabel": "Key Responsibilities",
     "impactLabel": "Business Impact",
@@ -61,15 +75,60 @@
     "productionStatus": "Production",
     "activeDevelopmentStatus": "Active Development",
     "viewLive": "View Live Project",
-    "viewProject": "View Project",
+    "viewProject": "View project",
+    "googlePlay": "Google Play",
+    "appStore": "App Store",
     "caseStudyComingSoon": "Case Study (coming soon)",
     "technicalHighlightsLabel": "Technical Highlights",
+    "businessCapabilitiesLabel": "Business Capabilities",
+    "organizationalImpactLabel": "Organizational Impact",
     "viewWebsite": "Visit Website",
     "viewApplication": "Open Application",
-    "viewCaseStudy": "View Case Study",
     "viewProjectDetails": "View Project Details",
     "contactCta": "Discuss Project",
     "statisticsLabel": "Project Statistics",
+    "impactOverview": {
+      "devocion": {
+        "name": "Devoción Diaria",
+        "type": "Own product",
+        "highlights": {
+          "0": "Mobile application",
+          "1": "PWA",
+          "2": "Admin dashboard",
+          "3": "Firebase architecture"
+        }
+      },
+      "veyco": {
+        "name": "VE&CO",
+        "type": "Digital marketplace",
+        "highlights": {
+          "0": "Full marketplace",
+          "1": "Order management",
+          "2": "User roles",
+          "3": "Admin dashboard"
+        }
+      },
+      "enaex": {
+        "name": "ENAEX",
+        "type": "Corporate platform",
+        "highlights": {
+          "0": "Multi-country platform",
+          "1": "Organizational analytics",
+          "2": "Multi-language",
+          "3": "Plant and area metrics"
+        }
+      },
+      "formidavel": {
+        "name": "Formidável",
+        "type": "Operational digitization",
+        "highlights": {
+          "0": "GPS route management",
+          "1": "Digital markup",
+          "2": "Offline operation",
+          "3": "Bulk PDF generation"
+        }
+      }
+    },
     "platforms": {
       "web": "Web",
       "android": "Android",
@@ -79,12 +138,48 @@
       "veyco": {
         "name": "VE&CO",
         "category": "Marketplace Platform",
-        "description": "Digital marketplace platform with web application and mobile app, designed to connect buyers and sellers through a secure and scalable experience.",
+        "subtitle": "Digital marketplace for buying and selling products.",
+        "tagline": "Digital marketplace · Web & Mobile · Production",
+        "description": "Digital marketplace designed to connect buyers and sellers through a modern e-commerce experience, order management, product catalogs and business administration.",
         "role": "Lead Full Stack Developer",
         "imageAlt": "VE&CO platform screenshot",
         "impact": {
           "metric": "Web & Mobile",
           "description": "Marketplace available on web and mobile app, connecting buyers and sellers in an ecosystem built to scale with the business."
+        },
+        "highlights": {
+          "marketplace": {
+            "title": "Full Marketplace",
+            "description": "Platform connecting buyers and sellers within a single digital ecosystem."
+          },
+          "favorites": {
+            "title": "Favorites & Discovery",
+            "description": "Users can save favorite products and explore new catalogs."
+          },
+          "orders": {
+            "title": "Order Management",
+            "description": "Order administration, tracking and control of commercial operations."
+          },
+          "catalog": {
+            "title": "Product Catalog",
+            "description": "Structured management of products, categories and commercial listings."
+          },
+          "userRoles": {
+            "title": "User Roles",
+            "description": "Differentiated experience for buyers, sellers and administrators."
+          },
+          "adminPanel": {
+            "title": "Admin Dashboard",
+            "description": "Administration and platform activity monitoring tools."
+          },
+          "activitySummaries": {
+            "title": "Activity Summaries",
+            "description": "Indicators and metrics to monitor behavior and operations."
+          },
+          "commercialEcosystem": {
+            "title": "Commercial Ecosystem",
+            "description": "Segmentation and management of buyers and sellers within the marketplace."
+          }
         },
         "responsibilities": {
           "0": "Developed the web frontend application with Angular.",
@@ -117,9 +212,12 @@
       "enaex": {
         "name": "Espíritu Enaex",
         "category": "Corporate Recognition Platform",
-        "description": "Enterprise recognition platform used by employees across multiple countries to strengthen company culture, reward positive behaviors and increase engagement across the organization.",
+        "subtitle": "Corporate employee recognition system.",
+        "tagline": "Corporate system · Web, Android & iOS · Production",
+        "description": "Corporate organizational recognition platform designed to strengthen company culture, increase employee participation and provide strategic metrics for teams distributed across multiple countries.",
         "role": "Full Stack Developer",
         "imageAlt": "Espíritu Enaex platform screenshot",
+        "organizationalImpact": "Implemented for international teams with segmentation by country, plant, area, category and user, enabling analysis of participation and recognition across the organization through consolidated indicators.",
         "impact": {
           "metric": "Multi-country · Web & Mobile",
           "description": "A corporate platform used by employees across multiple countries to recognize achievements, promote company values and improve organizational culture."
@@ -133,29 +231,55 @@
           "5": "Integrated REST APIs.",
           "6": "Participated in architecture, maintenance and feature evolution."
         },
-        "highlights": {
-          "0": {
+        "capabilities": {
+          "multiCountry": {
             "title": "Multi-country Platform",
-            "description": "Used by employees in different countries."
+            "description": "Available to employees across countries with organizational segmentation."
           },
-          "1": {
-            "title": "Cross-platform Experience",
-            "description": "Available on Web, Android and iOS."
+          "multiLanguage": {
+            "title": "Multi-language",
+            "description": "Interface available in multiple languages for international teams."
           },
-          "2": {
-            "title": "Enterprise Authentication",
-            "description": "Integrated with Microsoft Azure Active Directory."
+          "organizationalAnalytics": {
+            "title": "Organizational Analytics",
+            "description": "Consolidated indicators and metrics for decision-making."
           },
-          "3": {
-            "title": "Cloud Architecture",
-            "description": "Built using Firebase, Functions and REST APIs."
+          "plantStats": {
+            "title": "Plant Statistics",
+            "description": "Participation and recognition tracking by operational plant."
+          },
+          "areaStats": {
+            "title": "Area Statistics",
+            "description": "Comparative analysis across departments and business areas."
+          },
+          "countryStats": {
+            "title": "Country Statistics",
+            "description": "Participation and activity visualization by country."
+          },
+          "userMetrics": {
+            "title": "User Metrics",
+            "description": "Individual tracking of activity and recognitions."
+          },
+          "categoryMetrics": {
+            "title": "Category Metrics",
+            "description": "Recognition analysis by corporate categories."
+          },
+          "bulkImport": {
+            "title": "Bulk Import",
+            "description": "Upload of users and corporate data through Excel files."
+          },
+          "enterpriseExport": {
+            "title": "Enterprise Export",
+            "description": "Export of information and reports in Excel format."
           }
         }
       },
       "formidavel": {
         "name": "Formidável",
         "category": "Business Process Digitalization Platform",
-        "description": "Formidável is a business platform focused on digitalizing field operations, replacing paper-based processes with digital workflows, forms, inspections, audits, reports and operational automation. The platform helps organizations collect information in real time, manage field teams and centralize operational data through a web and mobile experience.",
+        "subtitle": "Platform for process digitization and automation.",
+        "tagline": "Process digitization · PWA & Mobile · Production",
+        "description": "Enterprise platform for operational process digitization, field inspections, document management and workflow automation. Used to capture, process and distribute information efficiently across different operational environments.",
         "role": "Lead Full Stack Developer",
         "imageAlt": "Formidável platform screenshot",
         "impact": {
@@ -180,22 +304,30 @@
           "8": "Implemented image processing and file management workflows.",
           "9": "Participated in architecture, optimization and product evolution."
         },
-        "highlights": {
-          "0": {
-            "title": "Dynamic Forms",
-            "description": "Create and manage customizable forms for inspections, audits, field visits and operational processes."
+        "capabilities": {
+          "gpsRoutes": {
+            "title": "GPS route management",
+            "description": "Planning and tracking of routes using geographic coordinates."
           },
-          "1": {
-            "title": "Field Operations",
-            "description": "Designed for teams working outside the office, enabling real-time data collection and operational tracking."
+          "digitalMarkup": {
+            "title": "Digital markup",
+            "description": "Annotations on images, plans and photos using icons and strokes."
           },
-          "2": {
-            "title": "Offline Capabilities",
-            "description": "Supports work in environments with limited connectivity through PWA and local storage strategies."
+          "offline": {
+            "title": "Offline operation",
+            "description": "Field data capture without connectivity and later synchronization."
           },
-          "3": {
-            "title": "Document Automation",
-            "description": "Generate reports, PDFs, exports and operational documentation automatically."
+          "qr": {
+            "title": "QR system",
+            "description": "QR code generation and scanning for identification and traceability."
+          },
+          "excel": {
+            "title": "Enterprise Excel",
+            "description": "Bulk import and advanced export of information in Excel."
+          },
+          "pdf": {
+            "title": "Bulk PDF generation",
+            "description": "Automatic creation of multiple documents and reports."
           }
         },
         "statistics": {
@@ -209,7 +341,9 @@
       "devocion": {
         "name": "Devoción Diaria",
         "category": "Faith-Based Productivity Platform",
-        "description": "Devoción Diaria is a platform designed to help believers build consistent spiritual habits through devotional journaling, prayer tracking and personal growth insights.",
+        "subtitle": "Spiritual growth and community management platform.",
+        "tagline": "Own product · PWA · Android in development",
+        "description": "Helps believers build spiritual habits through devotional journaling and prayer tracking.",
         "longDescription": "Devoción Diaria combines devotional journaling, prayer requests, spiritual habit tracking and church administration tools into a single platform. The project includes a mobile experience, a progressive web application and an administrative dashboard for churches and community leaders.",
         "platformSummary": "Web App · PWA · Android (in progress)",
         "role": "Founder & Full Stack Developer",
@@ -280,14 +414,97 @@
           "3": "Designed assignment, scheduling and team coordination flows.",
           "4": "Participated in architecture, deployment and platform maintenance."
         }
+      },
+      "enfoqueglobal": {
+        "name": "Enfoque Global",
+        "category": "Web Platform",
+        "description": "Web application for content and business operations management, with a responsive experience and cloud deployment.",
+        "role": "Full Stack Developer",
+        "imageAlt": "Enfoque Global platform screenshot",
+        "impact": {
+          "metric": "Web · Cross-platform",
+          "description": "Web platform accessible from multiple devices for business operations and content management."
+        },
+        "responsibilities": {
+          "0": "Developed the frontend with Angular and TypeScript.",
+          "1": "Integrated Firebase for authentication, database and hosting.",
+          "2": "Implemented content and user management modules.",
+          "3": "Optimized performance and responsive experience.",
+          "4": "Participated in deployment, maintenance and feature evolution."
+        }
+      },
+      "msmpackaging": {
+        "name": "MSM Packaging",
+        "category": "Enterprise Platform",
+        "description": "Web system for operational and commercial management of a packaging company, centralizing business processes and data.",
+        "role": "Full Stack Developer",
+        "imageAlt": "MSM Packaging platform screenshot",
+        "impact": {
+          "metric": "Operational digitization",
+          "description": "Centralized commercial and operational processes in a web platform to improve business management."
+        },
+        "responsibilities": {
+          "0": "Developed the frontend with Angular and TypeScript.",
+          "1": "Built backend services with Node.js and PostgreSQL.",
+          "2": "Implemented commercial and operational management modules.",
+          "3": "Participated in architecture, deployment and maintenance."
+        }
+      },
+      "vitrogourmet": {
+        "name": "Vitro Gourmet",
+        "category": "Mobile Application",
+        "description": "Mobile application for catalog and commercial management of gourmet products, with a native experience on iOS and Android.",
+        "role": "Full Stack Developer",
+        "imageAlt": "Vitro Gourmet app screenshot",
+        "impact": {
+          "metric": "Android & iOS",
+          "description": "Published mobile app to showcase product catalog and support the business commercial operations."
+        },
+        "responsibilities": {
+          "0": "Developed the mobile app with Ionic, Angular and Firebase.",
+          "1": "Implemented product catalog and commercial flows.",
+          "2": "Integrated authentication and cloud services.",
+          "3": "Optimized performance and user experience on mobile devices."
+        }
+      },
+      "churchapi": {
+        "name": "Church API",
+        "category": "Backend API",
+        "description": "REST API for church, member and administrative operations management, with authentication and cloud services.",
+        "role": "Backend Developer",
+        "imageAlt": "Church API architecture diagram",
+        "impact": {
+          "metric": "REST API · Firebase",
+          "description": "Scalable backend that centralizes business logic and exposes endpoints for client applications."
+        },
+        "responsibilities": {
+          "0": "Designed and developed the REST API with Node.js and Express.",
+          "1": "Integrated Firebase for authentication and data persistence.",
+          "2": "Implemented endpoints for church and member management.",
+          "3": "Documented and structured the service architecture.",
+          "4": "Participated in deployment, maintenance and API evolution."
+        }
+      },
+      "devocionadmin": {
+        "name": "Devoción Diaria Admin",
+        "category": "Admin Dashboard",
+        "description": "Administrative dashboard to manage content, users and metrics for the Devoción Diaria platform.",
+        "role": "Full Stack Developer",
+        "imageAlt": "Devoción Diaria Admin dashboard screenshot",
+        "impact": {
+          "metric": "Web dashboard · Firebase",
+          "description": "Internal tool to manage devotional content, users and product operations."
+        },
+        "responsibilities": {
+          "0": "Developed the admin dashboard with Angular and TypeScript.",
+          "1": "Integrated Firestore and Cloud Functions for backend operations.",
+          "2": "Implemented devotional content and user management.",
+          "3": "Built metrics and platform monitoring modules.",
+          "4": "Designed content publishing and moderation flows.",
+          "5": "Participated in architecture, deployment and product evolution."
+        }
       }
     }
-  },
-  "organizations": {
-    "label": "Experience",
-    "title": "Organizations I've <highlight>Contributed To</highlight>",
-    "description": "Throughout my career, I have participated in the development of digital products, mobile applications and enterprise platforms used by organizations across different industries in Latin America.",
-    "footer": "Additional projects and organizations available upon request."
   },
   "experience": {
     "label": "Experience",

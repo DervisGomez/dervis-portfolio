@@ -4,7 +4,6 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/sections/hero";
 import { TrustMetrics } from "@/components/sections/trust-metrics";
-import { OrganizationsContributed } from "@/components/sections/organizations-contributed";
 import { FeaturedProducts } from "@/components/sections/featured-products";
 import { ExperienceTimeline } from "@/components/sections/experience-timeline";
 import { TechStack } from "@/components/sections/tech-stack";
@@ -33,7 +32,6 @@ export default async function HomePage({ params }: Props) {
       <main id="main-content" className="flex-1 min-w-0">
         <Hero />
         <TrustMetrics />
-        <OrganizationsContributed />
         <FeaturedProducts />
         <ExperienceTimeline />
         <TechStack />

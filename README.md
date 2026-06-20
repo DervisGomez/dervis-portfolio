@@ -144,7 +144,7 @@ No requiere variables de entorno para funcionamiento básico.
 
 - [LinkedIn](https://linkedin.com/in/dervisgomez)
 - [GitHub](https://github.com/dervisgomez)
-- [Email](mailto:dervis@appi.cl)
+- [Email](mailto:dervisgomez77@gmail.com)
 
 ## Licencia
 

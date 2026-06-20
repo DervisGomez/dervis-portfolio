@@ -51,7 +51,21 @@
     "label": "Trabajo",
     "title": "Productos construidos para <highlight>empresas reales</highlight>",
     "description": "Casos de estudio de plataformas entregadas en producción — marketplaces, PWAs empresariales, sistemas corporativos y apps móviles para empresas en Latinoamérica.",
+    "descriptionShort": "Productos reales en producción — marketplaces, PWAs empresariales y sistemas corporativos.",
     "moreProjects": "Más proyectos",
+    "moreProjectsTitle": "Más proyectos",
+    "moreProjectsDescription": "He participado en el desarrollo de múltiples aplicaciones web, móviles y plataformas empresariales.",
+    "showMoreProjects": "Ver más proyectos",
+    "hideMoreProjects": "Ver menos proyectos",
+    "viewDetail": "Ver detalle",
+    "closeModal": "Cerrar",
+    "externalLinksLabel": "Enlaces externos",
+    "expandCaseStudy": "Ver caso técnico",
+    "viewCaseStudy": "Ver caso técnico",
+    "contextLabel": "Contexto",
+    "resultsLabel": "Resultados",
+    "moreTech": "+{count} más",
+    "overviewLabel": "Resumen",
     "roleLabel": "Mi Rol",
     "responsibilitiesLabel": "Responsabilidades Clave",
     "impactLabel": "Impacto en el Negocio",
@@ -61,15 +75,60 @@
     "productionStatus": "Producción",
     "activeDevelopmentStatus": "Desarrollo Activo",
     "viewLive": "Ver Proyecto en Vivo",
-    "viewProject": "Ver Proyecto",
+    "viewProject": "Ver proyecto",
+    "googlePlay": "Google Play",
+    "appStore": "App Store",
     "caseStudyComingSoon": "Caso de Estudio (próximamente)",
     "technicalHighlightsLabel": "Aspectos Técnicos Destacados",
+    "businessCapabilitiesLabel": "Capacidades Empresariales",
+    "organizationalImpactLabel": "Impacto Organizacional",
     "viewWebsite": "Visitar Sitio Web",
     "viewApplication": "Abrir Aplicación",
-    "viewCaseStudy": "Ver Caso de Estudio",
     "viewProjectDetails": "Ver Detalles del Proyecto",
     "contactCta": "Consultar Proyecto",
     "statisticsLabel": "Estadísticas del Proyecto",
+    "impactOverview": {
+      "devocion": {
+        "name": "Devoción Diaria",
+        "type": "Producto propio",
+        "highlights": {
+          "0": "Aplicación móvil",
+          "1": "PWA",
+          "2": "Panel administrativo",
+          "3": "Arquitectura Firebase"
+        }
+      },
+      "veyco": {
+        "name": "VE&CO",
+        "type": "Marketplace digital",
+        "highlights": {
+          "0": "Marketplace completo",
+          "1": "Gestión de pedidos",
+          "2": "Roles de usuario",
+          "3": "Panel administrativo"
+        }
+      },
+      "enaex": {
+        "name": "ENAEX",
+        "type": "Plataforma corporativa",
+        "highlights": {
+          "0": "Plataforma multi-país",
+          "1": "Analítica organizacional",
+          "2": "Multi-idioma",
+          "3": "Métricas por planta y área"
+        }
+      },
+      "formidavel": {
+        "name": "Formidável",
+        "type": "Digitalización operacional",
+        "highlights": {
+          "0": "Gestión de rutas GPS",
+          "1": "Croquera digital",
+          "2": "Operación offline",
+          "3": "Generación masiva de PDFs"
+        }
+      }
+    },
     "platforms": {
       "web": "Web",
       "android": "Android",
@@ -79,12 +138,48 @@
       "veyco": {
         "name": "VE&CO",
         "category": "Plataforma Marketplace",
-        "description": "Plataforma marketplace digital con aplicación web y app móvil, diseñada para conectar compradores y vendedores a través de una experiencia segura y escalable.",
+        "subtitle": "Marketplace digital para compra y venta de productos.",
+        "tagline": "Marketplace digital · Web & Mobile · Producción",
+        "description": "Marketplace digital diseñado para conectar compradores y vendedores mediante una experiencia moderna de comercio electrónico, gestión de pedidos, catálogos de productos y administración empresarial.",
         "role": "Lead Full Stack Developer",
         "imageAlt": "Captura de pantalla de la plataforma VE&CO",
         "impact": {
           "metric": "Web & Mobile",
           "description": "Marketplace disponible en web y app móvil, conectando compradores y vendedores en un ecosistema diseñado para escalar con el negocio."
+        },
+        "highlights": {
+          "marketplace": {
+            "title": "Marketplace Completo",
+            "description": "Plataforma para conectar compradores y vendedores en un mismo ecosistema digital."
+          },
+          "favorites": {
+            "title": "Favoritos y Descubrimiento",
+            "description": "Los usuarios pueden guardar productos favoritos y explorar nuevos catálogos."
+          },
+          "orders": {
+            "title": "Gestión de Pedidos",
+            "description": "Administración de pedidos, seguimiento y control de operaciones comerciales."
+          },
+          "catalog": {
+            "title": "Catálogo de Productos",
+            "description": "Gestión estructurada de productos, categorías y publicaciones comerciales."
+          },
+          "userRoles": {
+            "title": "Roles de Usuario",
+            "description": "Experiencia diferenciada para compradores, vendedores y administradores."
+          },
+          "adminPanel": {
+            "title": "Panel Administrativo",
+            "description": "Herramientas de administración y supervisión de la actividad de la plataforma."
+          },
+          "activitySummaries": {
+            "title": "Resúmenes de Actividad",
+            "description": "Indicadores y métricas para monitorear comportamiento y operaciones."
+          },
+          "commercialEcosystem": {
+            "title": "Ecosistema Comercial",
+            "description": "Segmentación y gestión de compradores y vendedores dentro del marketplace."
+          }
         },
         "responsibilities": {
           "0": "Desarrollé la aplicación web frontend con Angular.",
@@ -117,9 +212,12 @@
       "enaex": {
         "name": "Espíritu Enaex",
         "category": "Plataforma de Reconocimiento Corporativo",
-        "description": "Plataforma empresarial de reconocimiento utilizada por colaboradores en múltiples países para fortalecer la cultura organizacional, premiar conductas positivas e incrementar el engagement en toda la compañía.",
+        "subtitle": "Sistema corporativo de reconocimiento empresarial.",
+        "tagline": "Sistema corporativo · Web, Android & iOS · Producción",
+        "description": "Plataforma corporativa de reconocimiento organizacional diseñada para fortalecer la cultura empresarial, aumentar la participación de los colaboradores y proporcionar métricas estratégicas para equipos distribuidos en múltiples países.",
         "role": "Full Stack Developer",
         "imageAlt": "Captura de pantalla de la plataforma Espíritu Enaex",
+        "organizationalImpact": "Implementada para equipos internacionales con segmentación por países, plantas, áreas, categorías y usuarios, permitiendo analizar la participación y el reconocimiento dentro de la organización mediante indicadores consolidados.",
         "impact": {
           "metric": "Multi-país · Web & Mobile",
           "description": "Plataforma corporativa utilizada por colaboradores en distintos países para reconocer logros, promover valores de la empresa y fortalecer la cultura organizacional."
@@ -133,29 +231,55 @@
           "5": "Integré APIs REST.",
           "6": "Participé en arquitectura, mantenimiento y evolución de funcionalidades."
         },
-        "highlights": {
-          "0": {
-            "title": "Plataforma multi-país",
-            "description": "Utilizada por colaboradores en distintos países."
+        "capabilities": {
+          "multiCountry": {
+            "title": "Plataforma Multi-país",
+            "description": "Disponible para colaboradores de distintos países con segmentación organizacional."
           },
-          "1": {
-            "title": "Experiencia cross-platform",
-            "description": "Disponible en Web, Android e iOS."
+          "multiLanguage": {
+            "title": "Multi-idioma",
+            "description": "Interfaz disponible en múltiples idiomas para equipos internacionales."
           },
-          "2": {
-            "title": "Autenticación empresarial",
-            "description": "Integrada con Microsoft Azure Active Directory."
+          "organizationalAnalytics": {
+            "title": "Analítica Organizacional",
+            "description": "Indicadores y métricas consolidadas para la toma de decisiones."
           },
-          "3": {
-            "title": "Arquitectura en la nube",
-            "description": "Construida con Firebase, Functions y APIs REST."
+          "plantStats": {
+            "title": "Estadísticas por Planta",
+            "description": "Seguimiento de participación y reconocimiento por planta operacional."
+          },
+          "areaStats": {
+            "title": "Estadísticas por Área",
+            "description": "Análisis comparativo entre departamentos y áreas de negocio."
+          },
+          "countryStats": {
+            "title": "Estadísticas por País",
+            "description": "Visualización de participación y actividad por país."
+          },
+          "userMetrics": {
+            "title": "Métricas por Usuario",
+            "description": "Seguimiento individual de actividad y reconocimientos."
+          },
+          "categoryMetrics": {
+            "title": "Métricas por Categoría",
+            "description": "Análisis de reconocimientos según categorías corporativas."
+          },
+          "bulkImport": {
+            "title": "Importación Masiva",
+            "description": "Carga de usuarios y datos corporativos mediante archivos Excel."
+          },
+          "enterpriseExport": {
+            "title": "Exportación Empresarial",
+            "description": "Exportación de información y reportes en formato Excel."
           }
         }
       },
       "formidavel": {
         "name": "Formidável",
         "category": "Plataforma de Digitalización de Procesos de Negocio",
-        "description": "Formidável es una plataforma empresarial enfocada en digitalizar operaciones de campo, reemplazando procesos en papel con flujos digitales, formularios, inspecciones, auditorías, reportes y automatización operacional. La plataforma ayuda a las organizaciones a recopilar información en tiempo real, gestionar equipos de campo y centralizar datos operacionales a través de una experiencia web y móvil.",
+        "subtitle": "Plataforma para digitalización y automatización de procesos.",
+        "tagline": "Digitalización de procesos · PWA & Mobile · Producción",
+        "description": "Plataforma empresarial para digitalización de procesos operativos, inspecciones en terreno, gestión documental y automatización de flujos de trabajo. Utilizada para capturar, procesar y distribuir información de forma eficiente en distintos entornos operacionales.",
         "role": "Lead Full Stack Developer",
         "imageAlt": "Captura de pantalla de la plataforma Formidável",
         "impact": {
@@ -180,22 +304,30 @@
           "8": "Implementé flujos de procesamiento de imágenes y gestión de archivos.",
           "9": "Participé en arquitectura, optimización y evolución del producto."
         },
-        "highlights": {
-          "0": {
-            "title": "Formularios Dinámicos",
-            "description": "Crea y gestiona formularios personalizables para inspecciones, auditorías, visitas de campo y procesos operacionales."
+        "capabilities": {
+          "gpsRoutes": {
+            "title": "Gestión de rutas GPS",
+            "description": "Planificación y seguimiento de recorridos mediante coordenadas geográficas."
           },
-          "1": {
-            "title": "Operaciones de Campo",
-            "description": "Diseñada para equipos que trabajan fuera de la oficina, habilitando recolección de datos en tiempo real y seguimiento operacional."
+          "digitalMarkup": {
+            "title": "Croquera digital",
+            "description": "Anotaciones sobre imágenes, planos y fotografías utilizando íconos y trazos."
           },
-          "2": {
-            "title": "Capacidades Offline",
-            "description": "Soporta trabajo en entornos con conectividad limitada mediante PWA y estrategias de almacenamiento local."
+          "offline": {
+            "title": "Operación offline",
+            "description": "Captura de información en terreno sin conexión con sincronización posterior."
           },
-          "3": {
-            "title": "Automatización Documental",
-            "description": "Genera reportes, PDFs, exportaciones y documentación operacional de forma automática."
+          "qr": {
+            "title": "Sistema QR",
+            "description": "Generación y lectura de códigos QR para identificación y trazabilidad."
+          },
+          "excel": {
+            "title": "Excel empresarial",
+            "description": "Importación masiva y exportación avanzada de información en Excel."
+          },
+          "pdf": {
+            "title": "Generación masiva de PDFs",
+            "description": "Creación automática de múltiples documentos y reportes."
           }
         },
         "statistics": {
@@ -209,7 +341,9 @@
       "devocion": {
         "name": "Devoción Diaria",
         "category": "Plataforma de Productividad Espiritual",
-        "description": "Devoción Diaria es una plataforma diseñada para ayudar a creyentes a construir hábitos espirituales consistentes mediante journaling devocional, seguimiento de oración e insights de crecimiento personal.",
+        "subtitle": "Plataforma de crecimiento espiritual y gestión de comunidades.",
+        "tagline": "Producto propio · PWA · Android en desarrollo",
+        "description": "Ayuda a creyentes a construir hábitos espirituales mediante journaling devocional y seguimiento de oración.",
         "longDescription": "Devoción Diaria combina journaling devocional, peticiones de oración, seguimiento de hábitos espirituales y herramientas de administración para iglesias en una sola plataforma. El proyecto incluye experiencia móvil, aplicación web progresiva y panel administrativo para iglesias y líderes comunitarios.",
         "platformSummary": "Web App · PWA · Android (en desarrollo)",
         "role": "Founder & Full Stack Developer",
@@ -280,14 +414,97 @@
           "3": "Diseñé flujos de asignación, horarios y coordinación de equipos.",
           "4": "Participé en arquitectura, despliegue y mantenimiento de la plataforma."
         }
+      },
+      "enfoqueglobal": {
+        "name": "Enfoque Global",
+        "category": "Plataforma Web",
+        "description": "Aplicación web para gestión de contenidos y operaciones empresariales, con experiencia responsive y despliegue en la nube.",
+        "role": "Full Stack Developer",
+        "imageAlt": "Captura de pantalla de la plataforma Enfoque Global",
+        "impact": {
+          "metric": "Web · Multiplataforma",
+          "description": "Plataforma web accesible desde distintos dispositivos para operaciones y gestión de contenidos empresariales."
+        },
+        "responsibilities": {
+          "0": "Desarrollé el frontend con Angular y TypeScript.",
+          "1": "Integré Firebase para autenticación, base de datos y hosting.",
+          "2": "Implementé módulos de gestión de contenidos y usuarios.",
+          "3": "Optimicé rendimiento y experiencia responsive.",
+          "4": "Participé en despliegue, mantenimiento y evolución de funcionalidades."
+        }
+      },
+      "msmpackaging": {
+        "name": "MSM Packaging",
+        "category": "Plataforma Empresarial",
+        "description": "Sistema web para gestión operativa y comercial de una empresa de empaques, centralizando procesos y datos del negocio.",
+        "role": "Full Stack Developer",
+        "imageAlt": "Captura de pantalla de la plataforma MSM Packaging",
+        "impact": {
+          "metric": "Digitalización operativa",
+          "description": "Centralizó procesos comerciales y operativos en una plataforma web para mejorar la gestión del negocio."
+        },
+        "responsibilities": {
+          "0": "Desarrollé el frontend con Angular y TypeScript.",
+          "1": "Construí servicios backend con Node.js y PostgreSQL.",
+          "2": "Implementé módulos de gestión comercial y operativa.",
+          "3": "Participé en arquitectura, despliegue y mantenimiento."
+        }
+      },
+      "vitrogourmet": {
+        "name": "Vitro Gourmet",
+        "category": "Aplicación Móvil",
+        "description": "Aplicación móvil para catálogo y gestión comercial de productos gourmet, con experiencia nativa en iOS y Android.",
+        "role": "Full Stack Developer",
+        "imageAlt": "Captura de pantalla de la aplicación Vitro Gourmet",
+        "impact": {
+          "metric": "Android & iOS",
+          "description": "App móvil publicada para presentar catálogo de productos y facilitar la operación comercial del negocio."
+        },
+        "responsibilities": {
+          "0": "Desarrollé la aplicación móvil con Ionic, Angular y Firebase.",
+          "1": "Implementé catálogo de productos y flujos comerciales.",
+          "2": "Integré autenticación y servicios en la nube.",
+          "3": "Optimicé rendimiento y experiencia de usuario en dispositivos móviles."
+        }
+      },
+      "churchapi": {
+        "name": "Church API",
+        "category": "API Backend",
+        "description": "API REST para gestión de iglesias, miembros y operaciones administrativas, con autenticación y servicios en la nube.",
+        "role": "Backend Developer",
+        "imageAlt": "Diagrama de la API Church API",
+        "impact": {
+          "metric": "API REST · Firebase",
+          "description": "Backend escalable que centraliza la lógica de negocio y expone endpoints para aplicaciones cliente."
+        },
+        "responsibilities": {
+          "0": "Diseñé y desarrollé la API REST con Node.js y Express.",
+          "1": "Integré Firebase para autenticación y persistencia de datos.",
+          "2": "Implementé endpoints para gestión de iglesias y miembros.",
+          "3": "Documenté y estructuré la arquitectura del servicio.",
+          "4": "Participé en despliegue, mantenimiento y evolución de la API."
+        }
+      },
+      "devocionadmin": {
+        "name": "Devoción Diaria Admin",
+        "category": "Panel Administrativo",
+        "description": "Panel administrativo para gestionar contenidos, usuarios y métricas de la plataforma Devoción Diaria.",
+        "role": "Full Stack Developer",
+        "imageAlt": "Captura de pantalla del panel Devoción Diaria Admin",
+        "impact": {
+          "metric": "Panel web · Firebase",
+          "description": "Herramienta interna para administrar contenidos devocionales, usuarios y operaciones del producto."
+        },
+        "responsibilities": {
+          "0": "Desarrollé el panel administrativo con Angular y TypeScript.",
+          "1": "Integré Firestore y Cloud Functions para operaciones del backend.",
+          "2": "Implementé gestión de contenidos devocionales y usuarios.",
+          "3": "Construí módulos de métricas y supervisión de la plataforma.",
+          "4": "Diseñé flujos de publicación y moderación de contenidos.",
+          "5": "Participé en arquitectura, despliegue y evolución del producto."
+        }
       }
     }
-  },
-  "organizations": {
-    "label": "Experiencia",
-    "title": "Organizaciones a las que he <highlight>contribuido</highlight>",
-    "description": "A lo largo de mi carrera he participado en el desarrollo de productos digitales, aplicaciones móviles y plataformas empresariales utilizadas por organizaciones de distintas industrias en Latinoamérica.",
-    "footer": "Proyectos y organizaciones adicionales disponibles bajo solicitud."
   },
   "experience": {
     "label": "Experiencia",

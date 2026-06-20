@@ -106,7 +106,11 @@ export function Header() {
         <div className="hidden items-center justify-self-end gap-2 md:flex">
           <ThemeSwitcher />
           <LanguageSwitcher />
-          <Button asChild size="sm" className="ml-1.5 rounded-full px-4 shadow-[var(--shadow-button)]">
+          <Button
+            asChild
+            size="sm"
+            className="ml-1.5 rounded-full bg-[#059669] px-4 text-white shadow-[var(--shadow-button)] hover:bg-[#047857]"
+          >
             <a href="#contact">{t("contactMe")}</a>
           </Button>
         </div>
@@ -153,7 +157,11 @@ export function Header() {
                   {t(link.key)}
                 </a>
               ))}
-              <Button asChild className="btn-mobile-wrap mt-4 w-full rounded-full" size="lg">
+              <Button
+                asChild
+                className="btn-mobile-wrap mt-4 w-full rounded-full bg-[#059669] text-white hover:bg-[#047857]"
+                size="lg"
+              >
                 <a href="#contact" onClick={() => setMobileOpen(false)}>
                   {t("contactMe")}
                 </a>
