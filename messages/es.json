@@ -831,9 +831,10 @@
   },
   "footer": {
     "subtitle": "Full Stack Developer",
-    "bio": "Full Stack Developer construyendo productos web, móviles y empresariales para empresas de Latinoamérica.",
+    "bio": "Construyo productos web, móviles y empresariales para compañías en Latinoamérica.",
     "navigate": "Navegar",
     "connect": "Conectar",
-    "rights": "Todos los derechos reservados."
+    "rights": "Todos los derechos reservados.",
+    "tagline": "Angular · Ionic · Firebase · React · Next.js"
   }
 }

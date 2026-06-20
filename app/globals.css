@@ -556,6 +556,30 @@
     border-color: color-mix(in srgb, var(--accent-green) 22%, var(--border));
   }
 
+  .footer-brand-avatar {
+    @apply relative h-11 w-11 shrink-0 overflow-hidden rounded-full ring-2 ring-[var(--accent-green-border)];
+    background-color: var(--accent-green-subtle);
+  }
+
+  .footer-nav-link {
+    @apply inline-flex rounded-md px-2 py-2 text-sm font-medium text-muted-foreground transition-colors duration-200 hover:bg-muted/40 hover:text-brand dark:hover:bg-white/[0.04];
+  }
+
+  .footer-connect-link {
+    @apply flex min-w-0 items-center gap-3 rounded-xl border border-transparent px-2 py-2 transition-all duration-200 hover:border-border/80 hover:bg-card hover:shadow-sm dark:hover:border-white/[0.06] dark:hover:bg-white/[0.03];
+  }
+
+  .footer-connect-icon {
+    @apply flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border text-[var(--accent-green)];
+    background-color: var(--accent-green-muted);
+    border-color: var(--accent-green-border);
+  }
+
+  .dark .footer-connect-icon {
+    background-color: color-mix(in srgb, var(--accent-green) 12%, var(--card));
+    border-color: color-mix(in srgb, var(--accent-green) 22%, var(--border));
+  }
+
   .project-modal-panel {
     box-shadow:
       0 0 0 1px rgb(0 0 0 / 0.04),
