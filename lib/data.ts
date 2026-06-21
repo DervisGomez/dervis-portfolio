@@ -468,7 +468,7 @@ export const experienceMeta: Record<
       "Angular",
       "Ionic",
       "Capacitor",
-      "Node.js",
+      "PHP",
       "Firebase",
       "TypeScript",
       "Next.js",
