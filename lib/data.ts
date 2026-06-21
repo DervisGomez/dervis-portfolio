@@ -188,6 +188,7 @@ export const productMeta: Record<
       "Capacitor",
       "Node.js",
       "Express",
+      "Socket.IO",
       "MongoDB",
       "TypeScript",
       "REST APIs",
@@ -476,7 +477,7 @@ export const experienceMeta: Record<
     present: true,
   },
   wonderchatt: {
-    stack: ["Node.js", "Express", "MongoDB", "REST APIs", "Mobile"],
+    stack: ["Node.js", "Express", "Socket.IO", "MongoDB", "REST APIs", "Mobile"],
     initials: "WC",
   },
   sistemex: {
@@ -525,7 +526,9 @@ export const techCategoriesData = [
     technologies: [
       "Node.js",
       "Express",
+      "Socket.IO",
       "ASP.NET Core",
+      "Entity Framework Core",
       "PHP",
       "Firebase Functions",
       "REST APIs",
@@ -537,10 +540,14 @@ export const techCategoriesData = [
     technologies: [
       "Firebase",
       "Firestore",
+      "Cloud Functions",
       "SQL Server",
+      "SQLite",
       "MySQL",
       "MongoDB",
       "PostgreSQL",
+      "Dexie",
+      "IndexedDB",
     ],
   },
   {
@@ -558,7 +565,6 @@ export const techCategoriesData = [
     icon: "cloud" as const,
     technologies: [
       "Firebase Hosting",
-      "Cloud Functions",
       "Git",
       "GitHub",
       "REST APIs",

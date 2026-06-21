@@ -52,13 +52,9 @@
     "title": "Productos construidos para <highlight>empresas reales</highlight>",
     "description": "Casos de estudio de plataformas entregadas en producción — marketplaces, PWAs empresariales, sistemas corporativos y apps móviles para empresas en Latinoamérica.",
     "descriptionShort": "Productos reales en producción — marketplaces, PWAs empresariales y sistemas corporativos.",
-    "moreProjects": "Más proyectos",
-    "moreProjectsTitle": "Más proyectos",
-    "moreProjectsDescription": "He participado en el desarrollo de múltiples aplicaciones web, móviles y plataformas empresariales.",
-    "moreProjectsCount": "{count} proyectos adicionales",
-    "moreProjectsHint": "Explora el resto del portafolio",
-    "showMoreProjects": "Ver más proyectos",
-    "hideMoreProjects": "Ver menos proyectos",
+    "secondaryLabel": "Portafolio ampliado",
+    "secondaryTitle": "Más productos <highlight>en producción</highlight>",
+    "secondaryDescription": "Cuatro plataformas adicionales — marketplaces, apps móviles y sistemas corporativos entregados para empresas en Latinoamérica.",
     "viewDetail": "Ver detalle",
     "closeModal": "Cerrar",
     "externalLinksLabel": "Enlaces externos",
@@ -755,15 +751,15 @@
         "location": "Remoto · Chile",
         "role": "Full Stack Developer",
         "company": "APPI.CL",
-        "description": "Desarrollé aplicaciones web, apps móviles y PWAs para múltiples clientes en Latinoamérica utilizando Angular, Ionic, Node.js, Firebase y tecnologías modernas."
+        "description": "Participé como Full Stack Developer en el desarrollo de aplicaciones web, móviles y PWAs para organizaciones en Latinoamérica. Implementé soluciones frontend y backend utilizando Angular, Ionic, Firebase, Node.js y ASP.NET Core. Colaboré en proyectos de marketplaces, reconocimiento empresarial, automatización de procesos, sistemas corporativos y aplicaciones publicadas en Google Play y App Store."
       },
       "wonderchatt": {
         "period": "2018 — 2019",
         "duration": "1 año",
         "location": "Remoto · Colombia",
         "role": "Backend & Mobile Developer",
-        "company": "WonderChatt",
-        "description": "Construí servicios backend e integraciones móviles para una plataforma de comunicación en tiempo real, enfocándome en diseño de APIs y entrega multiplataforma."
+        "company": "WonderChat",
+        "description": "Desarrollé APIs REST y funcionalidades de comunicación en tiempo real utilizando Node.js, Express y Socket.IO, participando en la arquitectura backend e integración móvil."
       },
       "sistemex": {
         "period": "Sep 2017 — Ago 2018",

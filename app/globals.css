@@ -585,9 +585,18 @@
   }
 
   .secondary-project-card {
+    @apply relative overflow-hidden;
     transition:
       box-shadow 200ms ease,
       transform 200ms ease;
+  }
+
+  .secondary-project-card__accent {
+    @apply pointer-events-none absolute inset-x-0 top-0 z-10 h-0.5 bg-brand transition-colors duration-200;
+  }
+
+  .secondary-project-card:hover .secondary-project-card__accent {
+    background-color: var(--accent-green);
   }
 
   .secondary-project-card:hover {
@@ -601,43 +610,6 @@
     box-shadow:
       0 0 0 1px rgb(255 255 255 / 0.05),
       0 4px 20px rgb(0 0 0 / 0.28);
-  }
-
-  .more-projects-cta {
-    @apply relative overflow-hidden rounded-[1.375rem] border border-brand/20 ring-1 ring-brand/10;
-    background:
-      linear-gradient(
-        135deg,
-        color-mix(in srgb, var(--brand) 9%, var(--card)) 0%,
-        var(--card) 48%,
-        color-mix(in srgb, #059669 6%, var(--card)) 100%
-      );
-    box-shadow:
-      0 1px 2px rgb(0 0 0 / 0.04),
-      0 8px 32px -8px color-mix(in srgb, var(--brand) 22%, transparent);
-  }
-
-  .dark .more-projects-cta {
-    @apply border-brand/25 ring-brand/15;
-    background:
-      linear-gradient(
-        135deg,
-        color-mix(in srgb, var(--brand) 14%, var(--card)) 0%,
-        var(--card) 52%,
-        color-mix(in srgb, #059669 10%, var(--card)) 100%
-      );
-    box-shadow:
-      0 0 0 1px rgb(255 255 255 / 0.04) inset,
-      0 8px 32px -8px color-mix(in srgb, var(--brand) 28%, transparent);
-  }
-
-  .more-projects-cta__glow {
-    @apply pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full opacity-60 blur-3xl;
-    background: color-mix(in srgb, var(--brand) 28%, transparent);
-  }
-
-  .more-projects-cta__count {
-    @apply font-mono text-[2.5rem] font-semibold leading-none tracking-tight text-brand sm:text-[3rem];
   }
 
   .devocion-case-study {
@@ -688,10 +660,6 @@
 
     .secondary-project-card:hover {
       transform: none;
-    }
-
-    .more-projects-cta {
-      transition: none;
     }
   }
 }
