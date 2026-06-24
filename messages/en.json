@@ -413,10 +413,10 @@
         "name": "Devoción Diaria",
         "category": "Faith-Based Productivity Platform",
         "subtitle": "Spiritual growth and community management platform.",
-        "tagline": "Own product · PWA · Android in development",
+        "tagline": "Own product · PWA · Android",
         "description": "Helps believers build spiritual habits through devotional journaling and prayer tracking.",
         "longDescription": "Devoción Diaria combines devotional journaling, prayer requests, spiritual habit tracking and church administration tools into a single platform. The project includes a mobile experience, a progressive web application and an administrative dashboard for churches and community leaders.",
-        "platformSummary": "Web App · PWA · Android (in progress)",
+        "platformSummary": "Web App · PWA · Android",
         "role": "Founder & Full Stack Developer",
         "imageAlt": "Devoción Diaria platform screenshot",
         "impact": {

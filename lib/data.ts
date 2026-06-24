@@ -32,6 +32,11 @@ export const area33StoreUrls = {
   ios: "https://apps.apple.com/cl/app/area33/id6740711768",
 } as const;
 
+export const devocionStoreUrls = {
+  android:
+    "https://play.google.com/store/apps/details?id=io.devocion.diaria",
+} as const;
+
 export const trustMetricIds = [
   "experience",
   "projects",
@@ -319,6 +324,9 @@ export const productMeta: Record<
   devocion: {
     image: "/DevocionDiaria.png",
     url: "https://devociondiaria.web.app/",
+    storeAppUrls: {
+      android: devocionStoreUrls.android,
+    },
     stack: [
       "Angular",
       "Ionic",
@@ -332,7 +340,7 @@ export const productMeta: Record<
       "TypeScript",
     ],
     highlightKeys: ["0", "1", "2", "3", "4", "5", "6", "7", "8"],
-    status: "activeDevelopment",
+    status: "production",
     cta: "product",
     theme: "devocion",
     prominent: true,

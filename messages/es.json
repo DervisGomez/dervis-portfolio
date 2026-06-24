@@ -413,10 +413,10 @@
         "name": "Devoción Diaria",
         "category": "Plataforma de Productividad Espiritual",
         "subtitle": "Plataforma de crecimiento espiritual y gestión de comunidades.",
-        "tagline": "Producto propio · PWA · Android en desarrollo",
+        "tagline": "Producto propio · PWA · Android",
         "description": "Ayuda a creyentes a construir hábitos espirituales mediante journaling devocional y seguimiento de oración.",
         "longDescription": "Devoción Diaria combina journaling devocional, peticiones de oración, seguimiento de hábitos espirituales y herramientas de administración para iglesias en una sola plataforma. El proyecto incluye experiencia móvil, aplicación web progresiva y panel administrativo para iglesias y líderes comunitarios.",
-        "platformSummary": "Web App · PWA · Android (en desarrollo)",
+        "platformSummary": "Web App · PWA · Android",
         "role": "Founder & Full Stack Developer",
         "imageAlt": "Captura de pantalla de la plataforma Devoción Diaria",
         "impact": {
