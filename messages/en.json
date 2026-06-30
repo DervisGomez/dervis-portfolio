@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "Dervis Gómez | Full Stack Developer — Web, Mobile & Azure",
+    "title": "Dervis Gómez | Full Stack Developer | ASP.NET Core, Angular, React, Azure",
     "titleTemplate": "%s | Dervis Gómez",
-    "description": "Full Stack Developer with 9+ years of experience building production web apps, mobile apps and APIs with Angular, React, Next.js, ASP.NET Core, Firebase and Azure.",
+    "description": "Full Stack Developer specialized in ASP.NET Core, Angular, React, Azure and Docker. I build REST APIs, web and mobile applications focused on architecture, performance and production deployment.",
     "keywords": "Dervis Gómez, Full Stack Developer, web developer, mobile applications, Angular, React, Next.js, ASP.NET Core, Firebase, TypeScript, Azure, REST API, PWA, developer portfolio, Latin America"
   },
   "nav": {
@@ -32,12 +32,12 @@
   },
   "hero": {
     "name": "Dervis Gómez",
-    "subtitle": "Full Stack Developer",
-    "headline": "<line>Building digital products</line><line>that <highlight>real companies</highlight></line><line>run on.</line>",
-    "description": "I design and build web platforms, mobile apps, and enterprise systems for teams across Latin America — from architecture through production deployment.",
+    "subtitle": "Full Stack Developer | ASP.NET Core & Angular",
+    "headline": "<line>I build <highlight>scalable digital</highlight> products for real companies.</line>",
+    "description": "I design and develop web applications, mobile apps and APIs for companies, participating across the full development cycle: architecture, implementation, testing and production deployment.",
     "viewProjects": "View Projects",
     "downloadCv": "Download CV",
-    "focusBadge": "Web, mobile & enterprise systems",
+    "focusBadge": "Web • APIs • Mobile • Cloud",
     "profileAlt": "Dervis Gómez — Full Stack Developer",
     "heroImageAlt": "Web and mobile product screenshots built by Dervis Gómez",
     "scroll": "Scroll",

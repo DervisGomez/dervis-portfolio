@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "Dervis Gómez | Full Stack Developer — Web, Móvil y Azure",
+    "title": "Dervis Gómez | Full Stack Developer | ASP.NET Core, Angular, React, Azure",
     "titleTemplate": "%s | Dervis Gómez",
-    "description": "Full Stack Developer con 9+ años de experiencia. Desarrollo aplicaciones web, móviles y APIs en producción con Angular, React, Next.js, ASP.NET Core, Firebase y Azure.",
+    "description": "Full Stack Developer especializado en ASP.NET Core, Angular, React, Azure y Docker. Desarrollo APIs REST, aplicaciones web y móviles con foco en arquitectura, rendimiento y despliegue en producción.",
     "keywords": "Dervis Gómez, Full Stack Developer, desarrollador web, aplicaciones móviles, Angular, React, Next.js, ASP.NET Core, Firebase, TypeScript, Azure, API REST, PWA, portafolio desarrollador, Latinoamérica"
   },
   "nav": {
@@ -32,12 +32,12 @@
   },
   "hero": {
     "name": "Dervis Gómez",
-    "subtitle": "Full Stack Developer",
-    "headline": "<line>Construyo productos</line><line>digitales en los que</line><line><highlight>empresas reales</highlight> confían.</line>",
-    "description": "Diseño y desarrollo plataformas web, apps móviles y sistemas empresariales para equipos en Latinoamérica — de la arquitectura al despliegue en producción.",
+    "subtitle": "Full Stack Developer | ASP.NET Core & Angular",
+    "headline": "<line>Construyo productos <highlight>digitales escalables</highlight> para empresas reales.</line>",
+    "description": "Diseño y desarrollo aplicaciones web, móviles y APIs para empresas, participando en todo el ciclo de desarrollo: arquitectura, implementación, pruebas y despliegue en producción.",
     "viewProjects": "Ver Proyectos",
     "downloadCv": "Descargar CV",
-    "focusBadge": "Web, mobile y sistemas enterprise",
+    "focusBadge": "Web • APIs • Mobile • Cloud",
     "profileAlt": "Dervis Gómez — Full Stack Developer",
     "heroImageAlt": "Capturas de productos web y móviles desarrollados por Dervis Gómez",
     "scroll": "Desplazar",

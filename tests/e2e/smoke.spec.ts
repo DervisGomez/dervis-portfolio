@@ -18,7 +18,7 @@ test.describe("Portfolio smoke and happy path", () => {
     await page.goto("/en");
 
     await expect(
-      page.getByRole("heading", { level: 1, name: /Building digital products/i })
+      page.getByRole("heading", { level: 1, name: /I build scalable digital products/i })
     ).toBeVisible();
     await expect(
       page.getByRole("navigation", { name: /Desktop main navigation/i })
@@ -32,7 +32,7 @@ test.describe("Portfolio smoke and happy path", () => {
 
     await expect(page).toHaveURL(/\/en$/);
     await expect(
-      page.getByRole("heading", { level: 1, name: /Building digital products/i })
+      page.getByRole("heading", { level: 1, name: /I build scalable digital products/i })
     ).toBeVisible();
   });
 
