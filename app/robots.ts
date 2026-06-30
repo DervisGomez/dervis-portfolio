@@ -8,6 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
+    host: siteConfig.url.replace(/^https?:\/\//, ""),
     sitemap: `${siteConfig.url}/sitemap.xml`,
   };
 }

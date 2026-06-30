@@ -1,7 +1,9 @@
 {
   "metadata": {
-    "title": "Dervis Gómez — Full Stack Developer",
-    "description": "Software Engineer with 9+ years of experience developing web applications, mobile apps and PWAs using Angular, React, Node.js, Firebase, TypeScript and modern technologies."
+    "title": "Dervis Gómez | Full Stack Developer — Web, Mobile & Azure",
+    "titleTemplate": "%s | Dervis Gómez",
+    "description": "Full Stack Developer with 9+ years of experience building production web apps, mobile apps and APIs with Angular, React, Next.js, ASP.NET Core, Firebase and Azure.",
+    "keywords": "Dervis Gómez, Full Stack Developer, web developer, mobile applications, Angular, React, Next.js, ASP.NET Core, Firebase, TypeScript, Azure, REST API, PWA, developer portfolio, Latin America"
   },
   "nav": {
     "projects": "Projects",

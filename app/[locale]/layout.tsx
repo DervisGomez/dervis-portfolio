@@ -11,7 +11,7 @@ import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 
 import { routing } from "@/i18n/routing";
-import { siteConfig } from "@/lib/data";
+import { buildSiteMetadata } from "@/lib/site-metadata";
 import { themeConfig } from "@/lib/theme-config";
 
 type Props = {
@@ -25,33 +25,19 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    return {};
+  }
+
   const t = await getTranslations({ locale, namespace: "metadata" });
 
-  return {
-    metadataBase: new URL(siteConfig.url),
+  return buildSiteMetadata(locale, {
     title: t("title"),
+    titleTemplate: t("titleTemplate"),
     description: t("description"),
-    openGraph: {
-      title: t("title"),
-      description: t("description"),
-      url: locale === "es" ? "/" : `/${locale}`,
-      siteName: siteConfig.name,
-      type: "website",
-      locale: locale === "es" ? "es_ES" : "en_US",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: t("title"),
-      description: t("description"),
-    },
-    alternates: {
-      canonical: locale === "es" ? "/" : `/${locale}`,
-      languages: {
-        es: "/",
-        en: "/en",
-      },
-    },
-  };
+    keywords: t("keywords"),
+  });
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
