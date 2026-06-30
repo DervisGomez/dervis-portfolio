@@ -11,7 +11,9 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "check": "npm run lint && npm run typecheck && npm run build"
+    "test:e2e": "playwright test",
+    "validate:data": "node scripts/validate-data.mjs",
+    "check": "npm run lint && npm run typecheck && npm run validate:data && npm run build"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.10",
@@ -29,6 +31,8 @@
     "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.61.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

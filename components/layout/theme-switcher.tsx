@@ -1,6 +1,6 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useEffect, useState } from "react";
 import { Monitor, Moon, Sun } from "lucide-react";
 import { useTheme } from "@teispace/next-themes";
 import { useTranslations } from "next-intl";
@@ -16,14 +16,15 @@ const icons: Record<ThemeOption, typeof Sun> = {
   system: Monitor,
 };
 
-function subscribe() {
-  return () => {};
-}
-
 export function ThemeSwitcher({ className }: { className?: string }) {
   const { theme, setTheme } = useTheme();
   const t = useTranslations("theme");
-  const mounted = useSyncExternalStore(subscribe, () => true, () => false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setMounted(true), 0);
+    return () => clearTimeout(timeout);
+  }, []);
 
   if (!mounted) {
     return (

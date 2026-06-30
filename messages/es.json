@@ -12,12 +12,15 @@
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú",
     "skipToContent": "Ir al contenido principal",
-    "mainNav": "Navegación principal"
+    "mainNav": "Navegación principal",
+    "desktopNav": "Navegación principal de escritorio",
+    "mobileNav": "Navegación principal móvil"
   },
   "language": {
     "es": "Español",
     "en": "English",
-    "switch": "Cambiar idioma"
+    "switch": "Cambiar idioma",
+    "switchTo": "Cambiar idioma a {language}"
   },
   "theme": {
     "light": "Modo claro",

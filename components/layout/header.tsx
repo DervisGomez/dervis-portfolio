@@ -95,7 +95,7 @@ export function Header() {
 
         <nav
           className="hidden items-center gap-8 justify-self-center lg:flex"
-          aria-label={t("mainNav")}
+          aria-label={t("desktopNav")}
         >
           {navAnchors.map((link) => (
             <AnchorLink
@@ -150,7 +150,7 @@ export function Header() {
           >
             <nav
               className="page-container flex flex-col py-5"
-              aria-label={t("mainNav")}
+              aria-label={t("mobileNav")}
             >
               {navAnchors.map((link) => (
                 <AnchorLink

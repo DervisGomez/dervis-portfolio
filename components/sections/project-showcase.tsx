@@ -239,6 +239,7 @@ function ProjectActions({
   const t = useTranslations("projects");
   const meta = productMeta[id];
   const projectUrl = getProjectUrl(id);
+  const projectName = t(`items.${id}.name`);
 
   return (
     <>
@@ -269,6 +270,7 @@ function ProjectActions({
         variant="caseStudy"
         size="sm"
         onClick={onOpenCaseStudy}
+        aria-label={`${t("viewCaseStudy")} — ${projectName}`}
         className="project-showcase-btn w-full cursor-pointer justify-center"
       >
         {t("viewCaseStudy")}

@@ -1,20 +1,13 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { usePathname, useRouter } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 
 export function LanguageSwitcher({ className }: { className?: string }) {
   const locale = useLocale() as Locale;
-  const router = useRouter();
-  const pathname = usePathname();
   const t = useTranslations("language");
-
-  function switchLocale(nextLocale: Locale) {
-    if (nextLocale === locale) return;
-    router.replace(pathname, { locale: nextLocale });
-  }
 
   return (
     <div
@@ -26,20 +19,21 @@ export function LanguageSwitcher({ className }: { className?: string }) {
       aria-label={t("switch")}
     >
       {routing.locales.map((loc) => (
-        <button
+        <Link
           key={loc}
-          type="button"
-          onClick={() => switchLocale(loc)}
+          href="/"
+          locale={loc}
           className={cn(
             "cursor-pointer rounded-full px-2.5 py-1 text-xs font-medium transition-colors duration-200",
             locale === loc
               ? "bg-brand-subtle text-brand shadow-sm dark:shadow-[inset_0_0_0_1px_rgb(255,255,255,0.06)]"
               : "text-muted-foreground hover:bg-muted/60 hover:text-brand dark:hover:bg-white/[0.06]"
           )}
-          aria-pressed={locale === loc}
+          aria-current={locale === loc ? "true" : undefined}
+          aria-label={t("switchTo", { language: t(loc) })}
         >
           {loc.toUpperCase()}
-        </button>
+        </Link>
       ))}
     </div>
   );

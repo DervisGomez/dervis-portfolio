@@ -1,17 +1,24 @@
-import { Geist_Mono, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import { getLocale } from "next-intl/server";
 
 import "./globals.css";
 
-const inter = Inter({
+const inter = localFont({
+  src: "./fonts/inter-latin.woff2",
   variable: "--font-inter",
-  subsets: ["latin"],
+  weight: "100 900",
+  style: "normal",
   display: "swap",
+  fallback: ["Arial", "sans-serif"],
 });
 
-const geistMono = Geist_Mono({
+const geistMono = localFont({
+  src: "./fonts/geist-mono-latin.woff2",
   variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: "100 900",
+  style: "normal",
+  display: "swap",
+  fallback: ["Arial", "monospace"],
 });
 
 export default async function RootLayout({

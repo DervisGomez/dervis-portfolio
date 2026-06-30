@@ -32,6 +32,7 @@ function SecondaryProjectCard({
   const meta = productMeta[id];
   const [hasError, setHasError] = useState(false);
   const showImage = Boolean(meta.image) && !hasError;
+  const projectName = t(`items.${id}.name`);
 
   return (
     <article className="secondary-project-card group surface-card flex flex-col overflow-hidden">
@@ -81,6 +82,7 @@ function SecondaryProjectCard({
           variant="caseStudy"
           size="sm"
           onClick={onOpenDetail}
+          aria-label={`${t("viewDetail")} — ${projectName}`}
           className="project-showcase-btn mt-auto w-full cursor-pointer justify-center"
         >
           {t("viewDetail")}

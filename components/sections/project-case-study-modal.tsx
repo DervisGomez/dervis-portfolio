@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
@@ -15,11 +15,14 @@ import { isAppiExecutorProject, productMeta } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 function useHasMounted() {
-  return useSyncExternalStore(
-    () => () => {},
-    () => true,
-    () => false
-  );
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setMounted(true), 0);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  return mounted;
 }
 
 function getProjectUrl(id: PortfolioProjectId) {
@@ -285,6 +288,7 @@ export function ProjectCaseStudyModal({
             role="dialog"
             aria-modal="true"
             aria-labelledby={`${projectId}-modal-title`}
+            data-testid="case-study-modal"
             className={cn(
               "project-modal-panel surface-card relative z-10 flex max-h-[92vh] w-full flex-col overflow-hidden sm:max-h-[88vh] sm:max-w-2xl md:max-w-3xl",
               isDevocion && "devocion-case-study"
@@ -317,6 +321,7 @@ export function ProjectCaseStudyModal({
                 size="sm"
                 onClick={onClose}
                 aria-label={t("closeModal")}
+                data-testid="case-study-modal-close"
                 className="project-showcase-btn h-9 w-9 shrink-0 cursor-pointer p-0"
               >
                 <X className="h-4 w-4" />
