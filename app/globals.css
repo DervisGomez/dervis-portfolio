@@ -618,6 +618,36 @@
     --project-accent-border: color-mix(in srgb, #059669 22%, var(--border));
   }
 
+  .featured-project-architecture {
+    @apply flex flex-col items-center gap-1;
+  }
+
+  .featured-project-architecture--compact {
+    --project-accent-border: color-mix(in srgb, var(--brand) 22%, var(--border));
+    --project-accent-subtle: color-mix(in srgb, var(--brand) 10%, var(--card));
+    @apply items-stretch rounded-xl border border-[var(--project-accent-border)] bg-[var(--project-accent-subtle)] p-4;
+  }
+
+  .featured-project-architecture__layer {
+    @apply flex flex-col items-center;
+  }
+
+  .featured-project-architecture--compact .featured-project-architecture__layer {
+    @apply items-stretch;
+  }
+
+  .featured-project-architecture__node {
+    @apply w-full rounded-xl border border-[var(--project-accent-border)] bg-card px-4 py-3 text-center text-sm font-medium text-foreground shadow-sm;
+  }
+
+  .featured-project-architecture__arrow {
+    @apply my-1 h-4 w-4 shrink-0 text-brand/70;
+  }
+
+  .featured-project-architecture--compact .featured-project-architecture__arrow {
+    @apply my-1.5 self-center text-base leading-none text-brand/70;
+  }
+
   .devocion-case-study .project-impact-card {
     border-color: var(--project-accent-border);
     background-color: var(--project-accent-subtle);

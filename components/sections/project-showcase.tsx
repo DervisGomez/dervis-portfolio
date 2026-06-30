@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ArrowUpRight, ExternalLink, Sparkles } from "lucide-react";
+import { ArrowUpRight, Activity, Code2, ExternalLink, Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
@@ -33,19 +33,34 @@ function ProjectHeroImage({
 }) {
   const [hasError, setHasError] = useState(false);
   const showImage = Boolean(image) && !hasError;
+  const isMarketingHero = id === "churchapi";
   const priority =
-    id === "devocion" || id === "veyco" || id === "enaex" || id === "formidavel";
+    id === "churchapi" ||
+    id === "devocion" ||
+    id === "veyco" ||
+    id === "enaex" ||
+    id === "formidavel";
 
   return (
-    <div className="relative aspect-[16/9] w-full overflow-hidden bg-surface-elevated md:aspect-[2/1]">
+    <div
+      className={cn(
+        "relative aspect-[16/9] w-full overflow-hidden md:aspect-[2/1]",
+        isMarketingHero ? "bg-[#0a1628]" : "bg-surface-elevated"
+      )}
+    >
       {showImage ? (
         <Image
           src={image!}
           alt={alt}
           fill
           priority={priority}
+          unoptimized={isMarketingHero}
           sizes="(max-width: 1080px) 100vw, 1080px"
-          className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.012]"
+          className={cn(
+            isMarketingHero
+              ? "object-contain"
+              : "object-cover object-top transition-transform duration-500 group-hover:scale-[1.012]"
+          )}
           onError={() => setHasError(true)}
         />
       ) : (
@@ -161,6 +176,51 @@ function StoreAppButtons({ id }: { id: PortfolioProjectId }) {
   );
 }
 
+function ExternalLinkButtons({ id }: { id: PortfolioProjectId }) {
+  const t = useTranslations("projects");
+  const links = productMeta[id].externalLinks;
+
+  if (!links?.github && !links?.healthCheck) return null;
+
+  const btnClass =
+    "project-showcase-btn w-full cursor-pointer justify-center gap-2 font-medium";
+  const githubReady = links.github && links.github !== "TODO";
+
+  return (
+    <>
+      {links.github ? (
+        githubReady ? (
+          <Button asChild variant="outline" size="sm" className={btnClass}>
+            <a
+              href={links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${t("githubRepository")} — ${t(`items.${id}.name`)}`}
+            >
+              <Code2 className="h-3.5 w-3.5" aria-hidden />
+              {t("githubRepository")}
+            </a>
+          </Button>
+        ) : null
+      ) : null}
+
+      {links.healthCheck ? (
+        <Button asChild variant="outline" size="sm" className={btnClass}>
+          <a
+            href={links.healthCheck}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${t("healthCheck")} — ${t(`items.${id}.name`)}`}
+          >
+            <Activity className="h-3.5 w-3.5" aria-hidden />
+            {t("healthCheck")}
+          </a>
+        </Button>
+      ) : null}
+    </>
+  );
+}
+
 function getProjectUrl(id: PortfolioProjectId) {
   const meta = productMeta[id];
   if (meta.cta === "enterprise") {
@@ -257,6 +317,7 @@ export function ProjectShowcase({ id, onOpenCaseStudy }: ProjectShowcaseProps) {
           <TechStack stack={meta.stack} />
           <div className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
             <StoreAppButtons id={id} />
+            <ExternalLinkButtons id={id} />
             <ProjectActions id={id} onOpenCaseStudy={onOpenCaseStudy} />
           </div>
         </div>

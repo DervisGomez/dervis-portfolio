@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, ExternalLink, X } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Code2, Activity, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { ProjectCaseStudyContent } from "@/components/sections/project-case-study-content";
@@ -31,11 +31,13 @@ function getProjectUrl(id: PortfolioProjectId) {
 }
 
 function ModalHeroImage({
+  id,
   image,
   alt,
   name,
   category,
 }: {
+  id: PortfolioProjectId;
   image?: string;
   alt: string;
   name: string;
@@ -43,16 +45,23 @@ function ModalHeroImage({
 }) {
   const [hasError, setHasError] = useState(false);
   const showImage = Boolean(image) && !hasError;
+  const isMarketingHero = id === "churchapi";
 
   return (
-    <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-surface-elevated">
+    <div
+      className={cn(
+        "relative aspect-[16/9] w-full overflow-hidden rounded-xl",
+        isMarketingHero ? "bg-[#0a1628]" : "bg-surface-elevated"
+      )}
+    >
       {showImage ? (
         <Image
           src={image!}
           alt={alt}
           fill
+          unoptimized={isMarketingHero}
           sizes="(max-width: 768px) 100vw, 720px"
-          className="object-cover object-top"
+          className={isMarketingHero ? "object-contain" : "object-cover object-top"}
           onError={() => setHasError(true)}
         />
       ) : (
@@ -70,18 +79,26 @@ function ModalExternalLinks({ id }: { id: PortfolioProjectId }) {
   const meta = productMeta[id];
   const projectUrl = getProjectUrl(id);
   const urls = meta.storeAppUrls;
+  const externalLinks = meta.externalLinks;
   const hasStoreLinks = Boolean(urls?.android || urls?.ios);
+  const hasExternalLinks = Boolean(
+    externalLinks?.github ||
+      externalLinks?.swagger ||
+      externalLinks?.healthCheck
+  );
 
-  if (!projectUrl && !hasStoreLinks) return null;
+  if (!projectUrl && !hasStoreLinks && !hasExternalLinks) return null;
 
   const linkBtnClass =
     "project-showcase-btn h-auto min-h-10 justify-center gap-2 font-medium";
+  const githubReady =
+    externalLinks?.github && externalLinks.github !== "TODO";
 
   return (
     <div className="border-t border-border pt-6 dark:border-white/[0.06]">
       <p className="field-label mb-3">{t("externalLinksLabel")}</p>
       <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
-        {projectUrl ? (
+        {projectUrl && !externalLinks?.swagger ? (
           <Button
             asChild
             size="sm"
@@ -99,6 +116,62 @@ function ModalExternalLinks({ id }: { id: PortfolioProjectId }) {
               ) : (
                 <ArrowUpRight className="h-3.5 w-3.5" />
               )}
+            </a>
+          </Button>
+        ) : null}
+
+        {externalLinks?.github ? (
+          githubReady ? (
+            <Button asChild variant="outline" size="sm" className={linkBtnClass}>
+              <a
+                href={externalLinks.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${t("githubRepository")} — ${t(`items.${id}.name`)}`}
+              >
+                <Code2 className="h-3.5 w-3.5" aria-hidden />
+                {t("githubRepository")}
+              </a>
+            </Button>
+          ) : (
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              disabled
+              className={`${linkBtnClass} opacity-60`}
+              title={t("githubRepositoryPending")}
+            >
+              <Code2 className="h-3.5 w-3.5" aria-hidden />
+              {t("githubRepository")}
+            </Button>
+          )
+        ) : null}
+
+        {externalLinks?.swagger ? (
+          <Button asChild size="sm" className={linkBtnClass}>
+            <a
+              href={externalLinks.swagger}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${t("liveSwagger")} — ${t(`items.${id}.name`)}`}
+            >
+              {t("liveSwagger")}
+              <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+            </a>
+          </Button>
+        ) : null}
+
+        {externalLinks?.healthCheck ? (
+          <Button asChild variant="outline" size="sm" className={linkBtnClass}>
+            <a
+              href={externalLinks.healthCheck}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${t("healthCheck")} — ${t(`items.${id}.name`)}`}
+            >
+              <Activity className="h-3.5 w-3.5" aria-hidden />
+              {t("healthCheck")}
             </a>
           </Button>
         ) : null}
@@ -252,6 +325,7 @@ export function ProjectCaseStudyModal({
 
             <div className="overflow-y-auto overscroll-contain px-5 py-5 sm:px-6 sm:py-6">
               <ModalHeroImage
+                id={projectId}
                 image={meta.image}
                 alt={t(`items.${projectId}.imageAlt`)}
                 name={t(`items.${projectId}.name`)}

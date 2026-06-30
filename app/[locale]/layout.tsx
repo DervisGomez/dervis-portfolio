@@ -10,12 +10,9 @@ import {
 import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 
-import { inter, geistMono } from "../layout";
 import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/lib/data";
 import { themeConfig } from "@/lib/theme-config";
-
-import "../globals.css";
 
 type Props = {
   children: React.ReactNode;
@@ -69,18 +66,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   const initialTheme = await getTheme();
 
   return (
-    <html
-      lang={locale}
-      suppressHydrationWarning
-      className={`${inter.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
-        <ThemeProvider {...themeConfig} initialTheme={initialTheme ?? undefined}>
-          <NextIntlClientProvider messages={messages}>
-            {children}
-          </NextIntlClientProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+    <ThemeProvider {...themeConfig} initialTheme={initialTheme ?? undefined}>
+      <NextIntlClientProvider messages={messages}>
+        {children}
+      </NextIntlClientProvider>
+    </ThemeProvider>
   );
 }

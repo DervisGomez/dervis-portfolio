@@ -6,6 +6,8 @@ import {
   BookOpen,
   Building2,
   Cloud,
+  Container,
+  Database,
   Download,
   Factory,
   FileStack,
@@ -15,6 +17,7 @@ import {
   Globe2,
   Handshake,
   Heart,
+  KeyRound,
   Languages,
   LayoutDashboard,
   MapPin,
@@ -26,6 +29,7 @@ import {
   RefreshCw,
   Share2,
   Sheet,
+  ShieldCheck,
   ShoppingCart,
   Smartphone,
   Sparkles,
@@ -38,6 +42,7 @@ import {
   Users,
   Video,
   WifiOff,
+  Workflow,
   Zap,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
@@ -157,6 +162,20 @@ const msmpackagingHighlightIcons: Record<string, LucideIcon> = {
   responsiveDesign: TabletSmartphone,
 };
 
+const churchapiHighlightIcons: Record<string, LucideIcon> = {
+  jwtAuth: KeyRound,
+  fullCrud: RefreshCw,
+  layeredArchitecture: Workflow,
+  efMigrations: Database,
+  healthChecks: ShieldCheck,
+  serilogLogging: FileStack,
+  envVariables: Cloud,
+  dockerMultiStage: Container,
+  azureContainerApps: Cloud,
+  azureSql: Database,
+  automatedTests: Sparkles,
+};
+
 const projectHighlightIcons: Partial<
   Record<PortfolioProjectId, Record<string, LucideIcon>>
 > = {
@@ -166,6 +185,7 @@ const projectHighlightIcons: Partial<
   area33: area33HighlightIcons,
   ubicaturepuesto: ubicaturepuestoHighlightIcons,
   msmpackaging: msmpackagingHighlightIcons,
+  churchapi: churchapiHighlightIcons,
 };
 
 function FeatureHighlightGrid({
@@ -206,6 +226,36 @@ function FeatureHighlightGrid({
             </div>
           );
         })}
+      </div>
+    </div>
+  );
+}
+
+function ArchitectureSection({
+  id,
+  layerKeys,
+}: {
+  id: PortfolioProjectId;
+  layerKeys: readonly string[];
+}) {
+  const t = useTranslations("projects");
+
+  return (
+    <div>
+      <p className="field-label mb-3">{t("architectureLabel")}</p>
+      <div className="featured-project-architecture featured-project-architecture--compact">
+        {layerKeys.map((key, index) => (
+          <div key={key} className="featured-project-architecture__layer">
+            <div className="featured-project-architecture__node">
+              <span>{t(`items.${id}.architecture.${key}`)}</span>
+            </div>
+            {index < layerKeys.length - 1 ? (
+              <span className="featured-project-architecture__arrow" aria-hidden>
+                ↓
+              </span>
+            ) : null}
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -389,6 +439,9 @@ export function ProjectCaseStudyContent({ id }: { id: PortfolioProjectId }) {
   ) : null;
 
   const platformsSection = <PlatformsSection id={id} />;
+  const architectureSection = meta.architectureLayerKeys?.length ? (
+    <ArchitectureSection id={id} layerKeys={meta.architectureLayerKeys} />
+  ) : null;
 
   return (
     <div className="space-y-6">
@@ -403,6 +456,7 @@ export function ProjectCaseStudyContent({ id }: { id: PortfolioProjectId }) {
         </>
       ) : (
         <>
+          {architectureSection}
           {businessCapabilitiesSection}
           {technicalHighlightsSection}
           {responsibilitiesSection}

@@ -1,4 +1,7 @@
 import { Geist_Mono, Inter } from "next/font/google";
+import { getLocale } from "next-intl/server";
+
+import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -11,12 +14,24 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return children;
+  const locale = await getLocale();
+
+  return (
+    <html
+      lang={locale}
+      suppressHydrationWarning
+      className={`${inter.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col bg-background text-foreground">
+        {children}
+      </body>
+    </html>
+  );
 }
 
 export { inter, geistMono };

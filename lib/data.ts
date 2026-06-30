@@ -37,6 +37,14 @@ export const devocionStoreUrls = {
     "https://play.google.com/store/apps/details?id=io.devocion.diaria",
 } as const;
 
+export const churchApiUrls = {
+  github: "https://github.com/DervisGomez/appi-miembros",
+  swagger:
+    "https://churchapi.purplemushroom-77a470e6.canadacentral.azurecontainerapps.io/swagger",
+  healthCheck:
+    "https://churchapi.purplemushroom-77a470e6.canadacentral.azurecontainerapps.io/health",
+} as const;
+
 export const trustMetricIds = [
   "experience",
   "projects",
@@ -120,6 +128,7 @@ export type PortfolioProjectId = (typeof featuredProductIds)[number];
 export type FeaturedProductId = PortfolioProjectId;
 
 export const primaryProductIds = [
+  "churchapi",
   "devocion",
   "veyco",
   "enaex",
@@ -152,6 +161,7 @@ export const projectImpactHighlights: Record<
   (typeof primaryProductIds)[number],
   readonly string[]
 > = {
+  churchapi: ["0", "1", "2", "3"],
   devocion: ["0", "1", "2", "3"],
   veyco: ["0", "1", "2", "3"],
   enaex: ["0", "1", "2", "3"],
@@ -171,6 +181,12 @@ export const productMeta: Record<
     platformBadgeKeys?: readonly string[];
     platformUrls?: Partial<Record<string, string>>;
     storeAppUrls?: { android?: string; ios?: string };
+    externalLinks?: {
+      github?: string;
+      swagger?: string;
+      healthCheck?: string;
+    };
+    architectureLayerKeys?: readonly string[];
     businessCapabilityKeys?: readonly string[];
     highlightKeys?: readonly string[];
     statisticKeys?: readonly string[];
@@ -442,8 +458,52 @@ export const productMeta: Record<
     responsibilityKeys: ["0", "1", "2", "3"],
   },
   churchapi: {
-    stack: ["Node.js", "Express", "Firebase", "TypeScript", "REST APIs"],
-    responsibilityKeys: ["0", "1", "2", "3", "4"],
+    image: "/ChurchAppi.png",
+    url: churchApiUrls.swagger,
+    externalLinks: {
+      github: churchApiUrls.github,
+      swagger: churchApiUrls.swagger,
+      healthCheck: churchApiUrls.healthCheck,
+    },
+    stack: [
+      "ASP.NET Core 8",
+      "C#",
+      "Entity Framework Core",
+      "SQL Server",
+      "Azure SQL Database",
+      "Azure Container Apps",
+      "Azure Container Registry",
+      "Docker",
+      "JWT Authentication",
+      "Serilog",
+      "Health Checks",
+      "xUnit",
+      "GitHub Actions",
+    ],
+    architectureLayerKeys: [
+      "client",
+      "aspnetApi",
+      "controllers",
+      "services",
+      "efCore",
+      "azureSql",
+    ],
+    highlightKeys: [
+      "jwtAuth",
+      "fullCrud",
+      "layeredArchitecture",
+      "efMigrations",
+      "healthChecks",
+      "serilogLogging",
+      "envVariables",
+      "dockerMultiStage",
+      "azureContainerApps",
+      "azureSql",
+      "automatedTests",
+    ],
+    status: "production",
+    cta: "live",
+    responsibilityKeys: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
   },
   devocionadmin: {
     stack: ["Angular", "Firebase", "Firestore", "TypeScript", "Cloud Functions"],

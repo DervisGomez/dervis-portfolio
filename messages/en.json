@@ -93,7 +93,24 @@
     "viewProjectDetails": "View Project Details",
     "contactCta": "Discuss Project",
     "statisticsLabel": "Project Statistics",
+    "featuredProjectBadge": "Featured Project",
+    "architectureLabel": "Architecture",
+    "highlightsLabel": "Highlights",
+    "githubRepository": "GitHub Repository",
+    "githubRepositoryPending": "Link pending configuration",
+    "liveSwagger": "Live Swagger",
+    "healthCheck": "Health Check",
     "impactOverview": {
+      "churchapi": {
+        "name": "Church API",
+        "type": "REST API · Backend",
+        "highlights": {
+          "0": "JWT Authentication",
+          "1": "Azure Deployment",
+          "2": "Docker",
+          "3": "46 Automated Tests"
+        }
+      },
       "devocion": {
         "name": "Devoción Diaria",
         "type": "Own product",
@@ -701,20 +718,92 @@
       },
       "churchapi": {
         "name": "Church API",
-        "category": "Backend API",
-        "description": "REST API for church, member and administrative operations management, with authentication and cloud services.",
+        "category": "REST API · Backend",
+        "subtitle": "Production-ready REST API built with ASP.NET Core 8, Entity Framework Core, Azure SQL, Docker and Azure Container Apps.",
+        "description": "Production-ready REST API built with ASP.NET Core 8, Entity Framework Core, Azure SQL, Docker and Azure Container Apps.",
+        "longDescription": "Church API is a REST API built with ASP.NET Core 8 following a layered architecture. It implements JWT authentication, Entity Framework Core, SQL Server, Docker, Health Checks, Serilog, automated tests and deployment on Azure Container Apps using Azure SQL Database.",
         "role": "Backend Developer",
-        "imageAlt": "Church API architecture diagram",
+        "imageAlt": "Church API screenshot — Swagger UI",
         "impact": {
-          "metric": "REST API · Firebase",
-          "description": "Scalable backend that centralizes business logic and exposes endpoints for client applications."
+          "metric": "REST API · Azure · Docker",
+          "description": "Scalable backend deployed on Azure Container Apps with cloud SQL Server, live Swagger documentation and service health monitoring."
+        },
+        "architecture": {
+          "client": "Client",
+          "aspnetApi": "ASP.NET Core API",
+          "controllers": "Controllers",
+          "services": "Services",
+          "efCore": "Entity Framework Core",
+          "azureSql": "Azure SQL Database"
+        },
+        "showcaseHighlights": {
+          "dockerized": "Dockerized",
+          "azureDeployment": "Azure Deployment",
+          "azureSql": "Azure SQL",
+          "jwtAuthentication": "JWT Authentication",
+          "healthChecks": "Health Checks",
+          "entityFrameworkCore": "Entity Framework Core",
+          "restApi": "REST API",
+          "automatedTests": "46 Automated Tests"
+        },
+        "highlights": {
+          "jwtAuth": {
+            "title": "JWT Authentication",
+            "description": "Token-based security to protect endpoints and control access to API resources."
+          },
+          "fullCrud": {
+            "title": "Full CRUD",
+            "description": "Create, Read, Update and Delete operations for the main domain entities."
+          },
+          "layeredArchitecture": {
+            "title": "Layered Architecture",
+            "description": "Clear separation between controllers, services and data access for maintainability and testing."
+          },
+          "efMigrations": {
+            "title": "Entity Framework Core Migrations",
+            "description": "Controlled database schema evolution through versioned migrations."
+          },
+          "healthChecks": {
+            "title": "Health Checks",
+            "description": "Health endpoint to verify service availability and dependencies in production."
+          },
+          "serilogLogging": {
+            "title": "Structured logging with Serilog",
+            "description": "Structured event and error logging for observability and cloud diagnostics."
+          },
+          "envVariables": {
+            "title": "Environment variables",
+            "description": "Externalized configuration for different environments without changing application code."
+          },
+          "dockerMultiStage": {
+            "title": "Docker multi-stage",
+            "description": "Optimized production image with multi-stage build and reproducible deployment."
+          },
+          "azureContainerApps": {
+            "title": "Azure Container Apps",
+            "description": "Serverless container deployment with automatic scaling on Azure."
+          },
+          "azureSql": {
+            "title": "Azure SQL",
+            "description": "Managed relational database on Azure SQL Database for production persistence."
+          },
+          "automatedTests": {
+            "title": "Automated tests",
+            "description": "Suite of 46 automated tests with xUnit to validate business logic and endpoints."
+          }
         },
         "responsibilities": {
-          "0": "Designed and developed the REST API with Node.js and Express.",
-          "1": "Integrated Firebase for authentication and data persistence.",
-          "2": "Implemented endpoints for church and member management.",
-          "3": "Documented and structured the service architecture.",
-          "4": "Participated in deployment, maintenance and API evolution."
+          "0": "Designed the layered API architecture with ASP.NET Core 8.",
+          "1": "Implemented JWT authentication and endpoint authorization.",
+          "2": "Developed CRUD operations with Entity Framework Core.",
+          "3": "Configured migrations and persistence with SQL Server / Azure SQL.",
+          "4": "Integrated Health Checks and structured logging with Serilog.",
+          "5": "Containerized the application with Docker multi-stage.",
+          "6": "Deployed to Azure Container Apps and Azure Container Registry.",
+          "7": "Documented the API with Swagger/OpenAPI.",
+          "8": "Implemented environment variables for per-environment configuration.",
+          "9": "Wrote 46 automated tests with xUnit.",
+          "10": "Configured CI/CD with GitHub Actions."
         }
       },
       "devocionadmin": {
